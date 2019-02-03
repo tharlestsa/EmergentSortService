@@ -1,10 +1,8 @@
 # Emergent Sort Service
 
-The basic idea of this project is, the clients will send their datas to our servers and the Emergent Sort Service will find the better solution for sort the informations. For example, an university have a enroled students list and want get sort for any attribute (name, course, enroled code, final grade).
+The basic idea of this project is, the clients will send their datas to our server and the Emergent Sort Service will find the better solution for sort the informations. For example, an university they have a enroled students list and want get sort for any attribute (name, course, enroled code, final grade).
 
-EmergSortService will be able of to sort and to mensurable the performance of all sort options and self-optimize for get the best response time to client. If necessary, the service can use both local or parallel processing.
-
-In the optimize process, the mecanism will use determinated metrics as time and performance cost, lining up with the concept green computing.
+The Emergent Sort Service will be able of to sort and to mensurable the performance of all sort options and self-optimize for get the best response time to client. If necessary, the service can use both local or parallel processing. And, In the optimize process, the mecanism will use determinated metrics as time and performance cost, lining up with the concept green computing.
 
 ## Getting Started
 
@@ -12,11 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+* [Dana] - Programming language
+* [PAL]  - Framework 
 
 ### Installing
 
@@ -36,53 +31,22 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Peoject Dana](http://www.projectdana.com/) - The programming language of this project
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Project Dana](http://www.projectdana.com/) - The programming language of this project
+* [PAL](http://www.projectdana.com/) - Framework -  Perception, Assembly and Learning (PAL)
 
 ## Authors
 
-* **Ramon José de Sousa Araújo** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Marcos Felipe Barboza de Abreu** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Rosângela Divina de Sousa Santana** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Tharles de Sousa Andrade** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Larissa Ramos Marques Silva** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Ramon José de Sousa Araújo** - *CS Undergrad* - [GitHub]()
+* **Marcos Felipe Barboza de Abreu** - *CS Undergrad* - [GitHub](https://github.com/PurpleBooth)
+* **Rosângela Divina de Sousa Santana** - *CS Master* - [GitHub](https://github.com/PurpleBooth)
+* **Tharles de Sousa Andrade** - *CS Undergrad* - [GitHub](https://github.com/PurpleBooth)
+* **Larissa Ramos Marques Silva** - *CS Master* - [GitHub](https://github.com/PurpleBooth)
 
 ## License
 
