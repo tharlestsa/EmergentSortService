@@ -2,7 +2,7 @@
 
 The basic idea of this project is, the clients will send their datas to our server and the Emergent Sort Service will find the better solution for sort the informations. For example, an university they have a enroled students list and want get sort for any attribute (name, course, enroled code, final grade).
 
-The Emergent Sort Service will be able of to sort and to mensurable the performance of all sort options and self-optimize for get the best response time to client. If necessary, the service can use both local or parallel processing. And, In the optimize process, the mecanism will use determinated metrics as time and performance cost, lining up with the concept green computing.
+The Emergent Sort Service will be able of to sort and to mensurable the performance of all sort options and self-optimize for get the best response time to client. If necessary, the service can use both local or parallel processing. And, in the optimize process, the mecanism will use determinated metrics as time and performance cost, lining up with the concept green computing.
 
 ## Getting Started
 
@@ -42,11 +42,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* **Ramon José de Sousa Araújo** - *CS Undergrad* - [GitHub]()
-* **Marcos Felipe Barboza de Abreu** - *CS Undergrad* - [GitHub](https://github.com/PurpleBooth)
-* **Rosângela Divina de Sousa Santana** - *CS Master* - [GitHub](https://github.com/PurpleBooth)
-* **Tharles de Sousa Andrade** - *CS Undergrad* - [GitHub](https://github.com/PurpleBooth)
-* **Larissa Ramos Marques Silva** - *CS Master* - [GitHub](https://github.com/PurpleBooth)
+* **Ramon José de Sousa Araújo** - *CS Undergrad* - [GitHub](https://github.com/ramonjsa)
+* **Marcos Felipe Barboza de Abreu** - *CS Undergrad* - [GitHub](https://github.com/marcosfelipp)
+* **Rosângela Divina de Sousa Santana** - *CS Master* - [GitHub](https://github.com/rosousas)
+* **Tharles de Sousa Andrade** - *CS Undergrad* - [GitHub](https://github.com/tharlestsa)
+* **Larissa Ramos Marques Silva** - *CS Master* - [GitHub]()
 
 ## License
 
