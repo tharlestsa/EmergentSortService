@@ -1,0 +1,5 @@
+uses http.util.HTTPUtil
+
+interface HTTPGET {
+	void handleRequest(HTTPMessage httpHeader)
+}

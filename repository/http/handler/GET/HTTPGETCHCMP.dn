@@ -1,0 +1,94 @@
+// HTTPGETCHCMP
+//
+// Processes the HTTP request with cache and compression
+//
+// Author: Roberto Rodrigues Filho
+// April @ 2017
+
+const char debugMSG[] = "[@HTTPGETCHCMP]"
+
+component provides http.handler.GET.HTTPGET requires io.Output out, data.IntUtil iu, io.File, compression.Compression compress, 
+	cache.CacheHandler ch, io.FileSystem fileSystem, http.handler.DCH.DCHandler dch {
+
+	void HTTPGET:handleRequest(HTTPMessage header) {
+		if (header == null) { return }
+		if (header.command == "GET") {
+			if (header.mimeType == "dn") { dch.process(header) }
+			else { processCache(header) }
+		} else if (header.command == "POST") {
+			dch.process(header)
+		} else if (header.command == "DELETE") {
+			dch.process(header)
+		} else if (header.command == "PUT") {
+			dch.process(header)
+		} else {
+			header.socket.send("HTTP/1.1 501 Not Implemented\r\n")
+			header.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			header.socket.send("Connection: close\r\n")
+			header.socket.send("\r\n")
+		}
+	}
+
+	void processCache(HTTPMessage httpMessage) {
+		CachedData cr = ch.get(new char[](httpMessage.resource, compress.getExtension()))
+		// FIXME: the comparison should be made against the non-compressed file
+		// otherwise, the system will never update cache, since changes will only occur in the original file
+		//if (cr != null && fileSystem.getInfo(cr.resource).modified == cr.resourceAge) {
+		if (cr != null) {
+			httpMessage.socket.send(cr.responseHeader)
+			httpMessage.socket.send(cr.response)
+		} else { processRequest(httpMessage) }
+	}
+
+	void processRequest(HTTPMessage httpMessage) {
+		if (httpMessage.resourceExists) {
+			CachedData ncr = new CachedData()
+			File fd = null
+			char newName[] = compress.compressResource(httpMessage.resource)
+			if (newName != "") {
+				fd = new File(newName, File.FILE_ACCESS_READ)
+				ncr.command = httpMessage.command
+				ncr.key = newName
+				ncr.resourceAge = fileSystem.getInfo(newName).modified
+				ncr.mimeType = httpMessage.mimeType
+				ncr.responseHeader = new byte[](
+								"HTTP/1.1 200 OK\r\n",
+								"Server: $(HTTPUtil.SERVER_NAME)\r\n",
+								"Content-Encoding: $(compress.algorithmName())\r\n",
+								"Content-Length: $(iu.intToString(fd.getSize()))\r\n",
+								"Connection: close\r\n",
+								"Content-Type: $(httpMessage.mimeType)\r\n",
+								"\r\n")
+			} else {
+				fd = new File(httpMessage.resource, File.FILE_ACCESS_READ)
+				ncr.command = httpMessage.command
+				ncr.key = httpMessage.resource
+				ncr.resourceAge = fileSystem.getInfo(httpMessage.resource).modified
+				ncr.mimeType = httpMessage.mimeType
+				ncr.responseHeader = new byte[](
+								"HTTP/1.1 200 OK\r\n",
+								"Server: $(HTTPUtil.SERVER_NAME)\r\n",
+								"Content-Encoding: binary\r\n",
+								"Content-Length: $(iu.intToString(fd.getSize()))\r\n",
+								"Connection: close\r\n",
+								"Content-Type: $(httpMessage.mimeType)\r\n",
+								"\r\n")
+			}
+			byte fbuf[]
+			// TODO: maybe change this?
+			// the cache stores everything in memory anyways..
+			fbuf = fd.read(fd.getSize())
+			httpMessage.socket.send(ncr.responseHeader)
+			httpMessage.socket.send(fbuf)
+			ncr.response = fbuf
+			ncr.contentSize = fbuf.arrayLength
+			ch.update(ncr)
+			fd.close()
+		} else {
+			httpMessage.socket.send("HTTP/1.1 404 Resource Not Found\r\n")
+			httpMessage.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			httpMessage.socket.send("Connection: close\r\n")
+			httpMessage.socket.send("\r\n")
+		}
+	}
+}

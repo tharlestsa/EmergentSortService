@@ -1,0 +1,30 @@
+const char debugMSG[] = "[@ZLIB]"
+
+component provides compression.Compression requires io.Output out, data.IntUtil iu, os.Run run, time.DateUtil dateUtil, io.FileSystem fileSystem {
+	char[] Compression:compressResource(char resource[]) {
+		// verify if zipped exists
+		// if it does and if it was created after the original
+		// just return it, without zipping
+		// otherwise, zip it!
+		char fileZipped[] = new char[](resource, ".zl")
+		if (fileSystem.exists(fileZipped)) {
+			DateTime original = fileSystem.getInfo(resource).modified
+			DateTime zipped = fileSystem.getInfo(fileZipped).modified
+			if (dateUtil.after(zipped, original)) { return fileZipped }
+		}
+		// create mutex here??????
+		char newName[] = ""
+		char osCommand[] = new char[]("perl ../repository/compression_external/zlib.pl < ", resource, " > ", resource, ".zl")
+		RunStatus rS = run.execute(osCommand)
+		if (rS.executed) { newName = new char[](resource, ".zl") }
+		return newName
+	}
+
+	char[] Compression:algorithmName() {
+		return "deflate"
+	}
+
+	char[] Compression:getExtension() {
+		return ".zl"
+	}
+}

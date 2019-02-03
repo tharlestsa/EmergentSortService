@@ -1,0 +1,15 @@
+// HTTPProtocol
+//
+// Handles HTTP protocol 
+//
+// Author: Roberto Rodrigues Filho
+// March @ 2017
+
+component provides app_protocols.AppProtocol requires http.HTTPHeader httpHeader {
+
+	implementation AppProtocol {
+		void AppProtocol:processRequest(TCPSocket s) {
+			httpHeader.processRequest(s)
+		}
+	}
+}

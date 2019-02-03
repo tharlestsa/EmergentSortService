@@ -1,0 +1,27 @@
+// TCPNetwork
+//
+// This is the main module that generates any program that communicates through Network
+//
+// Author: Roberto Rodrigues Filho
+// February @ 2017
+
+const char debugMSG[] = "[@TCPNetwork]"
+
+component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, net.TCPServerSocket, request.RequestHandler rh {
+	int App:main(AppParam params[]) {
+		TCPServerSocket host = new TCPServerSocket()
+		int server_port = 2012
+		if (params.arrayLength == 1) {
+			server_port = iu.intFromString(params[0].string)
+		}
+		if (!host.bind(TCPServerSocket.ANY_ADDRESS, server_port)) {
+			out.println("Error: failed to bind master socket")
+			return 1
+		}
+		while (true) {
+			TCPSocket client = new TCPSocket()
+			if (client.accept(host)) { rh.handleRequest(client) }
+		}
+		return 0
+	}
+}

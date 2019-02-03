@@ -1,0 +1,5 @@
+uses http.util.HTTPUtil
+
+interface DCHandler {
+	void process(HTTPMessage httpHeader)
+}

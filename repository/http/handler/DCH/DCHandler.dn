@@ -1,0 +1,60 @@
+// DCHandler.dn
+//
+// Dynamic Content Handler;
+//
+// Author: Roberto Rodrigues Filho
+// May @ 2017
+
+const char debugMSG[] = "[@DCHandler]"
+
+component provides http.handler.DCH.DCHandler requires io.Output out, data.IntUtil iu, io.File,
+	io.FileSystem fileSystem, http.util.HTTPUtil httpUtil, data.adt.HashTable, 
+	data.StringUtil strUtil, encoding.Encoder:uri encoder {
+
+	Mutex threadBlocker = new Mutex()
+
+	void DCHandler:process(HTTPMessage httpHeader) {
+		HTTPMessage httpMessage = httpUtil.getMessage(httpHeader)
+		//dispatcher.process(extractBaseDir(httpMessage.resource), httpMessage.command,
+		//	parseHTTPData(httpMessage), httpMessage.socket)
+	}
+
+	HashTable parseHTTPData(HTTPMessage httpMessage) {
+		HashTable hashedHTTPData = null
+		if ((httpMessage.postData != "") 
+			|| (httpMessage.postData != null)) {
+			hashedHTTPData = parseString2Hash(httpMessage.postData, hashedHTTPData)
+		}
+		if ((httpMessage.queryString != "") 
+			|| (httpMessage.queryString != null)) {
+			hashedHTTPData = parseString2Hash(httpMessage.queryString, hashedHTTPData)
+		}
+		return hashedHTTPData
+	}
+
+	HashTable parseString2Hash(char str[], HashTable hashedHTTPData) {
+		if (hashedHTTPData == null) { hashedHTTPData = new HashTable() }
+		String helper[] = strUtil.explode(str, "&")
+		String keyValue[]
+		for (int count = 0; count < helper.arrayLength; count++) {
+			keyValue = strUtil.explode(helper[count].string, "=")
+			hashedHTTPData.put(keyValue[0].string, 
+				new String(encoder.decode(keyValue[1].string)))
+		}
+		return hashedHTTPData
+	}
+
+	char[] httpDecode(char str[]) {
+		char decodedStr[] = new char[str.arrayLength]
+		for (int count = 0; count < str.arrayLength; count++) {
+			if (str[count] == "+") { decodedStr[count] = " " }
+			else { decodedStr[count] = str[count] }
+		}
+		return encoder.decode(decodedStr)
+	}
+
+	char[] extractBaseDir(char str[]) {
+		return strUtil.subString(str, HTTPUtil.htdocs.arrayLength+1,
+		 str.arrayLength-(HTTPUtil.htdocs.arrayLength+1))
+	}
+}

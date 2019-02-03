@@ -1,0 +1,73 @@
+// HTTPGETCH
+//
+// Processes the HTTP request using cache.
+//
+// Author: Roberto Rodrigues Filho
+// April @ 2017
+
+const char debugMSG[] = "[@HTTPGETCH]"
+
+component provides http.handler.GET.HTTPGET requires io.Output out, data.IntUtil iu, io.File, cache.CacheHandler ch, 
+	io.FileSystem fileSystem, http.handler.DCH.DCHandler dch {
+
+	void HTTPGET:handleRequest(HTTPMessage header) {
+		if (header == null) { return }
+		if (header.command == "GET") {
+			if (header.mimeType == "dn") { dch.process(header) }
+			else { processCache(header) }
+		} else if (header.command == "POST") {
+			dch.process(header)
+		} else if (header.command == "DELETE") {
+			dch.process(header)
+		} else if (header.command == "PUT") {
+			dch.process(header)
+		} else {
+			header.socket.send("HTTP/1.1 501 Not Implemented\r\n")
+			header.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			header.socket.send("Connection: close\r\n")
+			header.socket.send("\r\n")
+		}
+	}
+
+	void processCache(HTTPMessage httpMessage) {
+		CachedData cr = ch.get(httpMessage.resource)
+		if (cr != null) {
+			httpMessage.socket.send(cr.responseHeader)
+			httpMessage.socket.send(cr.response)
+		} else { processRequest(httpMessage) }	
+	}
+
+	void processRequest(HTTPMessage httpMessage) {
+		if (httpMessage.resourceExists) {
+			File fd = new File(httpMessage.resource, File.FILE_ACCESS_READ)
+			CachedData ncr = new CachedData()
+			ncr.command = httpMessage.command
+			ncr.key = httpMessage.resource
+			ncr.resourceAge = fileSystem.getInfo(httpMessage.resource).modified
+			ncr.mimeType = httpMessage.mimeType
+			ncr.responseHeader = new byte[](
+								"HTTP/1.1 200 OK\r\n",
+								"Server: $(HTTPUtil.SERVER_NAME)\r\n",
+								"Content-Encoding: binary\r\n",
+								"Content-Length: $(iu.intToString(fd.getSize()))\r\n",
+								"Connection: close\r\n",
+								"Content-Type: $(httpMessage.mimeType)\r\n",
+								"\r\n")
+			byte fbuf[]
+			// TODO: maybe change this?
+			// the cache stores everything in memory anyways..
+			fbuf = fd.read(fd.getSize()) 
+			httpMessage.socket.send(ncr.responseHeader)
+			httpMessage.socket.send(fbuf)
+			ncr.response = fbuf
+			ncr.contentSize = fbuf.arrayLength
+			ch.update(ncr)
+			fd.close()
+		} else {
+			httpMessage.socket.send("HTTP/1.1 404 Resource Not Found\r\n")
+			httpMessage.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			httpMessage.socket.send("Connection: close\r\n")
+			httpMessage.socket.send("\r\n")
+		}
+	}
+}

@@ -1,0 +1,80 @@
+// InteractiveAssembly.dn
+// A component that provides interactive access to assembly module 
+//
+// Author: Roberto Rodrigues Filho
+// February @ 2017
+const char debugMSG[] = "[@InteractiveAssembly]"
+
+const char HELP[] 			 = "help"
+const char GET_CONFIG[]		 = "get_config"
+const char GET_ALL_CONFIGS[] = "get_all_configs"
+const char SET_CONFIG[]   	 = "set_config"
+const char ADD_COMP[] 		 = "add_comp"
+const char REMOVE_COMP[] 	 = "remove_comp"
+const char EXIT[] 			 = "exit"
+
+
+component provides App requires io.Output out, data.IntUtil iu, io.Input in,
+ data.StringUtil strUtil, composition.Assembly assembly {
+
+	String configs[] = null
+	int configPointer = 0
+
+	void help() {
+		out.println("$(debugMSG) Command list:")
+		out.println(" $(debugMSG) $(HELP) - to list all commands")
+		out.println(" $(debugMSG) $(GET_CONFIG) show current config")
+		out.println(" $(debugMSG) $(GET_ALL_CONFIGS) list all configs")
+		out.println(" $(debugMSG) $(SET_CONFIG) a - set config to 'a' (use the number in front of the composition)")
+		out.println(" $(debugMSG) $(ADD_COMP) a - add a component")
+		out.println(" $(debugMSG) $(REMOVE_COMP) a - remove a component")
+		out.println(" $(debugMSG) $(EXIT) - to finish execution")
+	}
+
+	void commandInterpret(char cmd[]) {
+		String cmdList[] = strUtil.explode(cmd, " ")
+		if (cmdList.arrayLength == 1) {
+			if (cmd == HELP) {
+				help()
+			} else if (cmd == GET_CONFIG) {
+				out.println("$(debugMSG) Current config: $(assembly.getConfig())")
+			} else if (cmd == GET_ALL_CONFIGS) {
+				String configsStr[] = assembly.getAllConfigs()
+				for (int i = 0; i < configsStr.arrayLength; i++) {
+					out.println("$(debugMSG) $(iu.intToString(i)) $(configsStr[i].string)")
+				}
+				out.println("$(debugMSG) $(iu.intToString(configsStr.arrayLength)) configs:")
+			} else { out.println("$(debugMSG) Invalid command.") }
+		} else if (cmdList.arrayLength == 2) {
+			if (cmdList[0].string == SET_CONFIG) {
+				String configsArray[] = assembly.getAllConfigs()
+				int pointer = iu.intFromString(cmdList[1].string)
+				assembly.setConfig(configsArray[pointer].string)
+			} else if (cmdList[0].string == ADD_COMP) {
+				assembly.addComp(new String[](new String(cmdList[1].string)))
+			} else if (cmdList[0].string == REMOVE_COMP) {
+				assembly.removeComp(new String[](new String(cmdList[1].string)))
+			} else {
+				out.println("$(debugMSG) Invalid command.")
+			}
+		} else {
+			//out.println("$(debugMSG) $(iu.intToString(cmdList.arrayLength))")
+			out.println("$(debugMSG) Invalid command.")
+		}
+	}
+
+	int App:main(AppParam params[]) {
+		if (params.arrayLength < 1) {
+			out.println("$(debugMSG) use: dana InteractiveAssembly app.main.Component.o")
+			return 1
+		}
+		assembly.setMain(params[0].string, null)
+		char cmd[] = "start"
+		while (cmd != "exit") {
+			if (cmd != "start") { commandInterpret(cmd)	}
+			out.print("assembly> ")
+			cmd = in.readln()
+		}
+		return 0
+	}
+}

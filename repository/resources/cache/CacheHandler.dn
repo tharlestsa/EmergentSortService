@@ -1,0 +1,32 @@
+uses time.DateTime
+uses data.String
+
+//TODO: make this interface more generic
+// and make this according to the size of the stored object
+// rather than storing only 100 objects from unkown size
+data CachedData {
+	char command[]
+	char key[]
+	char mimeType[]
+	char contentType[]
+	byte responseHeader[]
+	byte response[]
+	DateTime resourceAge
+	DateTime timeAdded
+	CachedData next
+	CachedData prev
+	int hits
+	int contentSize
+	// Roberto: don't know what this is for
+	// Barry created this variable ...
+	int users
+}
+
+interface CacheHandler {
+	const int MAX_SIZE = 100
+	CachedData get(char key[])
+	void update(CachedData ncr)
+	void delete(char key[])
+	void clear()
+	String[] getKeys()
+}

@@ -1,0 +1,125 @@
+// InteractivePerception.dn
+// A component that provides interactive access to perception module 
+//
+// Author: Roberto Rodrigues Filho
+// February @ 2017
+
+const char debugMSG[] = "[@InteractivePerception]"
+
+const char HELP[] 			 		= "help"
+const char GET_CONFIG[]		 		= "get_config"
+const char GET_ALL_CONFIGS[] 		= "get_all_configs"
+const char SET_CONFIG[]   	 		= "set_config"
+const char ADD_COMP[] 		 		= "add_comp"
+const char REMOVE_COMP[] 	 		= "remove_comp"
+const char ADD_PROXY[]		 		= "add_proxy"
+const char REMOVE_PROXY[]	 		= "remove_proxy"
+const char GET_PROXIES[]	 		= "get_proxies"
+const char GET_PERCEPTION_DATA[] 	= "get_perception_data"
+const char EXIT[] 			 		= "exit"
+
+component provides App requires io.Output out, data.IntUtil iu, io.Input in, data.StringUtil strUtil, 
+	monitoring.Perception, data.DecUtil du, data.json.JSONParser parser {
+
+	Perception perception
+
+	void help() {
+		out.println("$(debugMSG) Command list:")
+		out.println(" $(debugMSG) $(HELP) - to list all commands")
+		out.println(" $(debugMSG) $(GET_CONFIG) show current config")
+		out.println(" $(debugMSG) $(GET_ALL_CONFIGS) list all configs")
+		out.println(" $(debugMSG) $(SET_CONFIG) a - set config to 'a'")
+		out.println(" $(debugMSG) $(ADD_COMP) a - add a component")
+		out.println(" $(debugMSG) $(REMOVE_COMP) a - remove a component")
+		out.println(" $(debugMSG) $(ADD_PROXY) exp - add proxy")
+		out.println(" $(debugMSG) $(REMOVE_PROXY) proxy - remove proxy")
+		out.println(" $(debugMSG) $(GET_PROXIES) - get a lits of available proxy")
+		out.println(" $(debugMSG) $(GET_PERCEPTION_DATA) - get perception data of current architecture")
+		out.println(" $(debugMSG) $(EXIT) - to finish execution")
+	}
+
+	void commandInterpret(char cmd[]) {
+		String cmdList[] = strUtil.explode(cmd, " ")
+		String configsStr[] = null
+		int counter = 0
+		if (cmdList.arrayLength == 1) {
+			if (cmd == HELP) { help() }
+			else if (cmd == GET_CONFIG) {
+				out.println("$(debugMSG) Current config: $(perception.getConfig())")
+			} else if (cmd == GET_ALL_CONFIGS) {
+				String configsStrHelper[] = perception.getAllConfigs()
+				for (int i = 0; i < configsStrHelper.arrayLength; i++) {
+					out.println("$(debugMSG) $(iu.intToString(i)) $(configsStrHelper[i].string)")
+				}
+				out.println("$(debugMSG) $(iu.intToString(configsStrHelper.arrayLength)) configs:")
+			} else if (cmdList[0].string == GET_PROXIES) {
+				String proxies[] = perception.getProxies()
+				out.println("$(debugMSG) $(iu.intToString(proxies.arrayLength)) proxies:")
+				for (int pointer = 0; pointer < proxies.arrayLength; pointer++) {
+					out.println("$(debugMSG) $(proxies[pointer].string)")
+				}
+			} else if (cmdList[0].string == GET_PERCEPTION_DATA) {
+				handlePerception(perception.getPerceptionData())
+
+			} else { out.println("$(debugMSG) Invalid command.") }
+		} else if (cmdList.arrayLength >= 2) {
+			if (cmdList[0].string == SET_CONFIG) {
+				String configsArray[] = perception.getAllConfigs()
+				int pointer = iu.intFromString(cmdList[1].string)
+				perception.setConfig(configsArray[pointer].string)
+				//perception.setConfig(strUtil.subString(cmd, (SET_CONFIG.arrayLength+1),(cmd.arrayLength-SET_CONFIG.arrayLength-1)))
+			} else if (cmdList[0].string == ADD_COMP) {
+				perception.addComp(new String[](new String(strUtil.subString(cmd, (ADD_COMP.arrayLength+1),(cmd.arrayLength-ADD_COMP.arrayLength-1)))))
+			} else if (cmdList[0].string == REMOVE_COMP) {
+				perception.removeComp(new String[](new String(strUtil.subString(cmd, (REMOVE_COMP.arrayLength+1),(cmd.arrayLength-REMOVE_COMP.arrayLength-1)))))
+			} else if (cmdList[0].string == REMOVE_PROXY) {
+				perception.removeProxy(strUtil.subString(cmd, (REMOVE_PROXY.arrayLength+1),(cmd.arrayLength-REMOVE_PROXY.arrayLength-1)))
+			} else if (cmdList[0].string == ADD_PROXY) {
+				perception.addProxy(strUtil.subString(cmd, (ADD_PROXY.arrayLength+1),(cmd.arrayLength-ADD_PROXY.arrayLength-1)))
+			} else { out.println("$(debugMSG) Invalid command.") }
+		} else { out.println("$(debugMSG) Invalid command.") }
+	}
+
+	void handlePerception(char perceptionData[]) {
+		JSONElement document = parser.parseDocument(perceptionData)
+		JSONElement metricsJSON = parser.getValue(document, "metrics")
+		if (metricsJSON != null) {
+			for (int pointer = 0; pointer < metricsJSON.children.arrayLength; pointer++) {
+				JSONElement childrenMetrics = metricsJSON.children[pointer]
+				char name[] = parser.getValue(childrenMetrics, "name").value
+				dec value = du.decFromString(parser.getValue(childrenMetrics, "value").value)
+				int count = iu.intFromString(parser.getValue(childrenMetrics, "count").value)
+				/*char startTime[] = parser.getValue(childrenMetrics, "startTime").value
+				char endTime[] = parser.getValue(childrenMetrics, "endTime").value*/
+				dec metricValue = value/count
+				out.println("$(debugMSG) $(name) value: $(du.decToString(value)) | count: $(iu.intToString(count)) | avg: $(du.decToString(metricValue)) ")
+			}
+		}
+		JSONElement eventsJSON = parser.getValue(document, "events")
+		if (eventsJSON != null) {
+			for (int pointer = 0; pointer < eventsJSON.children.arrayLength; pointer++) {
+				JSONElement childrenMetrics = eventsJSON.children[pointer]
+				dec eValue = du.decFromString(parser.getValue(childrenMetrics, "value").value)
+				int eCount = iu.intFromString(parser.getValue(childrenMetrics, "count").value)
+				char type[] = parser.getValue(childrenMetrics, "name").value
+				out.println("$(debugMSG) eValue: $(du.decToString(eValue)) | eCount: $(iu.intToString(eCount)) | type: $(type)")
+			}
+		}
+	}
+
+	int App:main(AppParam params[]) {
+		if (params.arrayLength < 1) {
+			out.println("$(debugMSG) use: dana InteractiveAssembly app.main.Component.o")
+			return 1
+		}
+		perception = new Perception(true)
+		perception.setMain(params[0].string, null)
+		char cmd[] = "start"
+		while (cmd != "exit") {
+			if (cmd != "start") { commandInterpret(cmd)	}
+			out.print("perception> ")
+			cmd = in.readln()
+		}
+		return 0
+	}
+}

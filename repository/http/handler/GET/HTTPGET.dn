@@ -1,0 +1,56 @@
+// HTTPGET
+//
+// Processes a HTTP GET request
+//
+// Author: Roberto Rodrigues Filho
+// April @ 2017
+
+const char debugMSG[] = "[@HTTPGET]"
+
+component provides http.handler.GET.HTTPGET requires io.Output out, data.IntUtil iu, io.File, 
+	http.handler.DCH.DCHandler dch {
+	
+	void HTTPGET:handleRequest(HTTPMessage header) {
+		if (header == null) { return }
+		if (header.command == "GET") {
+			if (header.mimeType == "dn") { dch.process(header) }
+			else { processRequest(header) }
+		} else if (header.command == "POST") {
+			dch.process(header)
+		} else if (header.command == "DELETE") {
+			dch.process(header)
+		} else if (header.command == "PUT") {
+			dch.process(header)
+		} else {
+			header.socket.send("HTTP/1.1 501 Not Implemented\r\n")
+			header.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			header.socket.send("Connection: close\r\n")
+			header.socket.send("\r\n")
+		}
+	}
+
+	void processRequest(HTTPMessage httpMessage) {
+		if (httpMessage.resourceExists) {
+			File fd = new File(httpMessage.resource, File.FILE_ACCESS_READ)
+			httpMessage.socket.send("HTTP/1.1 200 OK\r\n")
+			httpMessage.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			httpMessage.socket.send("Content-Encoding: binary\r\n")
+			httpMessage.socket.send("Content-Length: $(iu.intToString(fd.getSize()))\r\n")
+			httpMessage.socket.send("Connection: close\r\n")
+			httpMessage.socket.send("Content-Type: $(httpMessage.mimeType)\r\n")
+			httpMessage.socket.send("\r\n")
+			byte fbuf[]
+			int tl = 0
+			while ((fbuf = fd.read(HTTPUtil.BUFF_SIZE)).arrayLength > 0) {
+				tl += fbuf.arrayLength
+				httpMessage.socket.send(fbuf)
+			}
+			fd.close()
+		} else {
+			httpMessage.socket.send("HTTP/1.1 404 Resource Not Found\r\n")
+			httpMessage.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			httpMessage.socket.send("Connection: close\r\n")
+			httpMessage.socket.send("\r\n")
+		}
+	}
+}

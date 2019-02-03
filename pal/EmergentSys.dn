@@ -1,0 +1,239 @@
+// EmergentSys
+//
+// This component is responsible to control any emergent system.
+// 
+// Author: Roberto Rodrigues Filho
+// March @ 2017
+
+uses rest.RESys
+
+const char debugMSG[] = "[@EmergentSys]"
+
+/* emergent sys rest API */
+const char HELP[]				= "help"
+const char SET_MAIN[]			= "set_main"
+const char SET_CONFIG[]			= "set_config"
+const char GET_CONFIG[]			= "get_config"
+const char GET_ALL_CONFIGS[] 	= "get_all_configs"
+const char GET_PERCEPTION[]		= "get_perception"
+const char GET_PROXIES[] 		= "get_proxies"
+const char ADD_PROXY[]			= "add_proxy"
+const char ADD_COMP[]			= "add_comp"
+const char REMOVE_PROXY[]		= "remove_proxy"
+const char REMOVE_COMP[]		= "remove_comp"
+const char TERMINATE[]			= "terminate"
+
+const char END_OF_STR[] 		= "\r\n\r\n"
+
+/* HTTP responses */
+const char OK_STATUS[] 			= "200 OK"
+const char BADREQUEST_STATUS[] 	= "400 Bad Request"
+const char NOTFOUND_STATUS[] 	= "404 Not Found"
+
+/* Param constants */
+const char PORT_NUM[] = "port_num"
+const char HELP[]     = "help"
+const char APP[] 	  = "app"
+const char ARGS[]	  = "args"
+
+/* emergent sys port */
+const int PORT = 2011
+
+data ParsedParam {
+	char type[]
+	char value[]
+	char raw[]
+}
+
+component provides App requires io.Output out, data.IntUtil iu, monitoring.Perception, net.TCPSocket,
+ net.TCPServerSocket, data.StringUtil strUtil, http.util.HTTPUtil httpUtil, data.json.JSONParser parser,
+ data.json.JSONEncoder jsonEncoder {
+
+	Perception perception
+	TCPServerSocket host
+	// the terminate is used as a flag to kill the EmergentSys main process
+	// plus it is also used as a signal to unbind the TCPServerSocket after
+	// the main process has sent a response message to whoever called the 
+	// terminate function
+	bool terminate = false
+
+	char[] eliminateSpaces(char src[]) {
+		char result[] = null
+		for (int i = 0; i < src.arrayLength; i++) {
+			if (src[i] != " ") { result = new char[](result, src[i]) }
+		}
+		return result
+	}
+
+	HTTPMessage readRequest(TCPSocket client) {
+		HTTPMessage msg = clone httpUtil.readHTTPRequest(client)
+		/* removes the htdocs path + /meta/ */
+		int start = HTTPUtil.htdocs.arrayLength + 6 // 6 = {/meta/}.arrayLength
+		if (msg.resource.arrayLength > start) {
+			int length = msg.resource.arrayLength - start
+			msg.resource = strUtil.subString(msg.resource, start, length)	
+		}
+		return msg
+	}
+
+	char[] parseCommand(HTTPMessage msg) {
+		char result[] = ""
+		if (msg.command == "GET") {
+			result = msg.resource
+		} else if (msg.command == "POST") {
+			if (msg.resource == SET_CONFIG) { result = parseJSONString(msg.postData, "config") }
+			else if (msg.resource == SET_MAIN) { result = parseJSONString(msg.postData, "comp") }
+			else if ((msg.resource == ADD_COMP) 
+				|| (msg.resource == REMOVE_COMP)) { result = parseJSONList(msg.postData, "comps") }
+			else if (msg.resource == REMOVE_PROXY) { result = parseJSONString(msg.postData, "exp") }
+			else if (msg.resource == ADD_PROXY) { result = parseJSONString(msg.postData, "exp") }
+			if (result != "") { result = new char[](msg.resource, " ", result) }
+		}
+		return result
+	}
+
+	char[] parseListJSON(String list[], char key[]) {
+		char result[] = new char[] ("{", "\"", key, "\": [")
+		for (int pointer = 0; pointer < list.arrayLength; pointer++) {
+			if (pointer == 0) { result = new char[](result, "\"", list[pointer].string, "\"") }
+			else { result = new char[](result, ", \"", list[pointer].string, "\"") }
+		}
+		return new char[](result, "]}")
+	}
+
+	char[] parseStringJSON(char string[], char key[]) {
+		return new char[]("{\"", key, "\": \"", string, "\"}")
+	}
+
+	char[] parseJSONList(char document[], char key[]) {
+		String list[] = null
+		JSONElement jsonRoot = parser.parseDocument(document)
+		JSONElement el = parser.getValue(jsonRoot, key)
+		if ((el != null) && (el.children != null)) {
+			list = new String[el.children.arrayLength]()
+			for (int i = 0; i < el.children.arrayLength; i++) {
+				list[i] = new String(el.children[i].value)
+			}
+		}
+		if (list != null) { return strUtil.implode(list, " ") }
+		return ""
+	}
+
+	char[] parseJSONString(char document[], char key[]) {
+		JSONElement jsonRoot = parser.parseDocument(document)
+		JSONElement el = parser.getValue(jsonRoot, key)
+		if (el != null) { return new char[](el.value) }
+		return ""
+	}
+	
+	String[] interpreter(char msg[]) {
+		String cmdList[] = strUtil.explode(msg, " ")
+		if (cmdList.arrayLength == 1) {
+			if (cmdList[0].string == HELP) { return new String[](new String(NOTFOUND_STATUS)) /* TODO */ }
+			else if (cmdList[0].string == GET_CONFIG) {
+				return new String[](new String(OK_STATUS), 
+					new String(parseStringJSON(perception.getConfig(), "config")))
+			} else if (cmdList[0].string == GET_ALL_CONFIGS) {	
+				return new String[](new String(OK_STATUS),
+					new String(parseListJSON(perception.getAllConfigs(), "configs")))
+			} else if (cmdList[0].string == GET_PROXIES) {
+				return new String[](new String(OK_STATUS),
+					new String(parseListJSON(perception.getProxies(), "proxies")))
+			} else if (cmdList[0].string == GET_PERCEPTION) {
+				return new String[](new String(OK_STATUS), new String(perception.getPerceptionData()))
+			} else if (cmdList[0].string == TERMINATE) {
+				out.println("$(debugMSG) Terminating...")
+				terminate = true
+				return new String[](new String(OK_STATUS))
+			} else { out.println("$(debugMSG) Invalid command.") }
+		} else if (cmdList.arrayLength >= 2) {
+			if (cmdList[0].string == SET_CONFIG) {
+				perception.setConfig(cmdList[1].string)
+				return new String[](new String(OK_STATUS))
+			} else if (cmdList[0].string == ADD_COMP) {
+				perception.addComp(removeFromList(cmdList, 0))
+				return new String[](new String(OK_STATUS))
+			} else if (cmdList[0].string == REMOVE_COMP) {
+				perception.removeComp(removeFromList(cmdList, 0))
+				return new String[](new String(OK_STATUS))
+			} else if (cmdList[0].string == REMOVE_PROXY) {
+				perception.removeProxy(removeFromList(cmdList, 0)[0].string)
+				return new String[](new String(OK_STATUS))
+			} else if (cmdList[0].string == ADD_PROXY) {
+				perception.addProxy(cmdList[1].string)
+				return new String[](new String(OK_STATUS))
+			} else if (cmdList[0].string == SET_MAIN) {
+				perception.setMain(cmdList[1].string, null)
+				return new String[](new String(OK_STATUS))
+			} else { out.println("$(debugMSG) Invalid command.") }
+		} else { out.println("$(debugMSG) Invalid command.") }
+		return new String[](new String(BADREQUEST_STATUS))
+	}
+
+	String[] removeFromList(String list[], int index) {
+		String result[] = null
+		for (int pointer = 0; pointer < list.arrayLength; pointer++) {
+			if (pointer != index) { result = new String[](result, new String(list[pointer].string)) }
+		}
+		return result
+	}
+
+	void sendResponse(TCPSocket client, char msg[]) {
+		client.send(msg)
+		client.disconnect()
+	}
+
+	char[] formatHTTPResponse(String response[]) {
+		char resp[] = null
+		if (response.arrayLength > 0) {	resp = new char[]("HTTP/1.0 ", response[0].string, " \r\n")	}
+		else { resp = new char[]("HTTP/1.0 ", BADREQUEST_STATUS, " \r\n") }
+		resp = new char[] (resp, "Server: EmergentSys v1\r\n", "Content-Encoding: binary\r\n")	
+		if (response.arrayLength > 1) {
+			resp = new char[](resp, "Content-Length: $(iu.intToString(response[1].string.arrayLength))\r\n")	
+		} else { resp = new char[](resp, "Content-Length: $(iu.intToString(0))\r\n") }
+		resp = new char[](resp, "Content-Type: text/json\r\n", "Access-Control-Allow-Origin: *\r\n","\r\n")
+		if (response.arrayLength > 1) { resp = new char[](resp, response[1].string) }
+		return resp
+	}
+
+	String[] execCommand(char command[]) {
+		if ((command == null) || (command == "")) {	return new String[](new String(BADREQUEST_STATUS)) }
+		return interpreter(command)
+	}
+
+	void executor(TCPSocket client) {
+		sendResponse(client, formatHTTPResponse(execCommand(parseCommand(readRequest(client)))))
+		//NOTE: the unbind has to happen after the response is sent, otherwise it throws an exception
+		if (terminate) { host.unbind() }
+	}
+
+	void serverStart() {
+		host = new TCPServerSocket()
+		if (!host.bind(TCPServerSocket.ANY_ADDRESS, 2011)) {
+			out.println("Error: failed to bind master socket")
+			return
+		}
+		while (!terminate) {
+			TCPSocket client = new TCPSocket()
+			if (client.accept(host)) { asynch::executor(client)	}
+		}
+		out.println("$(debugMSG) EmergentSys instance is terminated!")
+	}
+
+	void help() {
+		out.println("EmergentSys [version 100]")
+		out.println("\nUsage: dana -sp ../repository EmergentSys")
+		out.println("\nOptions:")
+		out.println("-help      \t List commands that can be passed as parameter to the EmergentSys component.")
+		out.println("-p [number]\t Specify the port on which the server will be running.")
+		out.println("-app [app]\t Specify the app that the EmergentSys will load.")
+		out.println("-args [args]\t Specify the args that will be passed to the component EmergentSys will start.")
+	}
+
+	int App:main(AppParam params[]) {
+		perception = new Perception(true)
+		out.println("Perception and Assembly are up and running...\nWaiting for commands...")
+		serverStart()
+		return 0
+	}
+} 

@@ -1,0 +1,25 @@
+uses data.String
+
+const char IP[] = "localhost"
+const int PORT 	= 2011 
+
+component provides App requires io.Output out, rest.RESys, time.Timer t, data.IntUtil iu {
+	int App:main(AppParam param[]) {
+		RESys sys = new RESys(IP, PORT)
+		out.println("Setting main...")
+		sys.setMain("../repository/TCPNetwork.o")
+		out.println("Adding proxy...")
+		sys.addProxy("|../pal/monitoring/proxies/HTTPProxy.o|*(*:http.handler.GET.HTTPGET[0]:*)|")
+		out.println("Starting collection cycle...")
+		String configs[] = sys.getAllConfigs()
+		for (int count = 0; count < configs.arrayLength; count++) { 
+			sys.setConfig(configs[count].string)
+			t.sleep(100)
+			out.println("Perception data ($(iu.intToString(count))): $(sys.getPerceptionData())")
+		}
+		out.println("Terminating...")
+		sys.terminate()
+		out.println("Goodbye!")
+		return 0
+	}
+}

@@ -1,0 +1,12 @@
+
+interface Compression {
+	// compress - if success return the name of the resource
+	// else return an empty string
+	char[] compressResource(char resource[])
+
+	// used in content-type (gzip, deflate, etc.)
+	char[] algorithmName()
+
+	// used to verify if compressed content is cached
+	char[] getExtension()
+}

@@ -1,0 +1,169 @@
+// RESys - Rest EmergentSys
+//
+// This component is a REST abstarction of an emergent system.
+// In practice it provides REST access to EmergentSys.dn.
+//
+// Author: Roberto Rodrigues Filho
+// March @ 2017
+
+const char debugMSG[] = "[@RESys]"
+
+const char SET_MAIN[]			= "set_main"
+const char SET_CONFIG[]			= "set_config"
+const char GET_CONFIG[]			= "get_config"
+const char GET_ALL_CONFIGS[] 	= "get_all_configs"
+const char GET_PERCEPTION[]		= "get_perception"
+const char GET_PROXIES[] 		= "get_proxies"
+const char ADD_PROXY[]			= "add_proxy"
+const char ADD_COMP[]			= "add_comp"
+const char REMOVE_PROXY[]		= "remove_proxy"
+const char REMOVE_COMP[]		= "remove_comp"
+const char TERMINATE[]			= "terminate"
+const char END_OF_STR[] 		= "\r\n\r\n"
+
+component provides rest.RESys requires io.Output out, data.IntUtil iu, net.TCPSocket,
+ data.StringUtil strUtil, http.util.HTTPUtil httpUtil, data.json.JSONParser parser,
+ data.json.JSONEncoder jsonEncoder {
+
+	char SYSTEM_IP[] = ""
+	int SYSTEM_PORT = 0
+
+	RESys:RESys(char ip[], int port) {
+		SYSTEM_IP 	= ip
+		SYSTEM_PORT = port
+	}
+
+	/* Assembly functions */
+	// update this to return bool?	
+	void RESys:setMain(char path[]) {
+		char payload[] = new char[]("{\"comp\":\"", path, "\"}")
+		HTTPMessage msg = makeRequest("POST", SET_MAIN, payload)
+		if (msg.status != 200) { out.println("$(debugMSG) Something went wrong!") }
+	}
+
+	String[] RESys:getAllConfigs() {
+		HTTPMessage msg = makeRequest("GET", GET_ALL_CONFIGS, "")
+		if (msg.status == 200) { return parseJSONToConfigs(msg.postData) }
+		return null
+	}
+
+	char[] RESys:getConfig() {
+		HTTPMessage msg = makeRequest("GET", GET_CONFIG, "")
+		if (msg.status == 200) { return parseJSONToConfig(msg.postData) }
+		return null
+	}
+
+	void RESys:setConfig(char config[]) {
+		char payload[] = new char[]("{\"config\":\"", config, "\"}")
+		HTTPMessage msg = makeRequest("POST", SET_CONFIG, payload)
+		if (msg.status != 200) { out.println("$(debugMSG) Something went wrong!") }
+	}
+
+	void RESys:removeComp(String compPaths[]) {
+		char payload[] = new char[]("{\"comps\":", parseListToJSON(compPaths), "}")
+		HTTPMessage msg = makeRequest("POST", REMOVE_COMP, payload)
+		if (msg.status != 200) { out.println("$(debugMSG) Something went wrong!") }
+	}
+
+	void RESys:addComp(String compPaths[]) {
+		char payload[] = new char[]("{\"comps\": ", parseListToJSON(compPaths), "}")
+		HTTPMessage msg = makeRequest("POST", ADD_COMP, payload)
+		if (msg.status != 200) { out.println("$(debugMSG) Something went wrong!") }
+	}
+	
+	/* Perception functions */
+	void RESys:addProxy(char exp[]) {
+		char payload[] = new char[]("{\"exp\": \"", exp, "\"}")
+		HTTPMessage msg = makeRequest("POST", ADD_PROXY, payload)
+		if (msg.status != 200) { out.println("$(debugMSG) Something went wrong!") }
+	}
+
+	void RESys:removeProxy(char proxyExp[]) {
+		char payload[] = new char[]("{\"exp\": \"", proxyExp, "\"}")
+		HTTPMessage msg = makeRequest("POST", REMOVE_PROXY, payload)
+		if (msg.status != 200) { out.println("$(debugMSG) Something went wrong!") }
+	}
+
+	// returns json -- the parser will be done later 
+	char[] RESys:getPerceptionData() {
+		HTTPMessage msg = makeRequest("GET", GET_PERCEPTION, "")
+		if (msg.status == 200) { return msg.postData }
+		return null
+	}
+
+	String[] RESys:getProxies() {
+		HTTPMessage msg = makeRequest("GET", GET_PROXIES, "")
+		if (msg.status == 200) { return parseJSONToProxies(msg.postData) }
+		return null
+	}
+
+	bool RESys:terminate() {
+		HTTPMessage msg = makeRequest("GET", TERMINATE, "")
+		if (msg.status == 200) { return true }
+		return false
+	}
+
+	HTTPMessage makeRequest(char method[], char url[], char payload[]) {
+		char req[] 	= ""
+		if (method == "GET") { req = new char[]("GET /meta/", url, " HTTP/1.0", END_OF_STR) }
+		else if (method == "POST") {
+			req = new char[]("POST /meta/", url, " HTTP/1.0\r\n", "Content-Length: ",
+				iu.intToString(payload.arrayLength), END_OF_STR, payload)
+		}
+		return request(req)
+	}
+
+	HTTPMessage request(char req[]) {
+		TCPSocket s = new TCPSocket()
+		s.connect(SYSTEM_IP, SYSTEM_PORT)
+		s.send(req)		
+		HTTPMessage msg = httpUtil.readHTTPRequest(s)
+		s.disconnect()
+		return msg//.postData
+	}
+
+	String[] parseJSONToConfigs(char configsJSON[]) {
+		String configs[] = null
+		JSONElement jsonRoot = parser.parseDocument(configsJSON)
+		JSONElement el = parser.getValue(jsonRoot, "configs")
+		if ((el != null) && (el.children != null)) {
+			configs = new String[el.children.arrayLength]()
+			for (int i = 0; i < el.children.arrayLength; i++) {
+				configs[i] = new String(el.children[i].value)
+			}
+		}
+		return configs
+	}
+
+	char[] parseJSONToConfig(char configJSON[]) {
+		JSONElement jsonRoot = parser.parseDocument(configJSON)
+		JSONElement el = parser.getValue(jsonRoot, "config")
+		if (el != null) {
+			return el.value
+		}
+		return ""
+	}
+
+	String[] parseJSONToProxies(char proxiesJSON[]) {
+		String proxyList[] = null
+		JSONElement jsonRoot = parser.parseDocument(proxiesJSON)
+		JSONElement el = parser.getValue(jsonRoot, "proxies")
+		if ((el != null) && (el.children != null)) {
+			proxyList = new String[el.children.arrayLength]()
+			for (int i = 0; i < el.children.arrayLength; i++) {
+				proxyList[i] = new String(el.children[i].value)
+			}
+		}
+		return proxyList
+	}
+
+	char[] parseListToJSON(String content[]) {
+		char result[] = "["
+		for (int pointer = 0; pointer < content.arrayLength; pointer++) {
+			if (pointer == 0) { result = new char[](result, "\"", content[pointer].string, "\"") }
+			else { result = new char[](result, ", \"", content[pointer].string, "\"") }
+		}
+		result = new char[](result, "]")
+		return result
+	}
+}

@@ -1,0 +1,65 @@
+// HTTPGETCMP
+//
+// Processes the HTTP request with compression
+//
+// Author: Roberto Rodrigues Filho
+// April @ 2017
+
+const char debugMSG[] = "[@HTTPGETCMP]"
+
+component provides http.handler.GET.HTTPGET requires io.Output out, data.IntUtil iu, io.File, 
+	compression.Compression compress, http.handler.DCH.DCHandler dch {
+
+	void HTTPGET:handleRequest(HTTPMessage header) {
+		if (header == null) { return }
+		if (header.command == "GET") {
+			if (header.mimeType == "dn") { dch.process(header) }
+			else { processRequest(header) }
+		} else if (header.command == "POST") {
+			dch.process(header)
+		} else if (header.command == "DELETE") {
+			dch.process(header)
+		} else if (header.command == "PUT") {
+			dch.process(header)
+		} else {
+			header.socket.send("HTTP/1.1 501 Not Implemented\r\n")
+			header.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+			header.socket.send("Connection: close\r\n")
+			header.socket.send("\r\n")
+		}
+	}
+
+	void processRequest(HTTPMessage httpMessage) {
+		if (httpMessage.resourceExists) {
+			char newName[] = compress.compressResource(httpMessage.resource)
+			File fd = new File(newName, File.FILE_ACCESS_READ)
+			if (fd != null)	{ send(httpMessage, fd, true) }
+			else {
+				fd = new File(httpMessage.resource, File.FILE_ACCESS_READ)
+				if (fd != null) { send(httpMessage, fd, false) }
+				else { resourceNotFound(httpMessage) }
+			}
+		} else { resourceNotFound(httpMessage) }
+	}
+
+	void send(HTTPMessage httpMessage, File fd, bool compressed) {
+		httpMessage.socket.send("HTTP/1.1 200 OK\r\n")
+		httpMessage.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+		if (compressed) { httpMessage.socket.send("Content-Encoding: $(compress.algorithmName())\r\n") }
+		else { httpMessage.socket.send("Content-Encoding: binary\r\n") }
+		httpMessage.socket.send("Content-Length: $(iu.intToString(fd.getSize()))\r\n")
+		httpMessage.socket.send("Connection: close\r\n")
+		httpMessage.socket.send("Content-Type: $(httpMessage.mimeType)\r\n")
+		httpMessage.socket.send("\r\n")
+		byte fbuf[]
+		while ((fbuf = fd.read(HTTPUtil.BUFF_SIZE)).arrayLength > 0) { httpMessage.socket.send(fbuf) }
+		fd.close()
+	}
+
+	void resourceNotFound(HTTPMessage httpMessage) {
+		httpMessage.socket.send("HTTP/1.1 404 Resource Not Found\r\n")
+		httpMessage.socket.send("Server: $(HTTPUtil.SERVER_NAME)\r\n")
+		httpMessage.socket.send("Connection: close\r\n")
+		httpMessage.socket.send("\r\n")
+	}
+}

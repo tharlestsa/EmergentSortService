@@ -1,0 +1,18 @@
+uses data.String
+
+data IDCReference {
+	char path[]
+	IDC class
+}
+
+// TODO: should I return bool? I think it'll be useful to return the HTTP code in REST calls
+interface Assembly {
+	String[] getAllConfigs()
+	char[] getConfig()
+	void setMain(char path[], char args[])
+	bool setConfig(char config[])
+	void removeComp(String compPaths[])
+	void addComp(String compPaths[])
+	IDCReference[] getComponents(String paths[])
+	IDCReference[] getCompsByProvidedInterface(char providedIntf[])
+}

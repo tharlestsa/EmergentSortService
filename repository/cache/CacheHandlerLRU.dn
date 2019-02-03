@@ -1,0 +1,127 @@
+// CacheHanlderLRU.dn
+// This component implements the caching strategy named Least Recently Used.
+// This means that when deciding which stored item to replace it chooses the least recently used.
+// Author: Roberto Rodrigues Filho
+// August @ 2015
+
+const char debugMSG[] = "[@CacheHandlerLRU]"
+
+component provides cache.CacheHandler requires io.Output out, data.IntUtil iu, 
+	time.DateUtil dateUtil, time.Calendar ic {
+	static CachedData cache[]
+	static int arraySize
+	static Mutex cacheLock = new Mutex()
+
+	CachedData CacheHandler:get(char key[]) {
+		mutex(cacheLock) {
+			for (int i = 0; i < arraySize; i++) {
+				if (cache[i].key == key) {
+					cache[i].hits++
+					return cache[i]
+				}
+			}
+		}
+		return null
+	}
+
+	// the oldest is the one which will be replaced
+	int oldest(int index[]) {
+		DateTime dt = null
+		int oldestItem = 0
+		for (int i = 0; i < index.arrayLength; i++) {
+			if (dt == null) {
+				dt = cache[index[i]].timeAdded
+				oldestItem = index[i]
+			} else {
+				if (dateUtil.before(cache[index[i]].timeAdded, dt)) {
+					dt = cache[index[i]].timeAdded
+					oldestItem = index[i]
+				}
+			}
+		}
+		return oldestItem
+	}
+
+	int leastRecentlyUsed() {
+		int lfu[]
+		int least = INT_MAX
+		for (int i = 0; i < arraySize; i++) {
+			if (cache[i].hits <= least) {
+				if (cache[i].hits < least) {
+					// start over...
+					lfu = new int[](i)
+					least = cache[i].hits
+				} else { lfu = new int[](lfu, i) }
+			}
+		}
+		return oldest(lfu)
+	}
+
+	void CacheHandler:update(CachedData ncr) {
+		mutex(cacheLock) {
+			for (int i = 0; i < arraySize; i++) {
+				if (cache[i].key == ncr.key) {
+					cache[i].response = ncr.response
+					cache[i].resourceAge = ncr.resourceAge
+					cache[i].timeAdded = ic.getTime()
+					return
+				}
+			}
+			//not found add it
+			// copy ncr content to avoid read-only exception
+			// because ncr was created on another component
+			CachedData newEntry = new CachedData()
+			newEntry.command = ncr.command
+			newEntry.key = ncr.key
+			newEntry.resourceAge = ncr.resourceAge
+			newEntry.responseHeader = ncr.responseHeader
+			newEntry.response = ncr.response
+			newEntry.timeAdded = ic.getTime()
+			newEntry.mimeType = ncr.mimeType
+			newEntry.contentSize = ncr.contentSize
+			newEntry.contentType = ncr.contentType
+			if (cache == null) { cache = new CachedData[CacheHandler.MAX_SIZE]() }
+			if (arraySize == CacheHandler.MAX_SIZE) {
+				int index = leastRecentlyUsed()
+				cache[index] = newEntry
+			} else {
+				cache[arraySize] = newEntry
+				arraySize++
+			}
+		}
+	}
+
+	void CacheHandler:delete(char key[]) {
+		mutex(cacheLock) {
+			CachedData helper[] = new CachedData[CacheHandler.MAX_SIZE]()
+			int j = 0
+			int localArraySize = arraySize
+			for (int i = 0; i < localArraySize; i++) {
+				if (key != cache[i].key) {
+					helper[j] = cache[i]
+					j++	
+				} else { arraySize-- }
+			}
+			cache = helper
+		}
+	}
+
+	String[] CacheHandler:getKeys() {
+		String keys[] = null
+		mutex(cacheLock) {
+			keys = new String[arraySize]
+			for (int i = 0; i < arraySize; i++) {
+				keys[i] = new String()
+				keys[i].string = cache[i].key
+			}	
+		}
+		return keys
+	}
+
+	void CacheHandler:clear() {
+		mutex(cacheLock) {
+			cache = null
+			arraySize = 0
+		}
+	}	
+}

@@ -1,0 +1,21 @@
+// HTTPHeader
+//
+// Implements HTTP 1.0 (no keep alive...)
+//
+// Author: Roberto Rodrigues Filho
+// April @ 2017
+
+const char debugMSG[] = "[@HTTPHeader1_0]"
+
+// TODO: change the name of HTTPGET to HTTPHandler again
+component provides http.HTTPHeader requires http.handler.GET.HTTPGET, http.util.HTTPUtil httpUtil, io.Output out {
+	// HTTP1.0 there is no keep-alive (:
+	void HTTPHeader:processRequest(TCPSocket s) {
+		HTTPMessage header = httpUtil.readHeader(s)
+		if (header != null) {
+			HTTPGET httpGET = new HTTPGET()
+			httpGET.handleRequest(header)
+		}
+		s.disconnect()
+	}
+}
