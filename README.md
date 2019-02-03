@@ -46,7 +46,7 @@ Add additional notes about how to deploy this on a live system
 * **Marcos Felipe Barboza de Abreu** - *CS Undergrad* - [GitHub](https://github.com/marcosfelipp)
 * **Rosângela Divina de Sousa Santana** - *CS Master* - [GitHub](https://github.com/rosousas)
 * **Tharles de Sousa Andrade** - *CS Undergrad* - [GitHub](https://github.com/tharlestsa)
-* **Larissa Ramos Marques Silva** - *CS Master* - [GitHub]()
+* **Larissa Ramos Marques Silva** - *CS Master* - [GitHub](https://github.com/larissaramosm)
 
 ## License
 
