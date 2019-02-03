@@ -10,30 +10,47 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* [Dana] - Programming language
-* [PAL]  - Framework 
+* Dana - Programming language
+* PAL  - Framework 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Follow the steps for to get a development environment
 
-Say what the step will be
+1. Get the Dana from (http://www.projectdana.com/) according the version of your operating system (OS).
+Then, extract the .zip file into your home directory in Linux so that you have a folder called “dana”. 
+Inside the dana folder should be the files “dana”, “dnc”, “License.txt” etc.
 
-```
-Give the example
-```
-
-And repeat
+2. Open a terminal window and change into the “dana” directory.
 
 ```
-until finished
+sudo chmod +x dana dnc
 ```
+This tells Linux to allow these two files to be executable.
 
-End with an example of getting some data out of the system or using it for a little demo
+3. We set an environment variable DANA_HOME for the local user and also tell Linux where to find
+the Dana compiler and runtime executables. 
+
+```
+echo “export DANA_HOME=/home/your_username/dana/” >> ~/.bashrc
+echo “PATH=$PATH:$DANA_HOME” >> ~/.bashrc
+```
+Note that you need to replace your_username with the local username in your Linux environment.
+This completes your Dana installation. To allow the new environment variables to take effect you’ll need
+to log out of your session and log back in.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+1. You need to compile the programa .dn 
+
+```
+dnc Main.dn
+```
+You can now run the program with the command:
+
+```
+dana Main.o
+```
 
 ## Built With
 
@@ -54,6 +71,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Learn to build systems self-management ans self-learning
+* ..
