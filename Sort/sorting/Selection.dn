@@ -1,0 +1,5 @@
+component provides sort.Sort {
+  Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
+    return null
+  }
+}
