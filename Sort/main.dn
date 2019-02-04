@@ -23,51 +23,10 @@ io.Input in, io.Output out, data.IntUtil intU{
         for(int i=0; i<retorno.arrayLength; i++){
           out.println("$(intU.intToString(retorno[i].value))")
         }
-
-        char cmd[] = "start"
-        while (cmd != "exit") {
-          if (cmd != "start") { commandInterpret(cmd)	}
-			    out.print("$(debugMSG)> ")
-			    cmd = in.readln()
-        }
         //read json file
          File fd = new File("test_data.txt", File.FILE_ACCESS_READ)
          Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
 
         return 0
       }
-
-      void help() {
-      		out.println("$(debugMSG) Command list:")
-      		out.println(" $(debugMSG) $(HELP) - to list all commands")
-      		out.println(" $(debugMSG) $(BUBBLESORT) sort test_data.txt with BUBBLESORT")
-      		out.println(" $(debugMSG) $(HEAPSORT) sort test_data.txt with HEAPSORT")
-      		out.println(" $(debugMSG) $(INSERTIONSORT) sort test_data.txt with INSERTIONSORT")
-      		out.println(" $(debugMSG) $(MERGESORT) sort test_data.txt with MERGESORT")
-      		out.println(" $(debugMSG) $(QUICKSORT) sort test_data.txt with QUICKSORT")
-      		out.println(" $(debugMSG) $(SELECTIONSORT) sort test_data.text with SELECTIONSORT")
-      		out.println(" $(debugMSG) $(EXIT) - to finish execution")
-      	}
-
-      void commandInterpret(char cmd[]) {
-
-        if(cmd=="help"){
-          help()
-        }else if(cmd=="bubble"){
-
-        }else if(cmd=="heap"){
-
-        }else if(cmd=="insert"){
-
-        }else if(cmd=="merge"){
-
-        }else if(cmd=="quick"){
-
-        }else if(cmd=="selection"){
-
-        }else {
-            out.print("Invalid command")
-             out.print("$(debugMSG)> ")
-        }
-      }
-  }
+}
