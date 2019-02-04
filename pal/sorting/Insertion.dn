@@ -10,7 +10,6 @@ component provides sorting.Insertion requires
             for (int i = 1; i < array.arrayLength; i++) {
                 key = array[i]
                 j = i-1
-                out.println("$(iu.intToString(array[i]))")
                 /* Move elements of array[0..i-1], that are
                    greater than key, to one position ahead
                    of their current position */
