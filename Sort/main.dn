@@ -1,5 +1,4 @@
 const char debugMSG[] = "[@EmergentSort]"
-
 const char HELP[] 			 		= "help"
 const char BUBBLESORT[]     = "bubble"
 const char HEAPSORT[]       = "heap"
@@ -9,9 +8,22 @@ const char QUICKSORT[]      = "quick"
 const char SELECTIONSORT[]  = "selection"
 const char EXIT[] 			 		= "exit"
 
-component provides App requires io.File, sort.Sort, data.json.JSONEncoder parser, io.Input in, io.Output out, data.IntUtil intU{
+data teste{
+  int value
+}
+
+component provides App requires io.File, sort.Sort sort, data.json.JSONEncoder parser,
+io.Input in, io.Output out, data.IntUtil intU{
       int App:main(AppParam params[])
       {
+
+        teste array[]=new teste[](new teste(0), new teste(4), new teste(5),new teste(2),new teste(9),new teste(8),new teste(1), new teste(3))
+        teste retorno[]= sort.sorting(array, teste.[value], false)
+
+        for(int i=0; i<retorno.arrayLength; i++){
+          out.println("$(intU.intToString(retorno[i].value))")
+        }
+
         char cmd[] = "start"
         while (cmd != "exit") {
           if (cmd != "start") { commandInterpret(cmd)	}
@@ -38,6 +50,7 @@ component provides App requires io.File, sort.Sort, data.json.JSONEncoder parser
       	}
 
       void commandInterpret(char cmd[]) {
+
         if(cmd=="help"){
           help()
         }else if(cmd=="bubble"){

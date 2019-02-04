@@ -1,0 +1,41 @@
+component provides sort.Sort {
+
+  Data elements[]
+  int size
+
+  Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
+    elements= clone array
+    size=elements.arrayLength
+
+    if(size <= 1) return null
+
+    quicksort(0, size - 1)
+    return elements
+  }
+
+  int partition(int start, int end){
+    int i = start
+    for (int j = start; j < end; j++) {
+        if (elements[j] <= elements[end]) {
+            swap(i++, j)
+        }
+    }
+    swap(i, end)
+    return i
+  }
+
+  void swap (int i, int j){
+    Data k = elements[i]
+    elements[i] = elements[j]
+    elements[j] = k
+  }
+
+  void quicksort (int start, int end){
+      if (start >= end) return
+
+      int pivot = partition(start, end)
+
+      quicksort(start, pivot - 1)
+      quicksort(pivot + 1, end)
+  }
+}
