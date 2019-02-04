@@ -15,11 +15,11 @@ component provides sort.Sort {
       for (int j = i+1; j < elements.arrayLength; j++){
         /* code */
         if (ascending){
-            if (elements[j]<elements[next]){
+            if (elements[j]:.field < elements[next]:.field){
               next = j
             }
           }else {
-            if (elements[j]>elements[next]){
+            if (elements[j]:.field > elements[next]:.field){
               next = j
             }
           }

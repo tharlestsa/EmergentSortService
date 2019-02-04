@@ -1,4 +1,10 @@
+data teste{
+  int value
+}
+
 component provides sort.Sort requires Object ob, io.Output out,data.IntUtil iu{
+
+
 
   Data elements[]
   int size
@@ -15,12 +21,12 @@ component provides sort.Sort requires Object ob, io.Output out,data.IntUtil iu{
       for (int i = 0; i < elements.arrayLength - 1; i++) {
         /* code */
         if (ascending){
-          if (elements[i] > elements[i+1]){
+          if (elements[i]:.field > elements[i+1]:.field){
             swap(i,i+1)
             switched = true
           }
         }else{
-          if (elements[i] < elements[i+1]){
+          if (elements[i]:.field < elements[i+1]:.field){
             swap(i,i+1)
             switched = true
           }
