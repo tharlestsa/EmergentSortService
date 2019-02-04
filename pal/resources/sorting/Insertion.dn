@@ -1,0 +1,4 @@
+interface Insertion {
+	int[] sort(int array[])
+	void print(int array[])
+}
