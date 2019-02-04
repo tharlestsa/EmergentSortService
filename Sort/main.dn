@@ -18,14 +18,14 @@ io.Input in, io.Output out, data.IntUtil intU{
       {
 
         teste array[]=new teste[](new teste(0), new teste(4), new teste(5),new teste(2),new teste(9),new teste(8),new teste(1), new teste(3))
-        teste retorno[]= sort.sorting(array, teste.[value], false)
+        teste retorno[]= sort.sorting(array, teste.[value], true)
 
         for(int i=0; i<retorno.arrayLength; i++){
           out.println("$(intU.intToString(retorno[i].value))")
         }
         //read json file
-         File fd = new File("test_data.txt", File.FILE_ACCESS_READ)
-         Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
+         //File fd = new File("test_data.txt", File.FILE_ACCESS_READ)
+         //Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
 
         return 0
       }
