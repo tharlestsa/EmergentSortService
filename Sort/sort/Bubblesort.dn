@@ -1,31 +1,40 @@
-component provides sort.Sort requires io.Output out,data.IntUtil iu{
+component provides sort.Sort requires Object ob, io.Output out,data.IntUtil iu{
+
+  Data elements[]
+  int size
+
   Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
-    Data list[] = clone array
+    elements = clone array
+    size=elements.arrayLength
+
+    if(size <= 1) return null
+
     bool switched = true
     while (switched){
       switched = false
-      for (int i = 0; i < list.arrayLength - 1; i++) {
+      for (int i = 0; i < elements.arrayLength - 1; i++) {
         /* code */
         if (ascending){
-          if (list[i]>list[i+1]){
-            //switch
-            Data temp = list[i]
-            list[i]   = list[i+1]
-            list[i+1]= temp
-             switched = true
+          if (elements[i] > elements[i+1]){
+            swap(i,i+1)
+            switched = true
           }
         }else{
-          if (list[i]<list[i+1]){
-            //switch
-            Data temp = list[i]
-            list[i]   = list[i+1]
-            list[i+1]= temp
-             switched = true
+          if (elements[i] < elements[i+1]){
+            swap(i,i+1)
+            switched = true
           }
         }
-        //out.println("$(intToString(list[i]))")
+
       }
     }
-    return list
+    return elements
   }
+
+    void swap (int i, int j){
+      Data k = elements[i]
+      elements[i] = elements[j]
+      elements[j] = k
+    }
+
 }
