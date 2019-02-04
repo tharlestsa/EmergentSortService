@@ -1,5 +1,37 @@
 component provides sort.Sort {
+
+  Data elements[]
+  int size
+
   Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
-    return null
+    elements= clone array
+    size=elements.arrayLength
+
+    if(size <= 1) return null
+
+    for (int i = 0; i < elements.arrayLength; i++) {
+      /* code */
+      int next = i
+      for (int j = i+1; j < elements.arrayLength; j++){
+        /* code */
+        if (ascending){
+            if (elements[j]<elements[next]){
+              next = j
+            }
+          }else {
+            if (elements[j]>elements[next]){
+              next = j
+            }
+          }
+      }
+      swap ( i,  next)
+    }
+
+    return elements
+  }
+  void swap (int i, int j){
+    Data k = elements[i]
+    elements[i] = elements[j]
+    elements[j] = k
   }
 }
