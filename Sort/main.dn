@@ -1,3 +1,5 @@
+uses data.String
+
 const char debugMSG[] = "[@EmergentSort]"
 const char HELP[] 			 		= "help"
 const char BUBBLESORT[]     = "bubble"
@@ -14,7 +16,7 @@ data teste{
 }
 
 component provides App requires io.File, sort.Sort sort, data.json.JSONEncoder parser,
-io.Input in, io.Output out, data.IntUtil intU{
+io.Input in, io.Output out, data.IntUtil intU, data.StringUtil stringU{
       int App:main(AppParam params[])
       {
         teste array[]=new teste[](new teste(0, "c"), new teste(4, "b"), new teste(5, "a"))
@@ -24,7 +26,11 @@ io.Input in, io.Output out, data.IntUtil intU{
           //read json file
          //File fd = new File("test_data.txt", File.FILE_ACCESS_READ)
          //Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
-
+         String list []= new String[](new String("maria"),new String("antonio"),new String("barbosa"))
+         String sorted[]= sort.sorting(list, String.[string], true)
+         for(int i=0; i<sorted.arrayLength; i++){
+           out.println("$(sorted[i].string)")
+         }
         return 0
       }
 }
