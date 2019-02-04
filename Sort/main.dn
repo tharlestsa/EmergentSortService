@@ -10,20 +10,18 @@ const char EXIT[] 			 		= "exit"
 
 data teste{
   int value
+  char name[]
 }
 
 component provides App requires io.File, sort.Sort sort, data.json.JSONEncoder parser,
 io.Input in, io.Output out, data.IntUtil intU{
       int App:main(AppParam params[])
       {
+        teste array[]=new teste[](new teste(0, "c"), new teste(4, "b"), new teste(5, "a"))
+       
+        teste retorno[]= sort.sorting(array, teste.[name], true)
 
-        teste array[]=new teste[](new teste(0), new teste(4), new teste(5),new teste(2),new teste(9),new teste(8),new teste(1), new teste(3))
-        teste retorno[]= sort.sorting(array, teste.[value], true)
-
-        for(int i=0; i<retorno.arrayLength; i++){
-          out.println("$(intU.intToString(retorno[i].value))")
-        }
-        //read json file
+          //read json file
          //File fd = new File("test_data.txt", File.FILE_ACCESS_READ)
          //Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
 

@@ -1,5 +1,5 @@
 {
   "defaultLinks" : [
-      {"interface" : "Sort", "component", "Selection"}
+      {"interface" : "Sort", "component", "Quicksort"}
     ]
 }
