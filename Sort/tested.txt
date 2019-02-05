@@ -1,0 +1,4 @@
+Quicksort
+Bubblesort
+Selection
+Heapsort

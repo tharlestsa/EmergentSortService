@@ -15,22 +15,30 @@ data teste{
   char name[]
 }
 
-component provides App requires io.File, sort.Sort sort, data.json.JSONEncoder parser,
+component provides App requires time.Timer tm, io.TextFile, sort.Sort sort, data.json.JSONEncoder parser,
 io.Input in, io.Output out, data.IntUtil intU, data.StringUtil stringU{
       int App:main(AppParam params[])
       {
+        TextFile f = new TextFile("log.txt", File.FILE_ACCESS_WRITE)
+        while (true){
         teste array[]=new teste[](new teste(0, "c"), new teste(4, "b"), new teste(5, "a"))
-       
+
         teste retorno[]= sort.sorting(array, teste.[name], true)
+
 
           //read json file
          //File fd = new File("test_data.txt", File.FILE_ACCESS_READ)
          //Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
-         String list []= new String[](new String("maria"),new String("antonio"),new String("barbosa"))
+         /*String list []= new String[](new String("maria"),new String("antonio"),new String("barbosa"))
          String sorted[]= sort.sorting(list, String.[string], true)
-         for(int i=0; i<sorted.arrayLength; i++){
-           out.println("$(sorted[i].string)")
+         */
+         for(int i=0; i<retorno.arrayLength; i++){
+           f.writeLine("$(retorno[i].name)")
+           //out.print("$(retorno[i].name)")
          }
+         //out.print("\n")
+         tm.sleep(500)
+       }
         return 0
       }
 }
