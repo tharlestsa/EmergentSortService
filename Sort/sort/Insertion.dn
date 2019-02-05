@@ -1,5 +1,22 @@
-component provides sort.Sort {
+component provides sort.Sort requires io.Output out, data.IntUtil intU {
+  Data elements[]
+
   Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
-    return null
+    elements = clone array
+
+    if(elements.arrayLength <= 1) return elements
+
+    for (int i = 1; i < elements.arrayLength; i++){
+
+      Data aux = elements[i]
+      int j = i
+
+      while ((j > 0) && (elements[j-1]:.field > aux:.field)){
+        elements[j] = elements[j-1]
+        j -= 1
+      }
+      elements[j] = aux
+    }
+    return elements
   }
 }
