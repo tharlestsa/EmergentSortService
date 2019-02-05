@@ -1,0 +1,17 @@
+
+component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket,
+                                io.Output out, data.IntUtil intUtil, time.Timer timeT{
+    int App:main(AppParam params[]){
+
+        TCPSocket server = new TCPSocket()
+
+        server.connect("localhost", 2019)
+
+        server.send("Qualquer coisa\r")
+
+        server.disconnect()
+        
+        return 0
+    }
+
+}

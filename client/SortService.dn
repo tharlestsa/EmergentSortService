@@ -1,0 +1,31 @@
+uses data.String
+
+component provides App requires io.File, io.FileSystem fileSystem, data.json.JSONEncoder parser,
+                                io.Output out, data.IntUtil intUtil, time.Timer timeT{
+    int App:main(AppParam params[]){
+        int i = 1
+        char c[] = intUtil.intToString(i)
+        char file_name[] = "./data/data$c.json"
+
+        while(fileSystem.exists(file_name)){
+            File fd = new File(file_name, File.FILE_ACCESS_READ)
+
+            Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
+            
+            // Fazer chamada ao sistema para ordenação
+
+            out.println("Arquivo $c lido com sucesso!")
+            fd.close()
+            i++
+
+            c = intUtil.intToString(i)
+            file_name = "./data/data$c.json"
+
+            // Esperar um tempo...
+            timeT.sleep(2000)
+            
+        }
+    return 0 
+    }
+
+}
