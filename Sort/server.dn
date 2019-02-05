@@ -1,0 +1,37 @@
+
+component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, net.TCPServerSocket {
+
+    void readSocket(TCPSocket client){
+        char buffer[]
+        char payload[]
+
+        while((buffer = client.recv(1)) != null){
+            if(buffer == "\r"){
+                break
+            }
+            payload = new char[](payload,buffer)
+        }
+
+        out.println("$(payload)")
+
+        client.send()
+        client.disconnect()
+
+    }
+
+	int App:main(AppParam params[]) {
+		TCPServerSocket host = new TCPServerSocket()
+
+		if (!host.bind(TCPServerSocket.ANY_ADDRESS, 2019)) {
+			out.println("Error: failed to bind master socket")
+			return 1
+		}
+		while (true) {
+			TCPSocket client = new TCPSocket()
+			if (client.accept(host)) {
+                readSocket(client)
+            }
+		}
+		return 0
+	}
+}
