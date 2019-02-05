@@ -1,23 +1,55 @@
+uses data.String
 
-component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, net.TCPServerSocket {
+/* data MyData {
+    char fruit[]
+    char size[]
+    char color[]
+} */
+
+component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, net.TCPServerSocket, sort.Sort sort,  data.json.JSONEncoder encoder {
 
     void readSocket(TCPSocket client){
         char buffer[]
         char payload[]
 
-        while((buffer = client.recv(1)) != null){
+        while((buffer = client.recv(1024)) != null){
+            out.println("$(buffer)")
             if(buffer == "\r"){
                 break
             }
             payload = new char[](payload,buffer)
         }
 
+        //JSONElement rows[] = parser.parseDocument(payload)
+        //Data response[] = sort.sorting(parser.documentToString(rows), String.[string], true)
+
+        String rows[] = encoder.jsonToArray(payload, typeof(String[]), null)
+
+        out.println("des-Ordenado:")
+        out.println("")
+
+        for(int i=0; i<rows.arrayLength; i++)
+        {
+            out.println("$(rows[i].string)")
+        }
+
+        String sorted[] = sort.sorting(rows, String.[string], true)
+
+        out.println("Ordenado:")
+        out.println("")
+
+        for(int i=0; i<sorted.arrayLength; i++)
+        {
+            out.println("$(sorted[i].string)")
+        }
+
         out.println("$(payload)")
 
-        client.send()
+        client.send("teste")
         client.disconnect()
 
     }
+
 
 	int App:main(AppParam params[]) {
 		TCPServerSocket host = new TCPServerSocket()

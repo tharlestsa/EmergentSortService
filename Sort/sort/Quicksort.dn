@@ -56,7 +56,7 @@ void snapshot(){
 
       if(j > start)
 		    quicksort( start, j+1)
-	    
+
       if(i < end)
 		    quicksort( i, end)
     }
