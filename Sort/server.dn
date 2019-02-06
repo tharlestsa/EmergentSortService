@@ -35,7 +35,7 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, n
         out.println("ordering data")
         String sorted[] = sort.sorting(rows, String.[string], true)
         out.println("data ordered")
-
+/*
         out.println("Ordenado:")
         out.println("")
 
@@ -44,9 +44,10 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, n
             out.println("$(sorted[i].string)")
         }
 
-        /* out.println("$(payload)") */
+        /* out.println("$(payload)")
 
         client.send("teste")
+ */
         client.disconnect()
 
     }

@@ -10,7 +10,7 @@ data Algo {
   Metric metrics[]
 }
 
-component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, io.Output out, io.File, data.json.JSONEncoder parser, UCB1.UCB ucb, time.Calendar ic, time.DateUtil du,time.Timer timeT{
+component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, io.Output out, io.File, data.json.JSONParser parser,data.json.JSONEncoder encoder, UCB1.UCB ucb, time.Calendar ic, time.DateUtil du,time.Timer timeT{
         int App:main(AppParam params[]){
           RESys sys = new RESys(IP, PORT)
           out.println("Setting main...")
@@ -38,22 +38,36 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
             actions = new String[](actions,new String("a"+i)) */
 
           ucb.setActions(actions)
-          Map map[] = new Map[](new Map("data", "data_"))
+          //Map map[] = new Map[](new Map("data", "data_"))
 
 
-          for (int i = 0;i < 10;i++){
+          while(true){
             int a = ucb.getAction()
             sys.setConfig(actions[a].string)
 
-            timeT.sleep(1000)
-            out.println("$(sys.getPerceptionData())")
+            timeT.sleep(5000)
+            //out.println("$(sys.getPerceptionData())")
 
             JSONElement perceptionData = parser.parseDocument(sys.getPerceptionData())
 
       			char metricName[] = parser.getValueByDot("metrics[0].name", perceptionData).value
+            char config[]     = parser.getValueByDot("metrics[0].config", perceptionData).value
+            out.println (config)
+            if(metricName == "execution time"){
 
+      				int totalExecutionTime = iu.intFromString(parser.getValueByDot("metrics[0].value", perceptionData).value)
+      				int totalCount = iu.intFromString(parser.getValueByDot("metrics[0].count", perceptionData).value)
 
-            Algo algo = parser.jsonToData( sys.getPerceptionData(),typeof(Algo),0)
+      				dec averageExecutionTime = (0.0 + totalExecutionTime) / totalCount
+      				dec reward = (10000.0 - averageExecutionTime)/10000.0
+
+      				out.println("[Reward] $(decU.decToString(reward)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
+
+      				ucb.consumeData(reward)
+
+      			}
+
+            //Algo algo = parser.jsonToData( sys.getPerceptionData(),typeof(Algo),0)
             //dec cost = algo.metrics[0].value/algo.metrics[0].counter
             //ucb.consumeData(1/cost)
 

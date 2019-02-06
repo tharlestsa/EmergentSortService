@@ -3,10 +3,10 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
                                 io.Output out, data.IntUtil intUtil, time.Timer timeT, data.json.JSONParser parser{
 
 
-    char[] getFileData(int i)
+    char[] getFileData(char file_name[])
     {
-        char c[] = intUtil.intToString(i)
-        char file_name[] = "./data/nomes.json"
+        //char c[] = intUtil.intToString(i)
+        //char file_name[] = "./data/nomes.json"
 
         File fd = new File(file_name, File.FILE_ACCESS_READ)
         char content[] = fd.read(fd.getSize())
@@ -19,11 +19,12 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
 
         TCPSocket server = new TCPSocket()
         int i=0
-        while(i<10){
+        while(true){
             server.connect("localhost", 2019)
 
-            char content[] = getFileData(1)
+            char content[] = getFileData(params[0].string)
     /*
+            "./data/nomes.json"
             out.println("des-Ordenado:")
             out.println("")
 
