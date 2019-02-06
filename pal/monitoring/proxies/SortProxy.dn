@@ -1,0 +1,52 @@
+const char debugMSG[] = "[@SortProxy]"
+
+component provides sort.Sort, monitoring.BeingMonitored requires io.Output out,
+	sort.Sort, monitoring.Container,time.Calendar ic, time.DateUtil du {
+
+	static Container monitor
+
+	implementation BeingMonitored {
+		Event[] BeingMonitored:getEvents() {
+			if (monitor == null) { monitor = new Container() }
+			return monitor.getEvents()
+		}
+
+		Metric[] BeingMonitored:getMetrics() {
+			if (monitor == null) { monitor = new Container() }
+			return monitor.getMetrics()
+		}
+
+		void BeingMonitored:turnMonitorOn() {
+			if (monitor == null) { monitor = new Container() }
+			monitor.turnMonitorOn()
+		}
+
+		void BeingMonitored:turnMonitorOff() {
+			if (monitor == null) { monitor = new Container() }
+			monitor.turnMonitorOff()
+		}
+	}
+
+	implementation Sort {
+		Data[] Sort:sorting(Data array[], TypeField field, bool ascending) {
+			if (monitor == null) {
+				monitor = new Container()
+				monitor.turnMonitorOn()
+			}
+
+			Data sorted[]
+			Sort sort = new Sort()
+			DateTime end
+			DateTime start = ic.getTime()
+			//TODO... metric and collection...
+
+			sorted = sort.sorting(array,field,ascending)
+			 end = ic.getTime()
+			//TODO... metric and event collection
+			monitor.addMetric("execution time",du.toMilliseconds(du.diff(start,end)),true)
+
+			
+			return sorted
+		}
+	}
+}

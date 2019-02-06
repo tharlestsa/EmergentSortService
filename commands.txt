@@ -1,0 +1,3 @@
+add_proxy |../pal/monitoring/proxies/SortProxy.o|*(*:sort.Sort[0]:*)|
+get_perception_data
+ dana -sp ../Sort/ InteractivePerception.o ../Sort/server.o
