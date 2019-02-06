@@ -1,3 +1,8 @@
 add_proxy |../pal/monitoring/proxies/SortProxy.o|*(*:sort.Sort[0]:*)|
 get_perception_data
  dana -sp ../Sort/ InteractivePerception.o ../Sort/server.o
+
+
+ dnc . -sp "../repository;../Sort"
+ dana -sp ../repository/ AutonomousPerceptionSort.o
+ dana -sp "../repository;../Sort" EmergentSys.o

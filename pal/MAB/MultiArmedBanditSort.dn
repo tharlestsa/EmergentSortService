@@ -1,0 +1,62 @@
+data Row{
+      dec values[]
+}
+const char IP[] = "localhost"
+const int PORT 	= 2011
+component provides App requires rest.RESys ,data.DecUtil decU,data.IntUtil iu, io.Output out, io.File, data.json.JSONEncoder parser, UCB1.UCB ucb, time.Calendar ic, time.DateUtil du{
+        int App:main(AppParam params[]){
+          RESys sys = new RESys(IP, PORT)
+          out.println("Setting main...")
+          sys.setMain("../Sort/server.o")
+          out.println("Adding proxy...")
+          //sys.addProxy("|../pal/monitoring/proxies/HTTPProxy.o|*(*:http.handler.GET.HTTPGET[0]:*)|")
+          sys.addProxy("|../pal/monitoring/proxies/SortProxy.o|*(*:sort.Sort[0]:*)|")
+
+          out.println("Starting collection cycle...")
+          String configs[] = sys.getAllConfigs()
+          for (int count = 0; count < configs.arrayLength; count++) {
+            sys.setConfig(configs[count].string)
+            t.sleep(1000)
+            out.println("Perception data ($(iu.intToString(count))): $(sys.getPerceptionData())")
+
+          }
+          File fd = new File("test_data.txt",File.FILE_ACCESS_READ)
+          //parse the file in to rows
+          Row rows[] = parser.jsonToArray(fd.read(fd.getSize()),typeof(Row[]),null)
+
+
+          String actions[]
+          //for each column set an string of action named a,b,c, ...
+          for (int i = 0;i< rows[0].values.arrayLength;i++)
+            actions = new String[](actions,new String("a"+i))
+
+          ucb.setActions(actions)
+
+          for (int i = 0;i < rows.arrayLength;i++){
+            int a = ucb.getAction()
+            DateTime start = ic.getTime()
+            ucb.consumeData(rows[i].values[a])
+            DateTime end = ic.getTime()
+            int mills =  du.toMilliseconds(du.diff(start,end))
+            out.println("action $(actions[a].string), time $(iu.intToString(mills)) ms")
+          }
+          dec max =rows[0].values[0]
+          dec min =rows[0].values[0]
+          for (int i = 0; i < rows.arrayLength; i++) {
+            /* code */
+            for (int j = 0; j < rows[0].values.arrayLength; j++) {
+              /* code */
+              if (max< = rows[i].values[j]) {
+                /* code */
+                max = rows[i].values[j]
+              }
+              if (min > = rows[i].values[j]) {
+                /* code */
+                min = rows[i].values[j]
+              }
+            }
+          }
+
+          return 0
+        }
+}

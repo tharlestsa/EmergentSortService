@@ -2,7 +2,7 @@ data teste{
   int value
 }
 
-component provides sort.Sort requires Object ob, io.Output out,data.IntUtil iu{
+component provides sort.Sort requires io.Output out,data.IntUtil iu{
 
 
 

@@ -1,4 +1,0 @@
-interface Sort{
-  //Receive an array and return the result of sort
-  Data[] sorting(Data array[], TypeField field, bool ascending)
-}
