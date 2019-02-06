@@ -38,16 +38,24 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
             actions = new String[](actions,new String("a"+i)) */
 
           ucb.setActions(actions)
+          Map map[] = new Map[](new Map("data", "data_"))
+
 
           for (int i = 0;i < 10;i++){
             int a = ucb.getAction()
             sys.setConfig(actions[a].string)
 
             timeT.sleep(1000)
-            Algo algo = parser.jsonToData( sys.getPerceptionData(),typeof(Algo),null)
-            dec cost = algo.metrics[0].value/algo.metrics[0].counter
             out.println("$(sys.getPerceptionData())")
-            ucb.consumeData(1/cost)
+
+            JSONElement perceptionData = parser.parseDocument(sys.getPerceptionData())
+
+      			char metricName[] = parser.getValueByDot("metrics[0].name", perceptionData).value
+
+
+            Algo algo = parser.jsonToData( sys.getPerceptionData(),typeof(Algo),0)
+            //dec cost = algo.metrics[0].value/algo.metrics[0].counter
+            //ucb.consumeData(1/cost)
 
             //int mills =  du.toMilliseconds(du.diff(start,end))
             //out.println("action $(actions[a].string)")

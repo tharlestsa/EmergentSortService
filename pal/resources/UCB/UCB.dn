@@ -1,0 +1,9 @@
+uses data.String
+
+
+interface UCB  {
+
+  void setActions(String actions[])
+  int getAction()
+  void consumeData(dec reward)
+}

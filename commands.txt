@@ -6,3 +6,8 @@ get_perception_data
  dnc . -sp "../repository;../Sort"
  dana -sp ../repository/ AutonomousPerceptionSort.o
  dana -sp "../repository;../Sort" EmergentSys.o
+
+
+dnc . -sp "../repository/;../Sort"
+
+dana -sp "../repository/;../Sort" AutonomousPerceptionSort.o
