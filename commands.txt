@@ -11,3 +11,22 @@ get_perception_data
 dnc . -sp "../repository/;../Sort"
 
 dana -sp "../repository/;../Sort" AutonomousPerceptionSort.o
+
+
+
+
+
+
+Map map[] = new Map[])(new Map("name", "name"),
+										 (new Map("value", "value"),
+										 (new Map("high", "high"),
+										 (new Map("counter", "counter"),
+										 (new Map("started", "started"),
+										 (new Map("finished", "finished")
+						)
+
+
+// sequencia de execuçao
+/pal$ dana -sp "../repository;../Sort" EmergentSys.o
+/pal$ dana -sp "../repository;../Sort" MultiArmedBanditSort.o
+/client$ dana clientTest.o ./data/nomes.json
