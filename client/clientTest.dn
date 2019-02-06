@@ -18,24 +18,27 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
     int App:main(AppParam params[]){
 
         TCPSocket server = new TCPSocket()
+        int i=0
+        while(i<10){
+            server.connect("localhost", 2019)
 
-        server.connect("localhost", 2019)
+            char content[] = getFileData(1)
+    /*
+            out.println("des-Ordenado:")
+            out.println("")
 
-        char content[] = getFileData(1)
-/*
-        out.println("des-Ordenado:")
-        out.println("")
+            for(int i=0; i<content.arrayLength; i++)
+            {
+                out.println("$(content[i])")
+            } */
 
-        for(int i=0; i<content.arrayLength; i++)
-        {
-            out.println("$(content[i])")
-        } */
+            //server.send(getJsonFromFile())
+            server.send(new char[](content, "\r"))
 
-        //server.send(getJsonFromFile())
-        server.send(new char[](content, "\r"))
-
-        server.disconnect()
-
+            server.disconnect()
+            //timeT.sleep(10000)
+            i++
+        }
         return 0
     }
 

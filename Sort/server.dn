@@ -11,29 +11,30 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, n
     void readSocket(TCPSocket client){
         char buffer[]
         char payload[]
-
+        out.println("reciving data")
         while((buffer = client.recv(1024)) != null){
-            out.println("$(buffer)")
-            if(buffer == "\r"){
+            //out.println("$(buffer)")
+            if(buffer[buffer.arrayLength - 2] =="\r"){
                 break
             }
             payload = new char[](payload,buffer)
         }
-
+        out.println("data recived")
         //JSONElement rows[] = parser.parseDocument(payload)
         //Data response[] = sort.sorting(parser.documentToString(rows), String.[string], true)
 
         String rows[] = encoder.jsonToArray(payload, typeof(String[]), null)
-
+/*
         out.println("des-Ordenado:")
         out.println("")
 
         for(int i=0; i<rows.arrayLength; i++)
         {
             out.println("$(rows[i].string)")
-        }
-
+        } */
+        out.println("ordering data")
         String sorted[] = sort.sorting(rows, String.[string], true)
+        out.println("data ordered")
 
         out.println("Ordenado:")
         out.println("")
@@ -43,7 +44,7 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, n
             out.println("$(sorted[i].string)")
         }
 
-        out.println("$(payload)")
+        /* out.println("$(payload)") */
 
         client.send("teste")
         client.disconnect()
