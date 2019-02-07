@@ -45,7 +45,7 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
             int a = ucb.getAction()
             sys.setConfig(actions[a].string)
 
-            timeT.sleep(5000)
+            timeT.sleep(10000)
             //out.println("$(sys.getPerceptionData())")
 
             JSONElement perceptionData = parser.parseDocument(sys.getPerceptionData())
