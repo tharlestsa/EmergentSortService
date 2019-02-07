@@ -40,33 +40,37 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
           ucb.setActions(actions)
           //Map map[] = new Map[](new Map("data", "data_"))
 
+          int a = ucb.getAction()
+          sys.setConfig(actions[a].string)
+          JSONElement perceptionData = parser.parseDocument(sys.getPerceptionData())
+          char metricName[] = parser.getValueByDot("metrics[0].name", perceptionData).value
+          char config[]     = parser.getValueByDot("metrics[0].config", perceptionData).value
+          out.println (config)
 
           while(true){
-            int a = ucb.getAction()
-            sys.setConfig(actions[a].string)
 
-            timeT.sleep(10000)
             //out.println("$(sys.getPerceptionData())")
 
-            JSONElement perceptionData = parser.parseDocument(sys.getPerceptionData())
+            perceptionData = parser.parseDocument(sys.getPerceptionData())
+      			metricName = new char [](parser.getValueByDot("metrics[0].name", perceptionData).value)
+            config     = new char [](parser.getValueByDot("metrics[0].config", perceptionData).value)
 
-      			char metricName[] = parser.getValueByDot("metrics[0].name", perceptionData).value
-            char config[]     = parser.getValueByDot("metrics[0].config", perceptionData).value
-            out.println (config)
             if(metricName == "execution time"){
 
+              sys.setConfig(actions[a].string)
       				int totalExecutionTime = iu.intFromString(parser.getValueByDot("metrics[0].value", perceptionData).value)
       				int totalCount = iu.intFromString(parser.getValueByDot("metrics[0].count", perceptionData).value)
 
       				dec averageExecutionTime = (0.0 + totalExecutionTime) / totalCount
-      				dec reward = (10000.0 - averageExecutionTime)/10000.0
-
+      				dec reward = (10000.0 - averageExecutionTime)/averageExecutionTime
+              out.println (config)
       				out.println("[Reward] $(decU.decToString(reward)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
 
       				ucb.consumeData(reward)
 
       			}
-
+            a = ucb.getAction()
+            timeT.sleep(1000)
             //Algo algo = parser.jsonToData( sys.getPerceptionData(),typeof(Algo),0)
             //dec cost = algo.metrics[0].value/algo.metrics[0].counter
             //ucb.consumeData(1/cost)
