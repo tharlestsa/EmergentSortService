@@ -29,7 +29,7 @@ component provides UCB requires data.DecUtil decU,data.IntUtil iu, io.Output out
 
       dec val = ((rewards[i] ))+bonus
 
-      val = (val- 9.5118038073675112169) / (13.2793038073675112169 - 9.5118038073675112169)
+      //val = (val- 9.5118038073675112169) / (13.2793038073675112169 - 9.5118038073675112169)
       if (val > maxVal){
         maxVal = val
         maxInd = i
