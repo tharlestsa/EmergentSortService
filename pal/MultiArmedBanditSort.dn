@@ -10,8 +10,12 @@ data Algo {
   Metric metrics[]
 }
 
+//dec maxInverted
+
 component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, io.Output out, io.File, data.json.JSONParser parser,data.json.JSONEncoder encoder, UCB1.UCB ucb, time.Calendar ic, time.DateUtil du,time.Timer timeT{
         int App:main(AppParam params[]){
+          dec maxInverted = 0.0000001
+          dec maxReward = 0.000000001
           RESys sys = new RESys(IP, PORT)
           out.println("Setting main...")
           sys.setMain("../Sort/server.o")
@@ -33,6 +37,10 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
 
 
           String actions[]= sys.getAllConfigs()
+          for (int i = 0; i < actions.arrayLength; i++) {
+            /* code */
+            out.println(actions[i].string)
+          }
           //for each column set an string of action named a,b,c, ...
           /* for (int i = 0;i< configs.arrayLength;i++)
             actions = new String[](actions,new String("a"+i)) */
@@ -56,21 +64,38 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
             config     = new char [](parser.getValueByDot("metrics[0].config", perceptionData).value)
 
             if(metricName == "execution time"){
+              dec actionConter = ucb.getCounts()
+              int TotalConter  = ucb.getTotal()
 
               sys.setConfig(actions[a].string)
       				int totalExecutionTime = iu.intFromString(parser.getValueByDot("metrics[0].value", perceptionData).value)
-      				int totalCount = iu.intFromString(parser.getValueByDot("metrics[0].count", perceptionData).value)
+      				int count = iu.intFromString(parser.getValueByDot("metrics[0].count", perceptionData).value)
+              //int totalCount = iu.intFromString(parser.getValueByDot("metrics[0].totalCount", perceptionData).value)
 
-      				dec averageExecutionTime = (0.0 + totalExecutionTime) / totalCount
-      				dec reward = (10000.0 - averageExecutionTime)/averageExecutionTime
-              out.println (config)
-      				out.println("[Reward] $(decU.decToString(reward)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
+              out.println("\nconfiguration $(iu.intToString(a)) , action counter $(decU.decToString(actionConter)) executions $(iu.intToString(TotalConter))")
+
+      				dec averageExecutionTime = (0.0 + totalExecutionTime) / count
+              dec reward =(1.0/averageExecutionTime)
+              if (maxReward < reward){
+                maxReward = reward
+              }
+              /*
+              reward = reward/maxReward
+              /* dec invertedAvrET =  averageExecutionTime
+              if (maxInverted < invertedAvrET){
+                maxInverted = invertedAvrET
+              }
+              dec reward = (invertedAvrET )/maxInverted */
+
+      				//dec reward = (10000.0 - averageExecutionTime)/averageExecutionTime
+              //out.println (a)
+      				out.println("[Reward] $(decU.decToString(reward)) counts $(iu.intToString(count)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
 
       				ucb.consumeData(reward)
 
       			}
             a = ucb.getAction()
-            timeT.sleep(1000)
+            timeT.sleep(500)
             //Algo algo = parser.jsonToData( sys.getPerceptionData(),typeof(Algo),0)
             //dec cost = algo.metrics[0].value/algo.metrics[0].counter
             //ucb.consumeData(1/cost)
