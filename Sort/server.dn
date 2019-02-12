@@ -1,7 +1,7 @@
 uses data.String
 
 component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, 
-                                net.TCPServerSocket,  data.json.JSONEncoder encoder {
+                                net.TCPServerSocket, data.json.JSONEncoder encoder {
 
     int read_header(TCPSocket client){
         char buffer[]

@@ -20,7 +20,9 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
 
         out.println("0 to run with sensor, 1 to run with file")
         int input  = intUtil.intFromString(stdin.readln())
-        
+
+        //TODO: Ler ip do servidor por linha de comando
+                
         int i = 0
         while(i < 10){
             server.connect("10.0.0.121", 2019)
