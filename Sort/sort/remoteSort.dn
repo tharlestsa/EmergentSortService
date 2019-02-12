@@ -1,3 +1,4 @@
+uses data.String
 data teste{
   int value
 }
@@ -24,7 +25,7 @@ component provides sort.Sort requires io.Output out,
           }
           header = new char[](header, buffer)
       }
-      size_file = intUtil.intFromString(header)
+      size_file = iu.intFromString(header)
       return size_file
   }
 
@@ -32,7 +33,7 @@ component provides sort.Sort requires io.Output out,
   char []sort(TCPSocket server,char content[] ){
     //send content
     int file_size = content.arrayLength
-    char test[]=new char[](intUtil.intToString(file_size),"\r")
+    char test[]=new char[](iu.intToString(file_size),"\r")
 
     server.send(test)
     //server.send("\r")
@@ -50,12 +51,12 @@ component provides sort.Sort requires io.Output out,
 
 
   Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
-    elements =  encoder.jsonFromArray(array,null)
+    char content[]=  encoder.jsonFromArray(array,null)
     TCPSocket server = new TCPSocket()
     char sorted[]
     server.connect("10.0.0.14", 2019)
-    sorted = new char[]( sort(server,elements))
-    Data list[] = encoder.jsonToArray(sorted, typeof(String[]), null)
+    sorted = new char[]( sort(server,content))
+    String list[] = encoder.jsonToArray(sorted, typeof(String[]), null)
 
     return list
   }
