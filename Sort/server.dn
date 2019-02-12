@@ -1,54 +1,58 @@
 uses data.String
 
-component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, 
-                                net.TCPServerSocket, data.json.JSONEncoder encoder, 
-                                data.json.JSONParser parser, sort.Sort sort,{
+component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket,
+                                net.TCPServerSocket,
+                                data.json.JSONEncoder encoder,
+                                data.json.JSONParser parser,
+                                sort.Sort sort {
 
     int read_header(TCPSocket client){
         char buffer[]
         char header[]
         int size_file
-
         while(true){
             buffer = client.recv(1)
             if(buffer[0] == "\r"){
                 size_file = iu.intFromString(header)
                 break
             }
-            header = new char[](header, buffer)
+             //header = new char[](header, buffer)
+             header= new char[]( header, buffer)
         }
+        out.println(header)
         return size_file
     }
 
     char[] read_field(TCPSocket client){
         char buffer[]
-        char payload []
-
+        char field[]
         while(true){
             buffer = client.recv(1)
             if(buffer[0] == "\r"){
-                return payload
+                return buffer
             }
-            payload = new char[](payload, buffer)
+              field = new char[](field, buffer)
         }
-        return buffer
+        return field
     }
-    
+
     void readSocket(TCPSocket client){
-        
+
         char payload[]
         int size_file = read_header(client)
+        out.println("data size")
         payload = client.recv(size_file)
         out.println("data recived")
+        //JSONElement rows[] = parser.parseDocument(payload)
 
-        Data sorted
-        //JSONElement rows = parser.parseDocument(payload)
-        //Data sorted[] = sort.sorting(encoder.jsonToData(payload, Type(Data), null), String.[string], true)
-
-        char response[] = encoder.jsonFromData(sorted, null)
-
+        String list[] = encoder.jsonToArray(payload, typeof(String[]), null)
+         out.println("sorting data")
+        Data sorted[] = sort.sorting(list, String.[string], true)
+        out.println("data sorted")
+        char response[] = encoder.jsonFromArray(sorted,null)
+        out.println(response)
         int file_size = response.arrayLength
-        client.send(file_size)
+        client.send(iu.intToString(file_size))
         client.send("\r")
         client.send(response)
         client.disconnect()

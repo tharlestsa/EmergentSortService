@@ -1,5 +1,5 @@
 {
   "defaultLinks" : [
-      {"interface" : "Sort", "component", "Quicksort"}
+      {"interface" : "Sort", "component", "Bubblesort"}
     ]
 }
