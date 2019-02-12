@@ -7,15 +7,10 @@ component provides sort.Sort requires io.Output out, data.IntUtil intU
     elements= clone array
     attribute=field
 
-    out.println("antes")
-    snapshot()
 
     if(elements.arrayLength <= 1) return null
 
     quicksort( 0, elements.arrayLength)
-
-    out.println("depois")
-    snapshot()
 
     return elements
   }

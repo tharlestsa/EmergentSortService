@@ -23,11 +23,7 @@ component provides sort.Sort  {
         heapify(n,largest)
       }
   }
-
-
-
-
-
+  
   Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
     elements= clone array
     size=elements.arrayLength
