@@ -1,55 +1,53 @@
 uses data.String
 
-/* data MyData {
-    char fruit[]
-    char size[]
-    char color[]
-} */
+component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, 
+                                net.TCPServerSocket,  data.json.JSONEncoder encoder {
 
-component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, net.TCPServerSocket, sort.Sort sort,  data.json.JSONEncoder encoder {
-
-    void readSocket(TCPSocket client){
+    int read_header(TCPSocket client){
         char buffer[]
-        char payload[]
-        out.println("reciving data")
-        while((buffer = client.recv(1024)) != null){
-            //out.println("$(buffer)")
-            if(buffer[buffer.arrayLength - 2] =="\r"){
+
+        while(true){
+            buffer = client.recv(1)
+            if(buffer[0] == "\r"){
+                size_file = iu.intFromString(header)
                 break
             }
-            payload = new char[](payload,buffer)
+            header = new char[](payload, buffer)
         }
+        return size_file
+    }
+
+    char[] read_field(TCPSocket client){
+        char buffer[]
+
+        while(true){
+            buffer = client.recv(1)
+            if(buffer[0] == "\r"){
+                return header
+            }
+            header = new char[](payload, buffer)
+        }
+    }
+    
+    void readSocket(TCPSocket client){
+        
+        char payload[]
+        int size_file = read_header(client)
+        payload = client.recv(size_file)
         out.println("data recived")
+
         //JSONElement rows[] = parser.parseDocument(payload)
         //Data response[] = sort.sorting(parser.documentToString(rows), String.[string], true)
 
         String rows[] = encoder.jsonToArray(payload, typeof(String[]), null)
-/*
-        out.println("des-Ordenado:")
-        out.println("")
 
-        for(int i=0; i<rows.arrayLength; i++)
-        {
+        for(int i=0; i<rows.arrayLength; i++){
             out.println("$(rows[i].string)")
-        } */
-        out.println("ordering data")
-        String sorted[] = sort.sorting(rows, String.[string], true)
-        out.println("data ordered")
-/*
-        out.println("Ordenado:")
-        out.println("")
-
-        for(int i=0; i<sorted.arrayLength; i++)
-        {
-            out.println("$(sorted[i].string)")
-        }
-
-        /* out.println("$(payload)")
+        } 
+        // String sorted[] = sort.sorting(rows, String.[string], true)
 
         client.send("teste")
- */
         client.disconnect()
-
     }
 
 
@@ -63,7 +61,7 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, n
 		while (true) {
 			TCPSocket client = new TCPSocket()
 			if (client.accept(host)) {
-                readSocket(client)
+                asynch::readSocket(client)
             }
 		}
 		return 0

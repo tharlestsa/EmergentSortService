@@ -1,0 +1,53 @@
+uses data.String
+
+component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket,
+                                io.Output out, data.IntUtil intUtil, time.Timer timeT, 
+                                data.json.JSONParser parser, os.Run run,
+                                data.json.JSONEncoder encoder, data.StringUtil str
+                                io.Imput stdin{
+
+
+    char[] getFileData(char file_name[])
+    {
+        File fd = new File(file_name, File.FILE_ACCESS_READ)
+        char content[] = fd.read(fd.getSize())
+        fd.close()
+        return content
+    }
+
+    int App:main(AppParam params[]){
+        TCPSocket server = new TCPSocket()
+
+        out.println("0 to run with sensor, 1 to run with file")
+        int input  = intUtil.intFromString(stdin.readln())
+        
+        int i = 0
+        while(i < 10){
+            server.connect("10.0.0.121", 2019)
+            
+            if(imput == 0){
+                char osCommand[] = new char[]("sudo ./get_sensor > arq.json")
+                RunStatus temperature = run.execute(osCommand)
+            }
+
+            char content[] = getFileData("arq.json")    
+            int file_size = content.arrayLength
+            
+            //Format: "POST\rfield\rdata
+
+            server.send(intUtil.intToString(file_size))
+            server.send("\r")
+            server.send(content)
+            char buffer[] = server.recv(5)
+
+            out.println(buffer)
+            server.disconnect()
+            timeT.sleep(2000)
+            
+            i = i+1
+        }
+
+        return 0
+    }
+
+}
