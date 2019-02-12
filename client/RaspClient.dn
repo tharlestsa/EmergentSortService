@@ -15,6 +15,20 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
         return content
     }
 
+    int read_header(TCPSocket server){
+        char buffer[]
+
+        while(true){
+            buffer = server.recv(1)
+            if(buffer[0] == "\r"){
+                size_file = iu.intFromString(header)
+                break
+            }
+            header = new char[](payload, buffer)
+        }
+        return size_file
+    }
+
     int App:main(AppParam params[]){
         TCPSocket server = new TCPSocket()
 
@@ -22,10 +36,10 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
         int input  = intUtil.intFromString(stdin.readln())
 
         //TODO: Ler ip do servidor por linha de comando
-                
+
         int i = 0
         while(i < 10){
-            server.connect("10.0.0.121", 2019)
+            server.connect("localhost", 2019)
             
             if(imput == 0){
                 char osCommand[] = new char[]("sudo ./get_sensor > arq.json")
@@ -40,7 +54,9 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
             server.send(intUtil.intToString(file_size))
             server.send("\r")
             server.send(content)
-            char buffer[] = server.recv(5)
+            
+            int size_file = read_header(server)
+            char buffer[] = server.recv(size_file)
 
             out.println(buffer)
             server.disconnect()

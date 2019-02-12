@@ -36,13 +36,17 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket,
         payload = client.recv(size_file)
         out.println("data recived")
 
-        JSONElement rows[] = parser.parseDocument(payload)
-        Data response[] = sort.sorting(parser.documentToString(rows), String.[string], true)
+        //JSONElement rows[] = parser.parseDocument(payload)
+        //Data response[] = sort.sorting(parser.documentToString(rows), String.[string], true)
 
-        int file_size = response.arrayLength
-        client.send(file_size)
-        server.send("\r")
-        client.send(response)
+        String rows[] = encoder.jsonToArray(payload, typeof(String[]), null)
+
+        for(int i=0; i<rows.arrayLength; i++){
+            out.println("$(rows[i].string)")
+        } 
+        // String sorted[] = sort.sorting(rows, String.[string], true)
+
+        client.send("teste")
         client.disconnect()
     }
 
@@ -50,7 +54,7 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket,
 	int App:main(AppParam params[]) {
 		TCPServerSocket host = new TCPServerSocket()
 
-		if (!host.bind(TCPServerSocket.ANY_ADDRESS, 2019)) {
+		if (!host.bind(TCPServerSocket.ANY_ADDRESS, 2020)) {
 			out.println("Error: failed to bind master socket")
 			return 1
 		}

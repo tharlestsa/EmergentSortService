@@ -1,0 +1,30 @@
+component provides sort.Sort requires io.Output out, data.IntUtil intU{
+	Data elements[]
+	TypeField attribute
+
+	Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
+		elements = clone array
+		return sendDataToSort(elements, field)
+	}
+
+	char[] sendDataToSort(Data array[], char[] field){
+		TCPSocket server = new TCPSocket()
+		server.connect("10.0.0.121", 2020)
+		
+		char content[] = 
+		int file_size = content.arrayLength
+		
+		//Format: "POST\rfield\rdata
+
+		server.send(intUtil.intToString(file_size))
+		server.send("\r")
+		server.send(content)
+		char dataOrdened[] = server.recv(5)
+		server.disconnect()
+		
+        return dataOrdened
+
+	}
+
+
+
