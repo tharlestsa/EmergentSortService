@@ -1,10 +1,13 @@
 uses data.String
 
 component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, 
-                                net.TCPServerSocket, data.json.JSONEncoder encoder {
+                                net.TCPServerSocket, data.json.JSONEncoder encoder, 
+                                data.json.JSONParser parser, sort.Sort sort,{
 
     int read_header(TCPSocket client){
         char buffer[]
+        char header[]
+        int size_file
 
         while(true){
             buffer = client.recv(1)
@@ -12,21 +15,23 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket,
                 size_file = iu.intFromString(header)
                 break
             }
-            header = new char[](payload, buffer)
+            header = new char[](header, buffer)
         }
         return size_file
     }
 
     char[] read_field(TCPSocket client){
         char buffer[]
+        char payload []
 
         while(true){
             buffer = client.recv(1)
             if(buffer[0] == "\r"){
-                return header
+                return payload
             }
-            header = new char[](payload, buffer)
+            payload = new char[](payload, buffer)
         }
+        return buffer
     }
     
     void readSocket(TCPSocket client){
@@ -36,12 +41,15 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket,
         payload = client.recv(size_file)
         out.println("data recived")
 
-        JSONElement rows[] = parser.parseDocument(payload)
-        Data response[] = sort.sorting(parser.documentToString(rows), String.[string], true)
+        Data sorted
+        //JSONElement rows = parser.parseDocument(payload)
+        //Data sorted[] = sort.sorting(encoder.jsonToData(payload, Type(Data), null), String.[string], true)
+
+        char response[] = encoder.jsonFromData(sorted, null)
 
         int file_size = response.arrayLength
         client.send(file_size)
-        server.send("\r")
+        client.send("\r")
         client.send(response)
         client.disconnect()
     }

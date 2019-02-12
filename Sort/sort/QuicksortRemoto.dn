@@ -4,9 +4,10 @@ component provides sort.Sort requires io.Output out, data.IntUtil intU{
 
 	Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
 		elements = clone array
-		return sendDataToSort(elements, field)
+		//return sendDataToSort(elements, field)
+		return array
 	}
-
+/*
 	char[] sendDataToSort(Data array[], char[] field){
 		TCPSocket server = new TCPSocket()
 		server.connect("10.0.0.121", 2020)
@@ -25,6 +26,6 @@ component provides sort.Sort requires io.Output out, data.IntUtil intU{
         return dataOrdened
 
 	}
-
-
+*/
+}
 
