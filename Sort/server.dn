@@ -50,7 +50,7 @@ component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket,
         Data sorted[] = sort.sorting(list, String.[string], true)
         out.println("data sorted")
         char response[] = encoder.jsonFromArray(sorted,null)
-        out.println(response)
+        //out.println(response)
         int file_size = response.arrayLength
         client.send(iu.intToString(file_size))
         client.send("\r")
