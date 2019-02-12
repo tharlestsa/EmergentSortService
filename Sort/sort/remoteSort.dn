@@ -1,0 +1,69 @@
+data teste{
+  int value
+}
+
+component provides sort.Sort requires io.Output out,
+                                      data.IntUtil iu,
+                                      data.json.JSONEncoder encoder,
+                                      data.json.JSONParser parser,
+                                      net.TCPSocket{
+
+
+
+  Data elements[]
+  int size
+  int read_header(TCPSocket server){
+      char buffer[]
+      char header[]
+      int size_file
+      int i = 0
+      while(true){
+          buffer = server.recv(1)
+          if(buffer[i] == "\r"){
+              break
+          }
+          header = new char[](header, buffer)
+      }
+      size_file = intUtil.intFromString(header)
+      return size_file
+  }
+
+
+  char []sort(TCPSocket server,char content[] ){
+    //send content
+    int file_size = content.arrayLength
+    char test[]=new char[](intUtil.intToString(file_size),"\r")
+
+    server.send(test)
+    //server.send("\r")
+    //out.println(content)
+    server.send(content)
+    //server.send(new char[](content, "\r"))
+    //recive sorted data
+    int size_file = read_header(server)
+    char sortedContent[] = server.recv(size_file)
+    //out.println(sortedContent)
+    server.disconnect()
+    return sortedContent
+  }
+
+
+
+  Data[] Sort:sorting(Data array[], TypeField field, bool ascending){
+    elements =  encoder.jsonFromArray(array,null)
+    TCPSocket server = new TCPSocket()
+    char sorted[]
+    server.connect("10.0.0.14", 2019)
+    sorted = new char[]( sort(server,elements))
+    Data list[] = encoder.jsonToArray(sorted, typeof(String[]), null)
+
+    return list
+  }
+
+    void swap (int i, int j){
+      Data k = elements[i]
+      elements[i] = elements[j]
+      elements[j] = k
+    }
+
+}

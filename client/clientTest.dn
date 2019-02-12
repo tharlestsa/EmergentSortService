@@ -73,7 +73,7 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
 
             //server.send(getJsonFromFile())
 
-            timeT.sleep(2000)
+            //timeT.sleep(200)
             i++
         }
         return 0
