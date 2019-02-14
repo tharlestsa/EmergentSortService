@@ -7,22 +7,60 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
     {
         //char c[] = intUtil.intToString(i)
         //char file_name[] = "./data/nomes.json"
-
         File fd = new File(file_name, File.FILE_ACCESS_READ)
         char content[] = fd.read(fd.getSize())
         fd.close()
-
         return content
     }
+    int read_header(TCPSocket server){
+        char buffer[]
+        char header[]
+        int size_file
+        int i = 0
+        while(true){
+            buffer = server.recv(1)
+            if(buffer[i] == "\r"){
+                break
+            }
+            header = new char[](header, buffer)
+        }
+        size_file = intUtil.intFromString(header)
+        return size_file
+    }
+
+
+    char []sort(TCPSocket server,char content[] ){
+      //send content
+      int file_size = content.arrayLength
+      char test[]=new char[](intUtil.intToString(file_size),"\r")
+
+      server.send(test)
+      //server.send("\r")
+      //out.println(content)
+      server.send(content)
+      //server.send(new char[](content, "\r"))
+      //recive sorted data
+      int size_file = read_header(server)
+      char sortedContent[] = server.recv(size_file)
+      //out.println(sortedContent)
+      server.disconnect()
+      return sortedContent
+    }
+
+
 
     int App:main(AppParam params[]){
 
         TCPSocket server = new TCPSocket()
         int i=0
+        char sorted[]
         while(true){
             server.connect("localhost", 2019)
 
             char content[] = getFileData(params[0].string)
+            //out.println (content)
+            sorted = new char[]( sort(server,content))
+
     /*
             "./data/nomes.json"
             out.println("des-Ordenado:")
@@ -34,16 +72,11 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
             } */
 
             //server.send(getJsonFromFile())
-            server.send(new char[](content, "\r"))
 
-            server.disconnect()
-            //timeT.sleep(10000)
+            //timeT.sleep(200)
             i++
         }
         return 0
     }
-
-
-
 
 }

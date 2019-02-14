@@ -49,6 +49,7 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
           //Map map[] = new Map[](new Map("data", "data_"))
 
           int a = ucb.getAction()
+          int lest = a
           sys.setConfig(actions[a].string)
           JSONElement perceptionData = parser.parseDocument(sys.getPerceptionData())
           char metricName[] = parser.getValueByDot("metrics[0].name", perceptionData).value
@@ -64,44 +65,29 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
             config     = new char [](parser.getValueByDot("metrics[0].config", perceptionData).value)
 
             if(metricName == "execution time"){
+
               dec actionConter = ucb.getCounts()
               int TotalConter  = ucb.getTotal()
 
-              sys.setConfig(actions[a].string)
       				int totalExecutionTime = iu.intFromString(parser.getValueByDot("metrics[0].value", perceptionData).value)
       				int count = iu.intFromString(parser.getValueByDot("metrics[0].count", perceptionData).value)
-              //int totalCount = iu.intFromString(parser.getValueByDot("metrics[0].totalCount", perceptionData).value)
 
               out.println("\nconfiguration $(iu.intToString(a)) , action counter $(decU.decToString(actionConter)) executions $(iu.intToString(TotalConter))")
 
       				dec averageExecutionTime = (0.0 + totalExecutionTime) / count
               dec reward =(1.0/averageExecutionTime)
-              if (maxReward < reward){
-                maxReward = reward
-              }
-              /*
-              reward = reward/maxReward
-              /* dec invertedAvrET =  averageExecutionTime
-              if (maxInverted < invertedAvrET){
-                maxInverted = invertedAvrET
-              }
-              dec reward = (invertedAvrET )/maxInverted */
 
-      				//dec reward = (10000.0 - averageExecutionTime)/averageExecutionTime
-              //out.println (a)
-      				out.println("[Reward] $(decU.decToString(reward)) counts $(iu.intToString(count)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
-
+      				out.println("[Reward] $(decU.decToString(reward)) proxy counts $(iu.intToString(count)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
       				ucb.consumeData(1.0/reward)
 
       			}
             a = ucb.getAction()
+            if (a!=lest){
+              lest=a
+              sys.setConfig(actions[a].string)
+            }
             timeT.sleep(500)
-            //Algo algo = parser.jsonToData( sys.getPerceptionData(),typeof(Algo),0)
-            //dec cost = algo.metrics[0].value/algo.metrics[0].counter
-            //ucb.consumeData(1/cost)
 
-            //int mills =  du.toMilliseconds(du.diff(start,end))
-            //out.println("action $(actions[a].string)")
           }
 
 
