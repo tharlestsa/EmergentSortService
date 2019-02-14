@@ -6,4 +6,6 @@ interface UCB  {
   void setActions(String actions[])
   int getAction()
   void consumeData(dec reward)
+  int getTotal()
+  dec getCounts()
 }
