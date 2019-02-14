@@ -78,7 +78,7 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
               dec reward =(1.0/averageExecutionTime)
 
       				out.println("[Reward] $(decU.decToString(reward)) proxy counts $(iu.intToString(count)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
-      				ucb.consumeData(1.0/reward)
+      				ucb.consumeData(reward)
 
       			}
             a = ucb.getAction()
