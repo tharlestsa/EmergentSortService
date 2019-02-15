@@ -12,7 +12,18 @@ data Algo {
 
 //dec maxInverted
 
-component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, io.Output out, io.File, data.json.JSONParser parser,data.json.JSONEncoder encoder, UCB1.UCB ucb, time.Calendar ic, time.DateUtil du,time.Timer timeT{
+component provides App requires  rest.RESys ,
+                                 data.DecUtil decU,
+                                 data.IntUtil iu,
+                                 data.StringUtil StringU,
+                                 io.Output out,
+                                 io.File,
+                                 data.json.JSONParser parser,
+                                 data.json.JSONEncoder encoder,
+                                 UCB1.UCB ucb,
+                                 time.Calendar ic,
+                                 time.DateUtil du,
+                                 time.Timer timeT{
         int App:main(AppParam params[]){
           dec maxInverted = 0.0000001
           dec maxReward = 0.000000001
@@ -36,10 +47,18 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
           Row rows[] = parser.jsonToArray(fd.read(fd.getSize()),typeof(Row[]),null) */
 
 
-          String actions[]= sys.getAllConfigs()
+          String actions[] = sys.getAllConfigs()
+
+          String actionName[] = null
           for (int i = 0; i < actions.arrayLength; i++) {
             /* code */
-            out.println(actions[i].string)
+            String explode1[]=StringU.explode(actions[i].string,"|")
+            String explode2[]=StringU.explode(explode1[0].string,",")
+            actionName = new String[](actionName,new String(explode2[explode2.arrayLength -1].string))
+            //actionName[i]=explode2[explode2.arrayLength -1]
+            //out.println(actions[i].string)
+            out.println(actionName[i].string)
+            //actionName[i]=stringU.explode([0].string,",")[action.arrayLength - 1]
           }
           //for each column set an string of action named a,b,c, ...
           /* for (int i = 0;i< configs.arrayLength;i++)
@@ -72,7 +91,9 @@ component provides App requires  rest.RESys ,data.DecUtil decU,data.IntUtil iu, 
       				int totalExecutionTime = iu.intFromString(parser.getValueByDot("metrics[0].value", perceptionData).value)
       				int count = iu.intFromString(parser.getValueByDot("metrics[0].count", perceptionData).value)
 
-              out.println("\nconfiguration $(iu.intToString(a)) , action counter $(decU.decToString(actionConter)) executions $(iu.intToString(TotalConter))")
+              //out.println("\nconfiguration $(iu.intToString(a)) , action counter $(decU.decToString(actionConter)) executions $(iu.intToString(TotalConter))")
+
+              out.println("\nconfiguration $(actionName[a].string) , action counter $(decU.decToString(actionConter)) executions $(iu.intToString(TotalConter))")
 
       				dec averageExecutionTime = (0.0 + totalExecutionTime) / count
               dec reward =(1.0/averageExecutionTime)
