@@ -1,0 +1,80 @@
+uses data.String
+
+component provides App requires io.Output out, data.IntUtil iu, net.TCPSocket, 
+                                net.TCPServerSocket, data.json.JSONEncoder encoder, 
+                                data.json.JSONParser parser, sort.Sort sort,{
+
+    int read_header(TCPSocket client){
+        char buffer[]
+        char header[]
+        int size_file
+
+        while(true){
+            buffer = client.recv(1)
+            if(buffer[0] == "\r"){
+                size_file = iu.intFromString(header)
+                break
+            }
+            header = new char[](header, buffer)
+        }
+        return size_file
+    }
+
+    char[] read_field(TCPSocket client){
+        char buffer[]
+        char payload []
+
+        while(true){
+            buffer = client.recv(1)
+            if(buffer[0] == "\r"){
+                return payload
+            }
+            payload = new char[](payload, buffer)
+        }
+        return buffer
+    }
+    
+    void readSocket(TCPSocket client){
+        
+        char payload[]
+        int size_file = read_header(client)
+        
+        payload = client.recv(size_file)
+        out.println("data recived")
+
+        String rows[] = encoder.jsonToArray(payload, typeof(String[]), null)
+        String sorted[] = sort.sorting(rows, String.[string], true)
+
+        out.println("data sorted")
+
+        char header[]  
+        for(int i=0; i<sorted.arrayLength; i++){
+           header = new char[](sorted[i].string, header)
+           header = new char[]("\n", header)
+         }
+        int file_size = header.arrayLength
+
+        client.send(iu.intToString(file_size))
+        client.send("\r")
+
+        client.send(header)
+        client.disconnect()
+    }
+
+
+	int App:main(AppParam params[]) {
+		TCPServerSocket host = new TCPServerSocket()
+
+		if (!host.bind(TCPServerSocket.ANY_ADDRESS, 2019)) {
+			out.println("Error: failed to bind master socket")
+			return 1
+		}
+		while (true) {
+			TCPSocket client = new TCPSocket()
+			if (client.accept(host)) {
+                asynch::readSocket(client)
+            }
+		}
+		return 0
+	}
+}
