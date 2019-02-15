@@ -4,7 +4,7 @@
 // 1. allows component monitoring through proxy;
 // 2. supports proxy management (addition and removal of proxy);
 // 3. applies proxy to configs using proxy expression language (PEL);
-//
+// 
 // Author: Roberto Rodrigues Filho
 // February @ 2017
 
@@ -30,7 +30,7 @@ const bool PROXY = true
 // TODO: revisit the variable's name -- it's getting confusing...
 component provides monitoring.Perception requires io.Output out, data.IntUtil iu, composition.Assembly assembly, composition.ObjectWriter,
 	data.StringUtil strUtil, util.DescriptionHandler dh {
-
+	
 	Rule rule // active proxy rule -- one proxy rule at a time (for now and for simplicity -- maybe that's the right move here)
 	String cleanConfigs[] // configs with no proxies
 	String availableProxies[]
@@ -38,19 +38,19 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 
 	Perception:Perception(bool verbose) {
 		if (verbose) { out.println("$(debugMSG) Proxy set up procedure started!") }
-		// TODO: generate proxy code
+		// TODO: generate proxy code 
 		if (verbose) { /*out.println("$(debugMSG) 1. Proxy code generation...")*/ }
 		availableProxies = new String[](availableProxies, new String("../pal/monitoring/proxies/HTTPProxy.o"))
 		availableProxies = new String[](availableProxies, new String("../pal/monitoring/proxies/SortProxy.o"))
 		if (verbose) { /*out.println("$(debugMSG) -> Proxy code generation done.")*/ }
-		// TODO: compile proxy code
+		// TODO: compile proxy code 
 		if (verbose) { /*out.println("$(debugMSG) 2. Proxy compilation...")*/ }
 		if (verbose) { /*out.println("$(debugMSG) -> Proxy compilation done.")*/ }
 		// annotate all proxy
 		if (verbose) { /*out.println("$(debugMSG) 3. Proxy annotation...")*/ }
 		for (int pointer = 0; pointer < availableProxies.arrayLength; pointer++) {
 			ObjectWriter objWriter = new ObjectWriter(availableProxies[pointer].string)
-			if (objWriter.getInfoSection("PROX", "bool") == null) {
+			if (objWriter.getInfoSection("PROX", "bool") == null) { 
 				objWriter.addInfoSection(new InfoSection("PROX", "bool", "true"))
 			}
 		}
@@ -96,14 +96,14 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 				int configPointer = 0
 				if ((configPointer = reducedVerifier(config)) != INT_MAX) {
 					if (assembly.setConfig(rule.configs[configPointer].proxyConfig)) {
-						// clean Proxy data ensures that the data in proxy is the data immediately gathered
+						// clean Proxy data ensures that the data in proxy is the data immediately gathered 
 						// after setConfig() function was called
 						cleanProxyData()
 						// updating current config
 						setCurrentProxyConfigToFalse()
 						rule.configs[configPointer].current = true
-						rule.configs[configPointer].configCompressed = config
-					} else {
+						rule.configs[configPointer].configCompressed = config	
+					} else { 
 						out.println("$(debugMSG) Something went wrong, adaptation was not completed.")
 						return
 					}
@@ -116,7 +116,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 					}
 				}
 			}
-			out.println("$(debugMSG) Config filtered and changed successfully.")
+			out.println("$(debugMSG) Config filtered and changed successfully.")	
 		}
 	}
 
@@ -139,7 +139,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 						cleanConfigs = new String[](cleanConfigs, allConfs[configPointer])
 					} else {
 						if ((mapPointer = isStringinList(allConfs[configPointer].string, proxyConfigs)) != INT_MAX) {
-							newConfigs = new Map[](newConfigs,
+							newConfigs = new Map[](newConfigs, 
 									new Map(new char[](rule.configs[mapPointer].config),
 									"",
 									new char[](rule.configs[mapPointer].proxyConfig),
@@ -193,7 +193,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 				assembly.setConfig(getConfig()) // this should work
 				removeComp(rule.paths)
 				rule = null
-			} else {
+			} else { 
 				out.println("$(debugMSG) Proxy expression not found!")
 				return
 			}
@@ -222,58 +222,60 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 				if (components[compPointer].class :< BeingMonitored != null) {
 					BeingMonitored beingMonitored = new BeingMonitored() from components[compPointer].class :< BeingMonitored
 					char componentName[] 	= components[compPointer].path
-					// this is important! in case you store a list of perception data, you won't know
+					// this is important! in case you store a list of perception data, you won't know 
 					// in the future from what arch the data is
 					char currentConfig[] 	= getConfig()
 					Metric metrics[] 		= beingMonitored.getMetrics()
 					Event events[] 			= beingMonitored.getEvents()
 					for (int i = 0; i < metrics.arrayLength; i++) {
-						if (metricsJSON.arrayLength == 0) { metricsJSON = "\"metrics\": [{"	}
-						else { metricsJSON = new char[](metricsJSON, ", {")	}
-						if (metrics[i].high) { preferHigh = "true" }
+						if (metricsJSON.arrayLength == 0) { metricsJSON = "\"metrics\": [{"	} 
+						else { metricsJSON = new char[](metricsJSON, ", {")	}				
+						if (metrics[i].high) { preferHigh = "true" } 
 						else { preferHigh = "false" }
-						metricsJSON = new char[](metricsJSON, "\"name\": \"$(metrics[i].name)\"")
-						metricsJSON = new char[](metricsJSON, ", \"config\": \"", currentConfig, "\"")
-						metricsJSON = new char[](metricsJSON, ", \"source\": \"", componentName, "\"")
-						metricsJSON = new char[](metricsJSON, ", \"value\":", iu.intToString(metrics[i].value))
-						metricsJSON = new char[](metricsJSON, ", \"count\":", iu.intToString(metrics[i].counter))
-						metricsJSON = new char[](metricsJSON, ", \"preferHigh\":", preferHigh)
-						metricsJSON = new char[](metricsJSON, ", \"startTime\": \"")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].started.year), "-")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].started.month), "-")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].started.day), " ")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].started.hour), ":")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].started.minute), ":")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].started.second), "\"")
-						metricsJSON = new char[](metricsJSON, ", \"endTime\": \"")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].finished.year), "-")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].finished.month), "-")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].finished.day), " ")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].finished.hour), ":")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].finished.minute), ":")
-						metricsJSON = new char[](metricsJSON, iu.intToString(metrics[i].finished.second), "\"}")
+						metricsJSON = new char[](metricsJSON,
+									"\"name\": \"$(metrics[i].name)\"",
+									", \"config\": \"", currentConfig, "\"",
+									", \"source\": \"", componentName, "\"",
+									", \"value\":", iu.intToString(metrics[i].value),
+									", \"count\":", iu.intToString(metrics[i].counter),
+									", \"preferHigh\":", preferHigh,
+									", \"startTime\": \"",
+									iu.intToString(metrics[i].started.year), "-", 
+									iu.intToString(metrics[i].started.month), "-", 
+									iu.intToString(metrics[i].started.day), " ",
+									iu.intToString(metrics[i].started.hour), ":",
+									iu.intToString(metrics[i].started.minute), ":",
+									iu.intToString(metrics[i].started.second), "\"",
+									", \"endTime\": \"",
+									iu.intToString(metrics[i].finished.year), "-", 
+									iu.intToString(metrics[i].finished.month), "-", 
+									iu.intToString(metrics[i].finished.day), " ",
+									iu.intToString(metrics[i].finished.hour), ":",
+									iu.intToString(metrics[i].finished.minute), ":",
+									iu.intToString(metrics[i].finished.second), "\"}")
 					}
 					for (int i = 0; i < events.arrayLength; i++) {
 						if (eventsJSON.arrayLength == 0) { eventsJSON = "\"events\": [{" }
 						else { eventsJSON = new char[](eventsJSON, ", {") }
-						eventsJSON = new char[](eventsJSON,	"\"name\": \"$(events[i].type)\"")
-						eventsJSON = new char[](eventsJSON,	", \"source\": \"", componentName, "\"")
-						eventsJSON = new char[](eventsJSON,	", \"value\":", iu.intToString(events[i].quantifier))
-						eventsJSON = new char[](eventsJSON,	", \"count\":", iu.intToString(events[i].counter))
-						eventsJSON = new char[](eventsJSON,	", \"startTime\": \"")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].started.year), "-")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].started.month), "-")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].started.day), " ")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].started.hour), ":")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].started.minute), ":")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].started.second), "\"")
-						eventsJSON = new char[](eventsJSON,	", \"endTime\": \"")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].finished.year), "-")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].finished.month), "-")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].finished.day), " ")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].finished.hour), ":")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].finished.minute), ":")
-						eventsJSON = new char[](eventsJSON,	iu.intToString(events[i].finished.second), "\"}")
+						eventsJSON = new char[](eventsJSON,
+							"\"name\": \"$(events[i].type)\"",
+							", \"source\": \"", componentName, "\"",
+							", \"value\":", iu.intToString(events[i].quantifier),
+							", \"count\":", iu.intToString(events[i].counter),
+							", \"startTime\": \"",
+							iu.intToString(events[i].started.year), "-", 
+							iu.intToString(events[i].started.month), "-", 
+							iu.intToString(events[i].started.day), " ",
+							iu.intToString(events[i].started.hour), ":",
+							iu.intToString(events[i].started.minute), ":",
+							iu.intToString(events[i].started.second), "\"",
+							", \"endTime\": \"",
+							iu.intToString(events[i].finished.year), "-", 
+							iu.intToString(events[i].finished.month), "-", 
+							iu.intToString(events[i].finished.day), " ",
+							iu.intToString(events[i].finished.hour), ":",
+							iu.intToString(events[i].finished.minute), ":",
+							iu.intToString(events[i].finished.second), "\"}")
 					}
 
 				}
@@ -286,26 +288,28 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 			}
 			if ((metricsJSON.arrayLength == 0) && (eventsJSON.arrayLength > 0)) {
 				metricsJSON = "\"metrics\": [{"
-				metricsJSON = new char[](metricsJSON, "\"name\": \"no_metric\"")
-				metricsJSON = new char[](metricsJSON, ", \"config\": \"", getConfig(), "\"")
-				metricsJSON = new char[](metricsJSON, ", \"source\": \"", "\"")
-				metricsJSON = new char[](metricsJSON, ", \"value\":", iu.intToString(INT_MAX))
-				metricsJSON = new char[](metricsJSON, ", \"count\":", iu.intToString(1))
-				metricsJSON = new char[](metricsJSON, ", \"preferHigh\":", "false")
-				metricsJSON = new char[](metricsJSON, ", \"startTime\": \"","\"")
-				metricsJSON = new char[](metricsJSON, ", \"endTime\": \"", "\"}]")
+				metricsJSON = new char[](metricsJSON,
+									"\"name\": \"no_metric\"",
+									", \"config\": \"", getConfig(), "\"",
+									", \"source\": \"", "\"",
+									", \"value\":", iu.intToString(INT_MAX),
+									", \"count\":", iu.intToString(1),
+									", \"preferHigh\":", "false",
+									", \"startTime\": \"","\"",
+									", \"endTime\": \"", "\"}]")
 				resultingJSON = new char[]("{", metricsJSON, eventsJSON, "]}")
 			}
 			if ((metricsJSON.arrayLength == 0) && (eventsJSON.arrayLength == 0)) {
 				resultingJSON = "{\"metrics\": [{"
-				resultingJSON = new char[](resultingJSON, "\"name\": \"no_metric\"")
-				resultingJSON = new char[](resultingJSON, ", \"config\": \"", getConfig(), "\"")
-				resultingJSON = new char[](resultingJSON, ", \"source\": \"", "\"")
-				resultingJSON = new char[](resultingJSON, ", \"value\":", iu.intToString(INT_MAX))
-				resultingJSON = new char[](resultingJSON, ", \"count\":", iu.intToString(1))
-				resultingJSON = new char[](resultingJSON, ", \"preferHigh\":", "false")
-				resultingJSON = new char[](resultingJSON, ", \"startTime\": \"","\"")
-				resultingJSON = new char[](resultingJSON, ", \"endTime\": \"", "\"}]", "}")
+				resultingJSON = new char[](resultingJSON,
+									"\"name\": \"no_metric\"",
+									", \"config\": \"", getConfig(), "\"",
+									", \"source\": \"", "\"",
+									", \"value\":", iu.intToString(INT_MAX),
+									", \"count\":", iu.intToString(1),
+									", \"preferHigh\":", "false",
+									", \"startTime\": \"","\"",
+									", \"endTime\": \"", "\"}]", "}")
 			}
 			/* turn proxy back on */
 			for (int compPointer = 0; compPointer < components.arrayLength; compPointer++) {
@@ -330,7 +334,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 			char decompConfig[] = dh.decompress(proxyConfigs[proxyPointer].string)
 			char reducedConfig[] = null
 			if ((reducedConfig = matchExp(decompConfig, rule.exp)) != null) {
-				newConfig = new Map[](newConfig,
+				newConfig = new Map[](newConfig, 
 								new Map(reducedConfig,
 								"",
 								proxyConfigs[proxyPointer].string,
@@ -343,7 +347,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 		return newConfig
 	}
 
-	// verify if exp matches the config expecting decompressed config and exp
+	// verify if exp matches the config expecting decompressed config and exp 
 	// if it does, return reducedConfig, otherwise return null
 	char[] matchExp(char config[], char exp[]) {
 		String xOrExp[] = strUtil.explode(exp, ";")
@@ -351,7 +355,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 		int xOrTrue = 0
 		for (int xOrPointer = 0; xOrPointer < xOrExp.arrayLength; xOrPointer++) {
 			String andExp[] = strUtil.explode(xOrExp[xOrPointer].string, "&")
-			char rCHelper[] = config
+			char rCHelper[] = config 
 			for (int andPointer = 0; andPointer < andExp.arrayLength; andPointer++) {
 				String bindHelper[] = strUtil.explode(andExp[andPointer].string, "(")
 				int matchTimes = 0
@@ -394,7 +398,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 				if (previousStrList[0].string != "null") {
 					if (!matchPreviousStrList(previousStrList, strBindingList, index)) { return null }
 					else {
-						// the previous string matched! now copy previous string to result and remove it from strBindingList
+						// the previous string matched! now copy previous string to result and remove it from strBindingList  
 						int previousStrCounter = previousStrList.arrayLength
 						int strCounter = index-1
 						while ((previousStrCounter != INT_MAX) && (strCounter != INT_MAX)) {
@@ -426,7 +430,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 								String compHelper[] = null
 								if (comp1 == "") {
 									compHelper = strUtil.explode(strBindingList[index].string, ":")
-									comp1Name = compHelper[0].string
+									comp1Name = compHelper[0].string 
 								} else { comp1Name = comp1 }
 								if (comp2 == "") {
 									compHelper = strUtil.explode(strBindingList[index2].string, ":")
@@ -447,7 +451,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 		if (matchCounter == 0) { return null }	// this means the intf wasn't found in config
 		// add the remainder of items in strBindingList to result (the reduced proxy config)
 		for (int pointer = 0; pointer < strBindingList.arrayLength; pointer++) {
-			result = new String[](result, new String(strBindingList[pointer].string))
+			result = new String[](result, new String(strBindingList[pointer].string))	
 		}
 		return strUtil.implode(removeProxyFromStringList(result, proxy), ",")
 	}
@@ -460,7 +464,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 			// first filter -- removes proxies
 			for (int pointer = 0; pointer < list.arrayLength; pointer++) {
 				if (strUtil.find(list[pointer].string, proxy) == StringUtil.NOT_FOUND) {
-					result = new String[](result, new String(list[pointer].string))
+					result = new String[](result, new String(list[pointer].string))	
 				} else { proxyBindings = new String[](proxyBindings, new String(list[pointer].string)) }
 			}
 			// second filter -- removes subsequent bindings
@@ -513,7 +517,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 		char proxy[] = "null"
 		if (helper.arrayLength > 1) {
 			intf = helper[0].string
-			proxy = strUtil.explode(helper[1].string, "]")[0].string
+			proxy = strUtil.explode(helper[1].string, "]")[0].string	
 		}
 		return new char[]("|", intf, "|", comp1, "|", comp2, "|", proxy, "|", previousStr , "|")
 	}
@@ -548,7 +552,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 			for (int pointer = 0; pointer < rule.configs.arrayLength; pointer++) {
 				if (proxy) { configs = new String[](configs, new String(rule.configs[pointer].proxyConfig)) }
 				else { configs = new String[](configs, new String(rule.configs[pointer].config)) }
-			}
+			}	
 		}
 		return configs
 	}
@@ -576,7 +580,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 			if (onlyWithProxy) {
 				if (isAnyProxyInConfig(configs[configPointer].string, proxyList)) {
 					result = new String[](result, new String(configs[configPointer].string))
-				}
+				}	
 			} else {
 				if (!isAnyProxyInConfig(configs[configPointer].string, proxyList)) {
 					result = new String[](result, new String(configs[configPointer].string))
@@ -586,16 +590,16 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 		return result
 	}
 
-	// returns a list of compPaths without any or only with proxy of proxyList
+	// returns a list of compPaths without any or only with proxy of proxyList 
 	String[] filterProxy(String compPaths[], String proxyList[], bool onlyWithProxy) {
 		String result[] = null
 		for (int compPointer = 0; compPointer < compPaths.arrayLength; compPointer++) {
 			if (onlyWithProxy) {
-				if (isStringinList(compPaths[compPointer].string, proxyList) != INT_MAX) {
+				if (isStringinList(compPaths[compPointer].string, proxyList) != INT_MAX) { 
 					result = new String[](result, new String(compPaths[compPointer].string))
 				}
 			} else {
-				if (isStringinList(compPaths[compPointer].string, proxyList) == INT_MAX) {
+				if (isStringinList(compPaths[compPointer].string, proxyList) == INT_MAX) { 
 					result = new String[](result, new String(compPaths[compPointer].string))
 				}
 			}
@@ -684,7 +688,7 @@ component provides monitoring.Perception requires io.Output out, data.IntUtil iu
 				out.println("$(debugMSG) --- proxy: $(rule.configs[pointer].proxyConfig)")
 				out.println("$(debugMSG) --- clean: $(rule.configs[pointer].config)")
 				if (rule.configs[pointer].current) { out.println("$(debugMSG) --- current: yes") }
-				else { out.println("$(debugMSG) --- current: no") }
+				else { out.println("$(debugMSG) --- current: no") }	
 			}
 			out.println("$(debugMSG) ---- END OF RULE INFO ---- ")
 		} else { out.println("$(debugMSG) No proxies added!")}
