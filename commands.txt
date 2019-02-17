@@ -25,8 +25,14 @@ Map map[] = new Map[])(new Map("name", "name"),
 										 (new Map("finished", "finished")
 						)
 
+//compilacao
+pal$  dnc . -sp "../repository;../Sort"
+repository$dnc .  
+client$dnc .   
+Sort$dnc .	// antes de compilar a pasta sort deve ser definido o endereco do servidor remoto no arquivo remotSort.dn					
+se nao houver servido em nivel superior o arquivo remotSort.o deve ser removido.
 
-// sequencia de execuçao
+// sequencia de execuçao 
 /pal$ dana -sp "../repository;../Sort" EmergentSys.o
 /pal$ dana -sp "../repository;../Sort" MultiArmedBanditSort.o
 /client$ dana clientTest.o ./data/nomes.json
