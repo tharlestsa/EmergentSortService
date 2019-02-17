@@ -50,6 +50,8 @@ component provides App requires  rest.RESys ,
           String actions[] = sys.getAllConfigs()
 
           String actionName[] = null
+          int iterations = 0
+          int counters[]
           for (int i = 0; i < actions.arrayLength; i++) {
             /* code */
             String explode1[]=StringU.explode(actions[i].string,"|")
@@ -59,6 +61,11 @@ component provides App requires  rest.RESys ,
             //out.println(actions[i].string)
             out.println(actionName[i].string)
             //actionName[i]=stringU.explode([0].string,",")[action.arrayLength - 1]
+          }
+          counters = new int[actionName.arrayLength]
+          for (int i = 0; i < counters.arrayLength; i++) {
+            /* code */
+            counters[i]=0
           }
           //for each column set an string of action named a,b,c, ...
           /* for (int i = 0;i< configs.arrayLength;i++)
@@ -84,7 +91,8 @@ component provides App requires  rest.RESys ,
             config     = new char [](parser.getValueByDot("metrics[0].config", perceptionData).value)
 
             if(metricName == "execution time"){
-
+              counters[a]++
+              iterations++
               dec actionConter = ucb.getCounts()
               int TotalConter  = ucb.getTotal()
 
@@ -100,7 +108,17 @@ component provides App requires  rest.RESys ,
 
       				out.println("[Reward] $(decU.decToString(reward)) proxy counts $(iu.intToString(count)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
       				ucb.consumeData(reward)
+              File fd = new File("log.json", File.FILE_ACCESS_WRITE)
 
+              char log[]=new char[]("[\n{\n")
+              for (int i = 0; i < actions.arrayLength; i++) {
+                /* code */
+                log=new char[](log,actionName[i].string,": $(iu.intToString(counters[i])),\n")
+              }
+              log=new char[](log,",executions: $(iu.intToString(iterations)) \n}\n]")
+              fd.write(log)
+              fd.close()
+              out.println(log)
       			}
             a = ucb.getAction()
             if (a!=lest){

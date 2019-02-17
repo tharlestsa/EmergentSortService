@@ -1,0 +1,10 @@
+[
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Heapsort.o: 20,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 16,
+,executions: 79 
+}
+]
