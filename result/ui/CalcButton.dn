@@ -1,0 +1,66 @@
+const int TEXT_MARGIN = 15
+const int TEXT_PAD = 6
+
+component provides Button(AdaptEvents) requires io.Output out, data.IntUtil iu, Font, os.SystemInfo sysInfo {
+
+	Font labelFont
+	int width
+
+	Button:Button(char myLabel[]) {
+		text = myLabel
+		labelFont = new Font(sysInfo.getSystemFont(false), 15)
+		width = 35
+	}
+
+	void AdaptEvents:active() {
+		labelFont = new Font(sysInfo.getSystemFont(false), 15)
+		width = 35
+		postRepaint()
+	}
+
+	void Button:setPosition(int x, int y) {
+		xPosition = x
+		yPosition = y
+	}
+
+	void Button:paint(Canvas c) {
+		c.drawRect(new Rect2D(xPosition, yPosition, width, 20, new Color(0, 191, 255, 255)))
+		c.drawText(new Point2D(xPosition+TEXT_MARGIN, yPosition+1, new Color(255, 255, 255, 255)), labelFont, text)
+	}
+
+	void Button:click(int x, int y, int button) {
+		if (button == MouseButtons.BUTTON_LEFT) {
+			emitevent click()
+		}
+	}
+
+	void Button:postRepaint() {
+		emitevent repaint()
+	}
+
+	void Button:setText(char t[]) {
+		text = t
+		width = labelFont.getTextWidth(text) + TEXT_PAD
+	}
+
+	char[] Button:getText() {
+		return text
+	}
+
+	Rect Button:getBounds() {
+		return new Rect(xPosition, yPosition, width, 20)
+	}
+
+	WH Button:getPreferredSize() {
+		return new WH(width, 20)
+	}
+
+	Point Button:getPosition() {
+		return new Point(xPosition, yPosition)
+	}
+
+	bool Button:equals(Object o) {
+		Button bq = o
+		return text == bq.getText()
+	}
+}

@@ -1,0 +1,32 @@
+uses events.EventData
+
+component provides App requires ui.Window, ui.Button, ui.Label, Font, data.IntUtil iu, data.StringUtil strUtil {
+	Window window
+
+
+	Thread main
+
+	char currentDisplay[] 	= "0"
+	bool addPressed			= false
+	int n1 					= 0
+	int n2 					= 0
+
+	eventsink AppEvents(EventData ed) {
+	if (ed.source === window && ed.type == Window.[close]) {
+			main.signal()
+		}
+	}
+
+	int App:main(AppParam params[]) {
+		window = new Window("Emergent Sort Service Result")
+		window.setSize(800, 800)
+		window.setVisible(true)
+
+		main = this.thread
+		this.thread.wait()
+
+		window.close()
+
+		return 0
+	}
+}
