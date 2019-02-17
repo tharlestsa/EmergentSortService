@@ -108,14 +108,17 @@ component provides App requires  rest.RESys ,
 
       				out.println("[Reward] $(decU.decToString(reward)) proxy counts $(iu.intToString(count)) (avg time: $(decU.decToString(averageExecutionTime))ms)")
       				ucb.consumeData(reward)
-              File fd = new File("log.json", File.FILE_ACCESS_WRITE)
 
+              //gera dados para log
               char log[]=new char[]("[\n{\n")
               for (int i = 0; i < actions.arrayLength; i++) {
                 /* code */
                 log=new char[](log,actionName[i].string,": $(iu.intToString(counters[i])),\n")
               }
               log=new char[](log,",executions: $(iu.intToString(iterations)) \n}\n]")
+              //grava log
+              File fd = new File("log.json", File.FILE_ACCESS_WRITE)
+              fd.setPos(fd.getSize())
               fd.write(log)
               fd.close()
               out.println(log)
