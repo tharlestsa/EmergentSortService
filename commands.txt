@@ -27,12 +27,16 @@ Map map[] = new Map[])(new Map("name", "name"),
 
 //compilacao
 pal$  dnc . -sp "../repository;../Sort"
-repository$dnc .  
-client$dnc .   
-Sort$dnc .	// antes de compilar a pasta sort deve ser definido o endereco do servidor remoto no arquivo remotSort.dn					
+repository$dnc .
+client$dnc .
+Sort$dnc .	// antes de compilar a pasta sort deve ser definido o endereco do servidor remoto no arquivo remotSort.dn
 se nao houver servido em nivel superior o arquivo remotSort.o deve ser removido.
 
-// sequencia de execuçao 
+// sequencia de execuçao
 /pal$ dana -sp "../repository;../Sort" EmergentSys.o
 /pal$ dana -sp "../repository;../Sort" MultiArmedBanditSort.o
 /client$ dana clientTest.o ./data/nomes.json
+
+
+//Compilação programa que captura os dados do sensor de Temperatura e Umidade
+gcc get_sensor.c -o get_sensor -lwiringPi -lwiringPiDev
