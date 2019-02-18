@@ -1,29 +1,85 @@
 uses events.EventData
 
-component provides App requires ui.Window, ui.Button, ui.Label, Font, data.IntUtil iu, data.StringUtil strUtil {
+component provides App requires  io.File, io.FileSystem fileSystem, data.json.JSONEncoder parser,
+ ui.Window, ui.Button, ui.Label, Font, data.IntUtil iu, data.StringUtil strUtil, time.Timer timer {
 	Window window
-
-
 	Thread main
 
-	char currentDisplay[] 	= "0"
-	bool addPressed			= false
-	int n1 					= 0
-	int n2 					= 0
+	Label Bubblesort
+	Label Heapsort
+	Label Insertionsort
+	Label Quicksort
+	Label Selectionsort
+	Label Remotesort
+
+	Label count_Bubblesort
+	Label count_Heapsort
+	Label count_Insertionsort
+	Label count_Quicksort
+	Label count_Selectionsort
+	Label count_Remotesort
+
+	bool open=true
 
 	eventsink AppEvents(EventData ed) {
 	if (ed.source === window && ed.type == Window.[close]) {
+			open=false
 			main.signal()
 		}
 	}
 
 	int App:main(AppParam params[]) {
 		window = new Window("Emergent Sort Service Result")
-		window.setSize(800, 800)
+		window.setSize(500, 500)
 		window.setVisible(true)
+
+		Bubblesort = new Label("Bubble sort:","LiberationMono.ttf", 18)
+		Bubblesort.setColor(new Color(0, 0, 0, 255))
+		Bubblesort.setPosition(10, 30)
+
+		Heapsort = new Label("Heap sort:", "LiberationMono.ttf", 18)
+		Heapsort.setColor(new Color(0, 0, 0, 255))
+		Heapsort.setPosition(10, 70)
+
+		Insertionsort = new Label("Insertion sort:", "LiberationMono.ttf", 18)
+		Insertionsort.setColor(new Color(0, 0, 0, 255))
+		Insertionsort.setPosition(10, 110)
+
+		Quicksort = new Label("Quick sort:", "LiberationMono.ttf", 18)
+		Quicksort.setColor(new Color(0, 0, 0, 255))
+		Quicksort.setPosition(10, 150)
+
+		Selectionsort = new Label("Selection sort:", "LiberationMono.ttf", 18)
+		Selectionsort.setColor(new Color(0, 0, 0, 255))
+		Selectionsort.setPosition(10, 190)
+
+		Remotesort = new Label("Remote sort:", "LiberationMono.ttf", 18)
+		Remotesort.setColor(new Color(0, 0, 0, 255))
+		Remotesort.setPosition(10, 230)
+
+		window.addObject(Bubblesort)
+		window.addObject(Heapsort)
+		window.addObject(Insertionsort)
+		window.addObject(Quicksort)
+		window.addObject(Remotesort)
+		window.addObject(Selectionsort)
+
+  	char file_name[] = "./pal/log.json"
+
+		sinkevent AppEvents(window)
 
 		main = this.thread
 		this.thread.wait()
+
+		while(open){
+			while(fileSystem.exists(file_name)){
+					File fd = new File(file_name, File.FILE_ACCESS_READ)
+
+					Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
+
+				}
+			timer.sleep(3000)
+		}
 
 		window.close()
 

@@ -10,6 +10,16 @@ data Algo {
   Metric metrics[]
 }
 
+data resultObject{
+  int Selection
+  int Heapsort
+  int Bubblesort
+  int Quicksort
+  int Insertion
+  int Remotesort
+  int counter
+}
+
 //dec maxInverted
 
 component provides App requires  rest.RESys ,
