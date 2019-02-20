@@ -1,12 +1,14 @@
-# Emergent Sort Service
+# Emergent Sort Service (ESS)
 
-The basic idea of this project is, the clients will send their datas to our server and the Emergent Sort Service will find the better solution for sort the informations. For example, an university they have a enroled students list and want get sort for any attribute (name, course, enroled code, final grade).
+## Overview 
 
-The Emergent Sort Service will be able of to sort and to mensurable the performance of all sort options and self-optimize for get the best response time to client. If necessary, the service can use both local or parallel processing. And, in the optimize process, the mecanism will use determinated metrics as time and performance cost, lining up with the concept green computing.
+The basic idea of this project is, the clients will send data to the server and the ESS will find the better solution for sort the informations. For example, an university they have a enrolled students list and want get sort for any attribute (name, course, enrolled code, final grade). For the sort the information the system works with the many algorithms as bubble sort, Heapsort, Quicksort, Insertion and Selection sort that will be sort the data received by a clients. The ESS will be able of to sort and measure the performance of all sort options and self-optimize for get the best response time to client. The service can use both local or remote processing. And, in the optimize process, the mechanism will use determined metrics as time and performance cost, lining up with the concept green computing.
+The case Study is sorting system but we can generalise the components for any function, for example the Raspberry can be one gateway (Fog computing), the clients can be sensors, differents algorithms will be used to sort locally or in Cloud.
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project.
 
 ### Prerequisites
 
@@ -41,16 +43,61 @@ to log out of your session and log back in.
 
 ## Deployment
 
-1. You need to compile the programa .dn 
+We have three differents environments: ESS Cloud Server, ESS Local Server and Clients. Each env have differents scripts for to compile and run the Emergent Sort Service. 
+
+### ESS Cloud Server
+
+For to simulate a server running on the cloud, we expose a computer through Internet located somewhere in Goiânia-GO. This computer will be our ESS Cloud Server. 
+
+1. There is a directory named deployment in this repository that have same scripts, for this env you only have to run the script with ess_cloud. So, first you have to compile the ESS Cloud Server.    
 
 ```
-dnc Main.dn
+./1_ess_cloud_compile.sh 
 ```
-You can now run the program with the command:
+
+2. You need to run the EmergentSys
 
 ```
-dana Main.o
+./2_ess_cloud_run_emergentsys.sh 
 ```
+
+3. In other ssh connection, you have to run the MultiArmedBanditSort
+
+```
+./3_ess_cloud_run_multiarmedbandit.sh
+```
+
+### ESS Local Server
+
+The ESS Local Server will recieve dataset of the clients and find the better algorithm for sort and to make the next composition of the system. In addition, this ESS can send the data to the ESS Cloud Server for sort tha data too. 
+
+1. In directory called deployment, you only have to run the script with ess_local. First, you have to compile the ESS Local Server.    
+```
+./4_ess_local_compile.sh 
+```
+
+2. Then, you need to run the EmergentSys
+
+```
+./5_ess_local_run_emergentsys.sh 
+```
+
+3. In other terminal, you have to run the MultiArmedBanditSort
+
+```
+./6_ess_local_run_multiarmedbandit.sh
+```
+
+### Clients
+
+The clients can be a raspberry or other computer that will send dataset to ESS Local Server. 
+
+1. In directory called deployment, you only have to run the script with run_client.     
+```
+./7_run_client.sh 
+```
+
+Note: The clients have to be the last part of the ESS. 
 
 ## Built With
 
@@ -60,7 +107,7 @@ dana Main.o
 ## Authors
 
 * **Ramon José de Sousa Araújo** - *CS Undergrad* - [GitHub](https://github.com/ramonjsa)
-* **Marcos Felipe Barboza de Abreu** - *CS Undergrad* - [GitHub](https://github.com/marcosfelipp)
+* **Marcos Fellipe Barboza de Abreu** - *CS Undergrad* - [GitHub](https://github.com/marcosfelipp)
 * **Rosângela Divina de Sousa Santana** - *CS Master* - [GitHub](https://github.com/rosousas)
 * **Tharles de Sousa Andrade** - *CS Undergrad* - [GitHub](https://github.com/tharlestsa)
 * **Larissa Ramos Marques Silva** - *CS Master* - [GitHub](https://github.com/larissaramosm)
@@ -68,8 +115,3 @@ dana Main.o
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tharlestsa/EmergentSortService/blob/master/LICENSE) file for details
-
-## Acknowledgments
-
-* Learn to build systems self-management ans self-learning
-* ..
