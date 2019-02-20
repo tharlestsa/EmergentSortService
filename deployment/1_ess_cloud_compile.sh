@@ -6,8 +6,13 @@ cd $HOME/EmergentSortService/pal/
 
 dnc . -v -sp "../repository;../Sort"
 
-dnc $HOME/EmergentSortService/Sort -v
-dnc $HOME/EmergentSortService/repository -v
+echo "\nCompiling directory Sort!\n"
+cd .. ; cd Sort/
+dnc . -v
+
+echo "\nCompiling directory repository!\n"
+cd .. ; cd repository/
+dnc . -v
 
 echo "\nRemoving file remoteSort.o!\n"
 rm $HOME/EmergentSortService/Sort/sort/remoteSort.o
