@@ -41,7 +41,7 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
         //TODO: Ler ip do servidor por linha de comando
 
         int i = 0
-        while(i < 10){
+        while(i < 1000){
             server.connect("localhost", 2019)
             
             if(input == 0){
@@ -49,7 +49,7 @@ component provides App requires io.File, io.FileSystem fileSystem, net.TCPSocket
                 RunStatus temperature = run.execute(osCommand)
             }
 
-            char content[] = getFileData("./data/nomes3.json")    
+            char content[] = getFileData("./data/nomes.json")    
             int file_size = content.arrayLength
             
             //Format: "POST\rfield\rdata
