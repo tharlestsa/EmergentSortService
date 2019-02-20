@@ -1,9 +1,17 @@
 #!/bin/bash
 
-echo "\nCompiling ESS Local Server!\n"
+echo -e "\nCompiling ESS Local Server!\n"
 
-dnc $HOME/EmergentSortService/pal/ -v -sp "$HOME/EmergentSortService/pal/repository;$HOME/EmergentSortService/pal/Sort"
-dnc $HOME/EmergentSortService/Sort -v
-dnc $HOME/EmergentSortService/repository -v
+cd $HOME/EmergentSortService/pal/
 
-echo "\nCompilation finished!\n"
+dnc . -v -sp "../repository;../Sort"
+
+echo -e "\nCompiling directory Sort!\n"
+cd .. ; cd Sort/
+dnc . -v
+
+echo -e "\nCompiling directory repository!\n"
+cd .. ; cd repository/
+dnc . -v
+
+echo -e "\nCompilation finish!\n"

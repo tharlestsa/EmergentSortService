@@ -1,7 +1,11 @@
 #!/bin/bash
 
-echo "\nRunning Client!\n"
+cd  $HOME/EmergentSortService/client
 
-dnc $HOME/EmergentSortService/client
+echo -e "\nCompiling directory client!\n"
 
-dana $HOME/EmergentSortService/client/RaspClient.o
+dnc . -v 
+
+echo -e "\nRunning Client!\n"
+
+dana RaspClient.o

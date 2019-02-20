@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "\nRunning EmergentSys.o of ESS Cloud Server!\n"
+echo "\nRunning MultiArmedBanditSort.o of ESS Local Server!\n"
 
-dana -sp '$HOME/EmergentSortService/repository;$HOME/EmergentSortService/Sort' \ 
-$HOME/EmergentSortService/pal/MultiArmedBanditSort.o 
+cd $HOME/EmergentSortService/pal
+
+dana -sp '../repository;../Sort' MultiArmedBanditSort.o 
