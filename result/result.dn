@@ -1,7 +1,8 @@
 uses events.EventData
 
-component provides App requires  io.File, io.FileSystem fileSystem, data.json.JSONEncoder parser,
- ui.Window, ui.Button, ui.Label, Font, data.IntUtil iu, data.StringUtil strUtil, time.Timer timer {
+component provides App requires    io.Output out, io.File, io.FileSystem fileSystem, data.json.JSONEncoder parser,
+ ui.Window, ui.Button, ui.Label, Font, data.IntUtil iu, data.StringUtil strUtil,
+  time.Timer timer, io.TextFile {
 	Window window
 	Thread main
 
@@ -64,22 +65,61 @@ component provides App requires  io.File, io.FileSystem fileSystem, data.json.JS
 		window.addObject(Remotesort)
 		window.addObject(Selectionsort)
 
-  	char file_name[] = "./pal/log.json"
+  	char file_name[] = "../pal/log.json"
 
 		sinkevent AppEvents(window)
+		out.println("1")
+
+		//while(open)
+		//{
+			out.println("3")
+			if(fileSystem.exists(file_name)){
+
+					TextFile fd = new TextFile(file_name, File.FILE_ACCESS_READ)
+					out.println("2")
+
+				//	out.println("$(fd.read(fd.getSize()))")
+
+					while (!fd.eof()) {
+						char	line[]=new char[](fd.readLine())
+
+  					out.println("linha: $(line)")
+
+						if(!strUtil.irfind(line, "Quick")){
+								Quicksort.setText(new char[]("Quick sort: " ,line))
+						}
+
+						 if(!strUtil.ifind(line, "Heap")){
+							 	Heapsort.setText(new char[](line))
+						}
+
+
+						if(!strUtil.ifind(line, "insertion")){
+							Insertionsort.setText(new char[](line,strUtil.explode(line,":")[1].string))
+						}
+
+						 if(!strUtil.find(line, "Bubblesort.o")){
+							Bubblesort.setText(new char[](line))
+						}
+						 if(!strUtil.ifind(line, "remote")){
+							Remotesort.setText(new char[](line))
+						}
+						 if(!strUtil.ifind(line, "selection"))
+						{
+							Selectionsort.setText(new char[](line))
+						}
+
+					}
+				//	Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
+
+				}
+			//timer.sleep(3000)
+		//}
+
 
 		main = this.thread
 		this.thread.wait()
 
-		while(open){
-			while(fileSystem.exists(file_name)){
-					File fd = new File(file_name, File.FILE_ACCESS_READ)
-
-					Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
-
-				}
-			timer.sleep(3000)
-		}
 
 		window.close()
 
