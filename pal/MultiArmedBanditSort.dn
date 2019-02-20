@@ -125,10 +125,10 @@ component provides App requires  rest.RESys ,
                 /* code */
                 log=new char[](log,actionName[i].string,": $(iu.intToString(counters[i])),\n")
               }
-              log=new char[](log,",executions: $(iu.intToString(iterations)) \n}\n]")
+              log=new char[](log,"executions: $(iu.intToString(iterations)) \n}\n]")
               //grava log
               File fd = new File("log.json", File.FILE_ACCESS_WRITE)
-              fd.setPos(fd.getSize())
+              //fd.setPos(fd.getSize())
               fd.write(log)
               fd.close()
               out.println(log)
