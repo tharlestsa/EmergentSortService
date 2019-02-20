@@ -2,7 +2,10 @@
 
 echo "\nCompiling ESS Cloud Server!\n"
 
-dnc $HOME/EmergentSortService/pal/ -v -sp "$HOME/EmergentSortService/pal/repository;$HOME/EmergentSortService/pal/Sort"
+cd $HOME/EmergentSortService/pal/
+
+dnc . -v -sp "../repository;../Sort"
+
 dnc $HOME/EmergentSortService/Sort -v
 dnc $HOME/EmergentSortService/repository -v
 
