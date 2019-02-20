@@ -54,7 +54,7 @@ component provides sort.Sort requires io.Output out,
     char content[]=  encoder.jsonFromArray(array,null)
     TCPSocket server = new TCPSocket()
     char sorted[]
-    server.connect("192.168.0.105", 2019)
+    server.connect("emergentsortservice.ddns.net", 10001)
     sorted = new char[]( sort(server,content))
     String list[] = encoder.jsonToArray(sorted, typeof(String[]), null)
 

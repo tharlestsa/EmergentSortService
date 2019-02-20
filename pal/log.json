@@ -124,4 +124,4554 @@
 ../Sort/sort/Insertion.o: 3,
 ,executions: 13 
 }
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 0,
+../Sort/sort/remoteSort.o: 0,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 1 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 0,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 2 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 0,
+../Sort/sort/remoteSort.o: 0,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 1 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 0,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 2 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 3 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 4 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 1,
+../Sort/sort/Heapsort.o: 0,
+,executions: 5 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 1,
+../Sort/sort/Heapsort.o: 1,
+,executions: 6 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 1,
+../Sort/sort/Heapsort.o: 2,
+,executions: 7 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 8 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 9 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 10 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 2,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 11 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 0,
+../Sort/sort/remoteSort.o: 0,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 1 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 0,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 2 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 0,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 3 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 0,
+../Sort/sort/Heapsort.o: 0,
+,executions: 4 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 1,
+../Sort/sort/Heapsort.o: 0,
+,executions: 5 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 1,
+../Sort/sort/Heapsort.o: 1,
+,executions: 6 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 1,
+../Sort/sort/Heapsort.o: 2,
+,executions: 7 
+}
+][
+{
+../Sort/sort/Selection.o: 1,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 8 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 1,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 9 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 1,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 10 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 1,
+../Sort/sort/Quicksort.o: 2,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 11 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 2,
+../Sort/sort/Quicksort.o: 2,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 2,
+,executions: 12 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 2,
+../Sort/sort/Quicksort.o: 2,
+../Sort/sort/Insertion.o: 2,
+../Sort/sort/Heapsort.o: 3,
+,executions: 13 
+}
+][
+{
+../Sort/sort/Selection.o: 2,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 2,
+../Sort/sort/Quicksort.o: 2,
+../Sort/sort/Insertion.o: 3,
+../Sort/sort/Heapsort.o: 3,
+,executions: 14 
+}
+][
+{
+../Sort/sort/Selection.o: 3,
+../Sort/sort/Bubblesort.o: 2,
+../Sort/sort/remoteSort.o: 2,
+../Sort/sort/Quicksort.o: 2,
+../Sort/sort/Insertion.o: 3,
+../Sort/sort/Heapsort.o: 3,
+,executions: 15 
+}
+][
+{
+../Sort/sort/Selection.o: 3,
+../Sort/sort/Bubblesort.o: 3,
+../Sort/sort/remoteSort.o: 2,
+../Sort/sort/Quicksort.o: 2,
+../Sort/sort/Insertion.o: 3,
+../Sort/sort/Heapsort.o: 3,
+,executions: 16 
+}
+][
+{
+../Sort/sort/Selection.o: 3,
+../Sort/sort/Bubblesort.o: 3,
+../Sort/sort/remoteSort.o: 2,
+../Sort/sort/Quicksort.o: 3,
+../Sort/sort/Insertion.o: 3,
+../Sort/sort/Heapsort.o: 3,
+,executions: 17 
+}
+][
+{
+../Sort/sort/Selection.o: 3,
+../Sort/sort/Bubblesort.o: 3,
+../Sort/sort/remoteSort.o: 3,
+../Sort/sort/Quicksort.o: 3,
+../Sort/sort/Insertion.o: 3,
+../Sort/sort/Heapsort.o: 3,
+,executions: 18 
+}
+][
+{
+../Sort/sort/Selection.o: 3,
+../Sort/sort/Bubblesort.o: 3,
+../Sort/sort/remoteSort.o: 3,
+../Sort/sort/Quicksort.o: 3,
+../Sort/sort/Insertion.o: 3,
+../Sort/sort/Heapsort.o: 4,
+,executions: 19 
+}
+][
+{
+../Sort/sort/Selection.o: 3,
+../Sort/sort/Bubblesort.o: 3,
+../Sort/sort/remoteSort.o: 3,
+../Sort/sort/Quicksort.o: 3,
+../Sort/sort/Insertion.o: 4,
+../Sort/sort/Heapsort.o: 4,
+,executions: 20 
+}
+][
+{
+../Sort/sort/Selection.o: 4,
+../Sort/sort/Bubblesort.o: 3,
+../Sort/sort/remoteSort.o: 3,
+../Sort/sort/Quicksort.o: 3,
+../Sort/sort/Insertion.o: 4,
+../Sort/sort/Heapsort.o: 4,
+,executions: 21 
+}
+][
+{
+../Sort/sort/Selection.o: 4,
+../Sort/sort/Bubblesort.o: 3,
+../Sort/sort/remoteSort.o: 3,
+../Sort/sort/Quicksort.o: 3,
+../Sort/sort/Insertion.o: 4,
+../Sort/sort/Heapsort.o: 5,
+,executions: 22 
+}
+][
+{
+../Sort/sort/Selection.o: 4,
+../Sort/sort/Bubblesort.o: 4,
+../Sort/sort/remoteSort.o: 3,
+../Sort/sort/Quicksort.o: 3,
+../Sort/sort/Insertion.o: 4,
+../Sort/sort/Heapsort.o: 5,
+,executions: 23 
+}
+][
+{
+../Sort/sort/Selection.o: 4,
+../Sort/sort/Bubblesort.o: 4,
+../Sort/sort/remoteSort.o: 3,
+../Sort/sort/Quicksort.o: 4,
+../Sort/sort/Insertion.o: 4,
+../Sort/sort/Heapsort.o: 5,
+,executions: 24 
+}
+][
+{
+../Sort/sort/Selection.o: 4,
+../Sort/sort/Bubblesort.o: 4,
+../Sort/sort/remoteSort.o: 4,
+../Sort/sort/Quicksort.o: 4,
+../Sort/sort/Insertion.o: 4,
+../Sort/sort/Heapsort.o: 5,
+,executions: 25 
+}
+][
+{
+../Sort/sort/Selection.o: 4,
+../Sort/sort/Bubblesort.o: 4,
+../Sort/sort/remoteSort.o: 4,
+../Sort/sort/Quicksort.o: 4,
+../Sort/sort/Insertion.o: 5,
+../Sort/sort/Heapsort.o: 5,
+,executions: 26 
+}
+][
+{
+../Sort/sort/Selection.o: 4,
+../Sort/sort/Bubblesort.o: 4,
+../Sort/sort/remoteSort.o: 4,
+../Sort/sort/Quicksort.o: 4,
+../Sort/sort/Insertion.o: 5,
+../Sort/sort/Heapsort.o: 6,
+,executions: 27 
+}
+][
+{
+../Sort/sort/Selection.o: 5,
+../Sort/sort/Bubblesort.o: 4,
+../Sort/sort/remoteSort.o: 4,
+../Sort/sort/Quicksort.o: 4,
+../Sort/sort/Insertion.o: 5,
+../Sort/sort/Heapsort.o: 6,
+,executions: 28 
+}
+][
+{
+../Sort/sort/Selection.o: 5,
+../Sort/sort/Bubblesort.o: 5,
+../Sort/sort/remoteSort.o: 4,
+../Sort/sort/Quicksort.o: 4,
+../Sort/sort/Insertion.o: 5,
+../Sort/sort/Heapsort.o: 6,
+,executions: 29 
+}
+][
+{
+../Sort/sort/Selection.o: 5,
+../Sort/sort/Bubblesort.o: 5,
+../Sort/sort/remoteSort.o: 4,
+../Sort/sort/Quicksort.o: 5,
+../Sort/sort/Insertion.o: 5,
+../Sort/sort/Heapsort.o: 6,
+,executions: 30 
+}
+][
+{
+../Sort/sort/Selection.o: 5,
+../Sort/sort/Bubblesort.o: 5,
+../Sort/sort/remoteSort.o: 5,
+../Sort/sort/Quicksort.o: 5,
+../Sort/sort/Insertion.o: 5,
+../Sort/sort/Heapsort.o: 6,
+,executions: 31 
+}
+][
+{
+../Sort/sort/Selection.o: 5,
+../Sort/sort/Bubblesort.o: 5,
+../Sort/sort/remoteSort.o: 5,
+../Sort/sort/Quicksort.o: 5,
+../Sort/sort/Insertion.o: 6,
+../Sort/sort/Heapsort.o: 6,
+,executions: 32 
+}
+][
+{
+../Sort/sort/Selection.o: 5,
+../Sort/sort/Bubblesort.o: 5,
+../Sort/sort/remoteSort.o: 5,
+../Sort/sort/Quicksort.o: 5,
+../Sort/sort/Insertion.o: 6,
+../Sort/sort/Heapsort.o: 7,
+,executions: 33 
+}
+][
+{
+../Sort/sort/Selection.o: 6,
+../Sort/sort/Bubblesort.o: 5,
+../Sort/sort/remoteSort.o: 5,
+../Sort/sort/Quicksort.o: 5,
+../Sort/sort/Insertion.o: 6,
+../Sort/sort/Heapsort.o: 7,
+,executions: 34 
+}
+][
+{
+../Sort/sort/Selection.o: 6,
+../Sort/sort/Bubblesort.o: 6,
+../Sort/sort/remoteSort.o: 5,
+../Sort/sort/Quicksort.o: 5,
+../Sort/sort/Insertion.o: 6,
+../Sort/sort/Heapsort.o: 7,
+,executions: 35 
+}
+][
+{
+../Sort/sort/Selection.o: 6,
+../Sort/sort/Bubblesort.o: 6,
+../Sort/sort/remoteSort.o: 5,
+../Sort/sort/Quicksort.o: 6,
+../Sort/sort/Insertion.o: 6,
+../Sort/sort/Heapsort.o: 7,
+,executions: 36 
+}
+][
+{
+../Sort/sort/Selection.o: 6,
+../Sort/sort/Bubblesort.o: 6,
+../Sort/sort/remoteSort.o: 6,
+../Sort/sort/Quicksort.o: 6,
+../Sort/sort/Insertion.o: 6,
+../Sort/sort/Heapsort.o: 7,
+,executions: 37 
+}
+][
+{
+../Sort/sort/Selection.o: 6,
+../Sort/sort/Bubblesort.o: 6,
+../Sort/sort/remoteSort.o: 6,
+../Sort/sort/Quicksort.o: 6,
+../Sort/sort/Insertion.o: 6,
+../Sort/sort/Heapsort.o: 8,
+,executions: 38 
+}
+][
+{
+../Sort/sort/Selection.o: 6,
+../Sort/sort/Bubblesort.o: 6,
+../Sort/sort/remoteSort.o: 6,
+../Sort/sort/Quicksort.o: 6,
+../Sort/sort/Insertion.o: 7,
+../Sort/sort/Heapsort.o: 8,
+,executions: 39 
+}
+][
+{
+../Sort/sort/Selection.o: 7,
+../Sort/sort/Bubblesort.o: 6,
+../Sort/sort/remoteSort.o: 6,
+../Sort/sort/Quicksort.o: 6,
+../Sort/sort/Insertion.o: 7,
+../Sort/sort/Heapsort.o: 8,
+,executions: 40 
+}
+][
+{
+../Sort/sort/Selection.o: 7,
+../Sort/sort/Bubblesort.o: 7,
+../Sort/sort/remoteSort.o: 6,
+../Sort/sort/Quicksort.o: 6,
+../Sort/sort/Insertion.o: 7,
+../Sort/sort/Heapsort.o: 8,
+,executions: 41 
+}
+][
+{
+../Sort/sort/Selection.o: 7,
+../Sort/sort/Bubblesort.o: 7,
+../Sort/sort/remoteSort.o: 6,
+../Sort/sort/Quicksort.o: 6,
+../Sort/sort/Insertion.o: 7,
+../Sort/sort/Heapsort.o: 9,
+,executions: 42 
+}
+][
+{
+../Sort/sort/Selection.o: 7,
+../Sort/sort/Bubblesort.o: 7,
+../Sort/sort/remoteSort.o: 6,
+../Sort/sort/Quicksort.o: 7,
+../Sort/sort/Insertion.o: 7,
+../Sort/sort/Heapsort.o: 9,
+,executions: 43 
+}
+][
+{
+../Sort/sort/Selection.o: 7,
+../Sort/sort/Bubblesort.o: 7,
+../Sort/sort/remoteSort.o: 7,
+../Sort/sort/Quicksort.o: 7,
+../Sort/sort/Insertion.o: 7,
+../Sort/sort/Heapsort.o: 9,
+,executions: 44 
+}
+][
+{
+../Sort/sort/Selection.o: 7,
+../Sort/sort/Bubblesort.o: 7,
+../Sort/sort/remoteSort.o: 7,
+../Sort/sort/Quicksort.o: 7,
+../Sort/sort/Insertion.o: 8,
+../Sort/sort/Heapsort.o: 9,
+,executions: 45 
+}
+][
+{
+../Sort/sort/Selection.o: 8,
+../Sort/sort/Bubblesort.o: 7,
+../Sort/sort/remoteSort.o: 7,
+../Sort/sort/Quicksort.o: 7,
+../Sort/sort/Insertion.o: 8,
+../Sort/sort/Heapsort.o: 9,
+,executions: 46 
+}
+][
+{
+../Sort/sort/Selection.o: 8,
+../Sort/sort/Bubblesort.o: 7,
+../Sort/sort/remoteSort.o: 7,
+../Sort/sort/Quicksort.o: 7,
+../Sort/sort/Insertion.o: 8,
+../Sort/sort/Heapsort.o: 10,
+,executions: 47 
+}
+][
+{
+../Sort/sort/Selection.o: 8,
+../Sort/sort/Bubblesort.o: 8,
+../Sort/sort/remoteSort.o: 7,
+../Sort/sort/Quicksort.o: 7,
+../Sort/sort/Insertion.o: 8,
+../Sort/sort/Heapsort.o: 10,
+,executions: 48 
+}
+][
+{
+../Sort/sort/Selection.o: 8,
+../Sort/sort/Bubblesort.o: 8,
+../Sort/sort/remoteSort.o: 7,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 8,
+../Sort/sort/Heapsort.o: 10,
+,executions: 49 
+}
+][
+{
+../Sort/sort/Selection.o: 8,
+../Sort/sort/Bubblesort.o: 8,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 8,
+../Sort/sort/Heapsort.o: 10,
+,executions: 50 
+}
+][
+{
+../Sort/sort/Selection.o: 8,
+../Sort/sort/Bubblesort.o: 8,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 8,
+../Sort/sort/Heapsort.o: 11,
+,executions: 51 
+}
+][
+{
+../Sort/sort/Selection.o: 8,
+../Sort/sort/Bubblesort.o: 8,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 9,
+../Sort/sort/Heapsort.o: 11,
+,executions: 52 
+}
+][
+{
+../Sort/sort/Selection.o: 9,
+../Sort/sort/Bubblesort.o: 8,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 9,
+../Sort/sort/Heapsort.o: 11,
+,executions: 53 
+}
+][
+{
+../Sort/sort/Selection.o: 9,
+../Sort/sort/Bubblesort.o: 8,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 9,
+../Sort/sort/Heapsort.o: 12,
+,executions: 54 
+}
+][
+{
+../Sort/sort/Selection.o: 9,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 9,
+../Sort/sort/Heapsort.o: 12,
+,executions: 55 
+}
+][
+{
+../Sort/sort/Selection.o: 9,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 8,
+../Sort/sort/Insertion.o: 10,
+../Sort/sort/Heapsort.o: 12,
+,executions: 56 
+}
+][
+{
+../Sort/sort/Selection.o: 9,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 8,
+../Sort/sort/Quicksort.o: 9,
+../Sort/sort/Insertion.o: 10,
+../Sort/sort/Heapsort.o: 12,
+,executions: 57 
+}
+][
+{
+../Sort/sort/Selection.o: 9,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 9,
+../Sort/sort/Quicksort.o: 9,
+../Sort/sort/Insertion.o: 10,
+../Sort/sort/Heapsort.o: 12,
+,executions: 58 
+}
+][
+{
+../Sort/sort/Selection.o: 9,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 9,
+../Sort/sort/Quicksort.o: 9,
+../Sort/sort/Insertion.o: 10,
+../Sort/sort/Heapsort.o: 13,
+,executions: 59 
+}
+][
+{
+../Sort/sort/Selection.o: 10,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 9,
+../Sort/sort/Quicksort.o: 9,
+../Sort/sort/Insertion.o: 10,
+../Sort/sort/Heapsort.o: 13,
+,executions: 60 
+}
+][
+{
+../Sort/sort/Selection.o: 10,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 9,
+../Sort/sort/Quicksort.o: 9,
+../Sort/sort/Insertion.o: 10,
+../Sort/sort/Heapsort.o: 14,
+,executions: 61 
+}
+][
+{
+../Sort/sort/Selection.o: 10,
+../Sort/sort/Bubblesort.o: 9,
+../Sort/sort/remoteSort.o: 9,
+../Sort/sort/Quicksort.o: 9,
+../Sort/sort/Insertion.o: 11,
+../Sort/sort/Heapsort.o: 14,
+,executions: 62 
+}
+][
+{
+../Sort/sort/Selection.o: 10,
+../Sort/sort/Bubblesort.o: 10,
+../Sort/sort/remoteSort.o: 9,
+../Sort/sort/Quicksort.o: 9,
+../Sort/sort/Insertion.o: 11,
+../Sort/sort/Heapsort.o: 14,
+,executions: 63 
+}
+][
+{
+../Sort/sort/Selection.o: 10,
+../Sort/sort/Bubblesort.o: 10,
+../Sort/sort/remoteSort.o: 9,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 11,
+../Sort/sort/Heapsort.o: 14,
+,executions: 64 
+}
+][
+{
+../Sort/sort/Selection.o: 10,
+../Sort/sort/Bubblesort.o: 10,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 11,
+../Sort/sort/Heapsort.o: 14,
+,executions: 65 
+}
+][
+{
+../Sort/sort/Selection.o: 11,
+../Sort/sort/Bubblesort.o: 10,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 11,
+../Sort/sort/Heapsort.o: 14,
+,executions: 66 
+}
+][
+{
+../Sort/sort/Selection.o: 11,
+../Sort/sort/Bubblesort.o: 10,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 11,
+../Sort/sort/Heapsort.o: 15,
+,executions: 67 
+}
+][
+{
+../Sort/sort/Selection.o: 11,
+../Sort/sort/Bubblesort.o: 10,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 12,
+../Sort/sort/Heapsort.o: 15,
+,executions: 68 
+}
+][
+{
+../Sort/sort/Selection.o: 11,
+../Sort/sort/Bubblesort.o: 10,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 12,
+../Sort/sort/Heapsort.o: 16,
+,executions: 69 
+}
+][
+{
+../Sort/sort/Selection.o: 11,
+../Sort/sort/Bubblesort.o: 11,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 12,
+../Sort/sort/Heapsort.o: 16,
+,executions: 70 
+}
+][
+{
+../Sort/sort/Selection.o: 12,
+../Sort/sort/Bubblesort.o: 11,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 10,
+../Sort/sort/Insertion.o: 12,
+../Sort/sort/Heapsort.o: 16,
+,executions: 71 
+}
+][
+{
+../Sort/sort/Selection.o: 12,
+../Sort/sort/Bubblesort.o: 11,
+../Sort/sort/remoteSort.o: 10,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 12,
+../Sort/sort/Heapsort.o: 16,
+,executions: 72 
+}
+][
+{
+../Sort/sort/Selection.o: 12,
+../Sort/sort/Bubblesort.o: 11,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 12,
+../Sort/sort/Heapsort.o: 16,
+,executions: 73 
+}
+][
+{
+../Sort/sort/Selection.o: 12,
+../Sort/sort/Bubblesort.o: 11,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 12,
+../Sort/sort/Heapsort.o: 17,
+,executions: 74 
+}
+][
+{
+../Sort/sort/Selection.o: 12,
+../Sort/sort/Bubblesort.o: 11,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 13,
+../Sort/sort/Heapsort.o: 17,
+,executions: 75 
+}
+][
+{
+../Sort/sort/Selection.o: 12,
+../Sort/sort/Bubblesort.o: 11,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 13,
+../Sort/sort/Heapsort.o: 18,
+,executions: 76 
+}
+][
+{
+../Sort/sort/Selection.o: 12,
+../Sort/sort/Bubblesort.o: 12,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 13,
+../Sort/sort/Heapsort.o: 18,
+,executions: 77 
+}
+][
+{
+../Sort/sort/Selection.o: 13,
+../Sort/sort/Bubblesort.o: 12,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 13,
+../Sort/sort/Heapsort.o: 18,
+,executions: 78 
+}
+][
+{
+../Sort/sort/Selection.o: 13,
+../Sort/sort/Bubblesort.o: 12,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 11,
+../Sort/sort/Insertion.o: 13,
+../Sort/sort/Heapsort.o: 19,
+,executions: 79 
+}
+][
+{
+../Sort/sort/Selection.o: 13,
+../Sort/sort/Bubblesort.o: 12,
+../Sort/sort/remoteSort.o: 11,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 13,
+../Sort/sort/Heapsort.o: 19,
+,executions: 80 
+}
+][
+{
+../Sort/sort/Selection.o: 13,
+../Sort/sort/Bubblesort.o: 12,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 13,
+../Sort/sort/Heapsort.o: 19,
+,executions: 81 
+}
+][
+{
+../Sort/sort/Selection.o: 13,
+../Sort/sort/Bubblesort.o: 12,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 14,
+../Sort/sort/Heapsort.o: 19,
+,executions: 82 
+}
+][
+{
+../Sort/sort/Selection.o: 13,
+../Sort/sort/Bubblesort.o: 12,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 14,
+../Sort/sort/Heapsort.o: 20,
+,executions: 83 
+}
+][
+{
+../Sort/sort/Selection.o: 13,
+../Sort/sort/Bubblesort.o: 13,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 14,
+../Sort/sort/Heapsort.o: 20,
+,executions: 84 
+}
+][
+{
+../Sort/sort/Selection.o: 14,
+../Sort/sort/Bubblesort.o: 13,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 14,
+../Sort/sort/Heapsort.o: 20,
+,executions: 85 
+}
+][
+{
+../Sort/sort/Selection.o: 14,
+../Sort/sort/Bubblesort.o: 13,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 14,
+../Sort/sort/Heapsort.o: 21,
+,executions: 86 
+}
+][
+{
+../Sort/sort/Selection.o: 14,
+../Sort/sort/Bubblesort.o: 13,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 12,
+../Sort/sort/Insertion.o: 15,
+../Sort/sort/Heapsort.o: 21,
+,executions: 87 
+}
+][
+{
+../Sort/sort/Selection.o: 14,
+../Sort/sort/Bubblesort.o: 13,
+../Sort/sort/remoteSort.o: 12,
+../Sort/sort/Quicksort.o: 13,
+../Sort/sort/Insertion.o: 15,
+../Sort/sort/Heapsort.o: 21,
+,executions: 88 
+}
+][
+{
+../Sort/sort/Selection.o: 14,
+../Sort/sort/Bubblesort.o: 13,
+../Sort/sort/remoteSort.o: 13,
+../Sort/sort/Quicksort.o: 13,
+../Sort/sort/Insertion.o: 15,
+../Sort/sort/Heapsort.o: 21,
+,executions: 89 
+}
+][
+{
+../Sort/sort/Selection.o: 14,
+../Sort/sort/Bubblesort.o: 13,
+../Sort/sort/remoteSort.o: 13,
+../Sort/sort/Quicksort.o: 13,
+../Sort/sort/Insertion.o: 15,
+../Sort/sort/Heapsort.o: 22,
+,executions: 90 
+}
+][
+{
+../Sort/sort/Selection.o: 14,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 13,
+../Sort/sort/Quicksort.o: 13,
+../Sort/sort/Insertion.o: 15,
+../Sort/sort/Heapsort.o: 22,
+,executions: 91 
+}
+][
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 13,
+../Sort/sort/Quicksort.o: 13,
+../Sort/sort/Insertion.o: 15,
+../Sort/sort/Heapsort.o: 22,
+,executions: 92 
+}
+][
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 13,
+../Sort/sort/Quicksort.o: 13,
+../Sort/sort/Insertion.o: 16,
+../Sort/sort/Heapsort.o: 22,
+,executions: 93 
+}
+][
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 13,
+../Sort/sort/Quicksort.o: 13,
+../Sort/sort/Insertion.o: 16,
+../Sort/sort/Heapsort.o: 23,
+,executions: 94 
+}
+][
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 13,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 16,
+../Sort/sort/Heapsort.o: 23,
+,executions: 95 
+}
+][
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 16,
+../Sort/sort/Heapsort.o: 23,
+,executions: 96 
+}
+][
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 16,
+../Sort/sort/Heapsort.o: 24,
+,executions: 97 
+}
+][
+{
+../Sort/sort/Selection.o: 15,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 17,
+../Sort/sort/Heapsort.o: 24,
+,executions: 98 
+}
+][
+{
+../Sort/sort/Selection.o: 16,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 17,
+../Sort/sort/Heapsort.o: 24,
+,executions: 99 
+}
+][
+{
+../Sort/sort/Selection.o: 16,
+../Sort/sort/Bubblesort.o: 14,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 17,
+../Sort/sort/Heapsort.o: 25,
+,executions: 100 
+}
+][
+{
+../Sort/sort/Selection.o: 16,
+../Sort/sort/Bubblesort.o: 15,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 17,
+../Sort/sort/Heapsort.o: 25,
+,executions: 101 
+}
+][
+{
+../Sort/sort/Selection.o: 16,
+../Sort/sort/Bubblesort.o: 15,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 14,
+../Sort/sort/Insertion.o: 17,
+../Sort/sort/Heapsort.o: 26,
+,executions: 102 
+}
+][
+{
+../Sort/sort/Selection.o: 16,
+../Sort/sort/Bubblesort.o: 15,
+../Sort/sort/remoteSort.o: 14,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 17,
+../Sort/sort/Heapsort.o: 26,
+,executions: 103 
+}
+][
+{
+../Sort/sort/Selection.o: 16,
+../Sort/sort/Bubblesort.o: 15,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 17,
+../Sort/sort/Heapsort.o: 26,
+,executions: 104 
+}
+][
+{
+../Sort/sort/Selection.o: 16,
+../Sort/sort/Bubblesort.o: 15,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 18,
+../Sort/sort/Heapsort.o: 26,
+,executions: 105 
+}
+][
+{
+../Sort/sort/Selection.o: 17,
+../Sort/sort/Bubblesort.o: 15,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 18,
+../Sort/sort/Heapsort.o: 26,
+,executions: 106 
+}
+][
+{
+../Sort/sort/Selection.o: 17,
+../Sort/sort/Bubblesort.o: 15,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 18,
+../Sort/sort/Heapsort.o: 27,
+,executions: 107 
+}
+][
+{
+../Sort/sort/Selection.o: 17,
+../Sort/sort/Bubblesort.o: 16,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 18,
+../Sort/sort/Heapsort.o: 27,
+,executions: 108 
+}
+][
+{
+../Sort/sort/Selection.o: 17,
+../Sort/sort/Bubblesort.o: 16,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 18,
+../Sort/sort/Heapsort.o: 28,
+,executions: 109 
+}
+][
+{
+../Sort/sort/Selection.o: 17,
+../Sort/sort/Bubblesort.o: 16,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 15,
+../Sort/sort/Insertion.o: 19,
+../Sort/sort/Heapsort.o: 28,
+,executions: 110 
+}
+][
+{
+../Sort/sort/Selection.o: 17,
+../Sort/sort/Bubblesort.o: 16,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 19,
+../Sort/sort/Heapsort.o: 28,
+,executions: 111 
+}
+][
+{
+../Sort/sort/Selection.o: 17,
+../Sort/sort/Bubblesort.o: 16,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 19,
+../Sort/sort/Heapsort.o: 29,
+,executions: 112 
+}
+][
+{
+../Sort/sort/Selection.o: 18,
+../Sort/sort/Bubblesort.o: 16,
+../Sort/sort/remoteSort.o: 15,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 19,
+../Sort/sort/Heapsort.o: 29,
+,executions: 113 
+}
+][
+{
+../Sort/sort/Selection.o: 18,
+../Sort/sort/Bubblesort.o: 16,
+../Sort/sort/remoteSort.o: 16,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 19,
+../Sort/sort/Heapsort.o: 29,
+,executions: 114 
+}
+][
+{
+../Sort/sort/Selection.o: 18,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 16,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 19,
+../Sort/sort/Heapsort.o: 29,
+,executions: 115 
+}
+][
+{
+../Sort/sort/Selection.o: 18,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 16,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 19,
+../Sort/sort/Heapsort.o: 30,
+,executions: 116 
+}
+][
+{
+../Sort/sort/Selection.o: 18,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 16,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 20,
+../Sort/sort/Heapsort.o: 30,
+,executions: 117 
+}
+][
+{
+../Sort/sort/Selection.o: 18,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 16,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 20,
+../Sort/sort/Heapsort.o: 31,
+,executions: 118 
+}
+][
+{
+../Sort/sort/Selection.o: 19,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 16,
+../Sort/sort/Quicksort.o: 16,
+../Sort/sort/Insertion.o: 20,
+../Sort/sort/Heapsort.o: 31,
+,executions: 119 
+}
+][
+{
+../Sort/sort/Selection.o: 19,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 16,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 20,
+../Sort/sort/Heapsort.o: 31,
+,executions: 120 
+}
+][
+{
+../Sort/sort/Selection.o: 19,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 20,
+../Sort/sort/Heapsort.o: 31,
+,executions: 121 
+}
+][
+{
+../Sort/sort/Selection.o: 19,
+../Sort/sort/Bubblesort.o: 17,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 20,
+../Sort/sort/Heapsort.o: 32,
+,executions: 122 
+}
+][
+{
+../Sort/sort/Selection.o: 19,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 20,
+../Sort/sort/Heapsort.o: 32,
+,executions: 123 
+}
+][
+{
+../Sort/sort/Selection.o: 19,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 21,
+../Sort/sort/Heapsort.o: 32,
+,executions: 124 
+}
+][
+{
+../Sort/sort/Selection.o: 19,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 21,
+../Sort/sort/Heapsort.o: 33,
+,executions: 125 
+}
+][
+{
+../Sort/sort/Selection.o: 20,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 21,
+../Sort/sort/Heapsort.o: 33,
+,executions: 126 
+}
+][
+{
+../Sort/sort/Selection.o: 20,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 17,
+../Sort/sort/Insertion.o: 21,
+../Sort/sort/Heapsort.o: 34,
+,executions: 127 
+}
+][
+{
+../Sort/sort/Selection.o: 20,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 17,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 21,
+../Sort/sort/Heapsort.o: 34,
+,executions: 128 
+}
+][
+{
+../Sort/sort/Selection.o: 20,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 21,
+../Sort/sort/Heapsort.o: 34,
+,executions: 129 
+}
+][
+{
+../Sort/sort/Selection.o: 20,
+../Sort/sort/Bubblesort.o: 18,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 22,
+../Sort/sort/Heapsort.o: 34,
+,executions: 130 
+}
+][
+{
+../Sort/sort/Selection.o: 20,
+../Sort/sort/Bubblesort.o: 19,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 22,
+../Sort/sort/Heapsort.o: 34,
+,executions: 131 
+}
+][
+{
+../Sort/sort/Selection.o: 20,
+../Sort/sort/Bubblesort.o: 19,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 22,
+../Sort/sort/Heapsort.o: 35,
+,executions: 132 
+}
+][
+{
+../Sort/sort/Selection.o: 21,
+../Sort/sort/Bubblesort.o: 19,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 22,
+../Sort/sort/Heapsort.o: 35,
+,executions: 133 
+}
+][
+{
+../Sort/sort/Selection.o: 21,
+../Sort/sort/Bubblesort.o: 19,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 22,
+../Sort/sort/Heapsort.o: 36,
+,executions: 134 
+}
+][
+{
+../Sort/sort/Selection.o: 21,
+../Sort/sort/Bubblesort.o: 19,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 18,
+../Sort/sort/Insertion.o: 23,
+../Sort/sort/Heapsort.o: 36,
+,executions: 135 
+}
+][
+{
+../Sort/sort/Selection.o: 21,
+../Sort/sort/Bubblesort.o: 19,
+../Sort/sort/remoteSort.o: 18,
+../Sort/sort/Quicksort.o: 19,
+../Sort/sort/Insertion.o: 23,
+../Sort/sort/Heapsort.o: 36,
+,executions: 136 
+}
+][
+{
+../Sort/sort/Selection.o: 21,
+../Sort/sort/Bubblesort.o: 19,
+../Sort/sort/remoteSort.o: 19,
+../Sort/sort/Quicksort.o: 19,
+../Sort/sort/Insertion.o: 23,
+../Sort/sort/Heapsort.o: 36,
+,executions: 137 
+}
+][
+{
+../Sort/sort/Selection.o: 21,
+../Sort/sort/Bubblesort.o: 20,
+../Sort/sort/remoteSort.o: 19,
+../Sort/sort/Quicksort.o: 19,
+../Sort/sort/Insertion.o: 23,
+../Sort/sort/Heapsort.o: 36,
+,executions: 138 
+}
+][
+{
+../Sort/sort/Selection.o: 22,
+../Sort/sort/Bubblesort.o: 20,
+../Sort/sort/remoteSort.o: 19,
+../Sort/sort/Quicksort.o: 19,
+../Sort/sort/Insertion.o: 23,
+../Sort/sort/Heapsort.o: 36,
+,executions: 139 
+}
+][
+{
+../Sort/sort/Selection.o: 22,
+../Sort/sort/Bubblesort.o: 20,
+../Sort/sort/remoteSort.o: 19,
+../Sort/sort/Quicksort.o: 19,
+../Sort/sort/Insertion.o: 23,
+../Sort/sort/Heapsort.o: 37,
+,executions: 140 
+}
+][
+{
+../Sort/sort/Selection.o: 22,
+../Sort/sort/Bubblesort.o: 20,
+../Sort/sort/remoteSort.o: 19,
+../Sort/sort/Quicksort.o: 19,
+../Sort/sort/Insertion.o: 24,
+../Sort/sort/Heapsort.o: 37,
+,executions: 141 
+}
+][
+{
+../Sort/sort/Selection.o: 22,
+../Sort/sort/Bubblesort.o: 20,
+../Sort/sort/remoteSort.o: 19,
+../Sort/sort/Quicksort.o: 20,
+../Sort/sort/Insertion.o: 24,
+../Sort/sort/Heapsort.o: 37,
+,executions: 142 
+}
+][
+{
+../Sort/sort/Selection.o: 22,
+../Sort/sort/Bubblesort.o: 20,
+../Sort/sort/remoteSort.o: 20,
+../Sort/sort/Quicksort.o: 20,
+../Sort/sort/Insertion.o: 24,
+../Sort/sort/Heapsort.o: 37,
+,executions: 143 
+}
+][
+{
+../Sort/sort/Selection.o: 22,
+../Sort/sort/Bubblesort.o: 20,
+../Sort/sort/remoteSort.o: 20,
+../Sort/sort/Quicksort.o: 20,
+../Sort/sort/Insertion.o: 24,
+../Sort/sort/Heapsort.o: 38,
+,executions: 144 
+}
+][
+{
+../Sort/sort/Selection.o: 22,
+../Sort/sort/Bubblesort.o: 21,
+../Sort/sort/remoteSort.o: 20,
+../Sort/sort/Quicksort.o: 20,
+../Sort/sort/Insertion.o: 24,
+../Sort/sort/Heapsort.o: 38,
+,executions: 145 
+}
+][
+{
+../Sort/sort/Selection.o: 23,
+../Sort/sort/Bubblesort.o: 21,
+../Sort/sort/remoteSort.o: 20,
+../Sort/sort/Quicksort.o: 20,
+../Sort/sort/Insertion.o: 24,
+../Sort/sort/Heapsort.o: 38,
+,executions: 146 
+}
+][
+{
+../Sort/sort/Selection.o: 23,
+../Sort/sort/Bubblesort.o: 21,
+../Sort/sort/remoteSort.o: 20,
+../Sort/sort/Quicksort.o: 20,
+../Sort/sort/Insertion.o: 24,
+../Sort/sort/Heapsort.o: 39,
+,executions: 147 
+}
+][
+{
+../Sort/sort/Selection.o: 23,
+../Sort/sort/Bubblesort.o: 21,
+../Sort/sort/remoteSort.o: 20,
+../Sort/sort/Quicksort.o: 20,
+../Sort/sort/Insertion.o: 25,
+../Sort/sort/Heapsort.o: 39,
+,executions: 148 
+}
+][
+{
+../Sort/sort/Selection.o: 23,
+../Sort/sort/Bubblesort.o: 21,
+../Sort/sort/remoteSort.o: 20,
+../Sort/sort/Quicksort.o: 21,
+../Sort/sort/Insertion.o: 25,
+../Sort/sort/Heapsort.o: 39,
+,executions: 149 
+}
+][
+{
+../Sort/sort/Selection.o: 23,
+../Sort/sort/Bubblesort.o: 21,
+../Sort/sort/remoteSort.o: 21,
+../Sort/sort/Quicksort.o: 21,
+../Sort/sort/Insertion.o: 25,
+../Sort/sort/Heapsort.o: 39,
+,executions: 150 
+}
+][
+{
+../Sort/sort/Selection.o: 23,
+../Sort/sort/Bubblesort.o: 22,
+../Sort/sort/remoteSort.o: 21,
+../Sort/sort/Quicksort.o: 21,
+../Sort/sort/Insertion.o: 25,
+../Sort/sort/Heapsort.o: 39,
+,executions: 151 
+}
+][
+{
+../Sort/sort/Selection.o: 24,
+../Sort/sort/Bubblesort.o: 22,
+../Sort/sort/remoteSort.o: 21,
+../Sort/sort/Quicksort.o: 21,
+../Sort/sort/Insertion.o: 25,
+../Sort/sort/Heapsort.o: 39,
+,executions: 152 
+}
+][
+{
+../Sort/sort/Selection.o: 24,
+../Sort/sort/Bubblesort.o: 22,
+../Sort/sort/remoteSort.o: 21,
+../Sort/sort/Quicksort.o: 21,
+../Sort/sort/Insertion.o: 25,
+../Sort/sort/Heapsort.o: 40,
+,executions: 153 
+}
+][
+{
+../Sort/sort/Selection.o: 24,
+../Sort/sort/Bubblesort.o: 22,
+../Sort/sort/remoteSort.o: 21,
+../Sort/sort/Quicksort.o: 21,
+../Sort/sort/Insertion.o: 26,
+../Sort/sort/Heapsort.o: 40,
+,executions: 154 
+}
+][
+{
+../Sort/sort/Selection.o: 24,
+../Sort/sort/Bubblesort.o: 22,
+../Sort/sort/remoteSort.o: 21,
+../Sort/sort/Quicksort.o: 22,
+../Sort/sort/Insertion.o: 26,
+../Sort/sort/Heapsort.o: 40,
+,executions: 155 
+}
+][
+{
+../Sort/sort/Selection.o: 24,
+../Sort/sort/Bubblesort.o: 22,
+../Sort/sort/remoteSort.o: 21,
+../Sort/sort/Quicksort.o: 22,
+../Sort/sort/Insertion.o: 26,
+../Sort/sort/Heapsort.o: 41,
+,executions: 156 
+}
+][
+{
+../Sort/sort/Selection.o: 24,
+../Sort/sort/Bubblesort.o: 22,
+../Sort/sort/remoteSort.o: 22,
+../Sort/sort/Quicksort.o: 22,
+../Sort/sort/Insertion.o: 26,
+../Sort/sort/Heapsort.o: 41,
+,executions: 157 
+}
+][
+{
+../Sort/sort/Selection.o: 24,
+../Sort/sort/Bubblesort.o: 23,
+../Sort/sort/remoteSort.o: 22,
+../Sort/sort/Quicksort.o: 22,
+../Sort/sort/Insertion.o: 26,
+../Sort/sort/Heapsort.o: 41,
+,executions: 158 
+}
+][
+{
+../Sort/sort/Selection.o: 25,
+../Sort/sort/Bubblesort.o: 23,
+../Sort/sort/remoteSort.o: 22,
+../Sort/sort/Quicksort.o: 22,
+../Sort/sort/Insertion.o: 26,
+../Sort/sort/Heapsort.o: 41,
+,executions: 159 
+}
+][
+{
+../Sort/sort/Selection.o: 25,
+../Sort/sort/Bubblesort.o: 23,
+../Sort/sort/remoteSort.o: 22,
+../Sort/sort/Quicksort.o: 22,
+../Sort/sort/Insertion.o: 27,
+../Sort/sort/Heapsort.o: 41,
+,executions: 160 
+}
+][
+{
+../Sort/sort/Selection.o: 25,
+../Sort/sort/Bubblesort.o: 23,
+../Sort/sort/remoteSort.o: 22,
+../Sort/sort/Quicksort.o: 22,
+../Sort/sort/Insertion.o: 27,
+../Sort/sort/Heapsort.o: 42,
+,executions: 161 
+}
+][
+{
+../Sort/sort/Selection.o: 25,
+../Sort/sort/Bubblesort.o: 23,
+../Sort/sort/remoteSort.o: 22,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 27,
+../Sort/sort/Heapsort.o: 42,
+,executions: 162 
+}
+][
+{
+../Sort/sort/Selection.o: 25,
+../Sort/sort/Bubblesort.o: 23,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 27,
+../Sort/sort/Heapsort.o: 42,
+,executions: 163 
+}
+][
+{
+../Sort/sort/Selection.o: 25,
+../Sort/sort/Bubblesort.o: 24,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 27,
+../Sort/sort/Heapsort.o: 42,
+,executions: 164 
+}
+][
+{
+../Sort/sort/Selection.o: 26,
+../Sort/sort/Bubblesort.o: 24,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 27,
+../Sort/sort/Heapsort.o: 42,
+,executions: 165 
+}
+][
+{
+../Sort/sort/Selection.o: 26,
+../Sort/sort/Bubblesort.o: 24,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 27,
+../Sort/sort/Heapsort.o: 43,
+,executions: 166 
+}
+][
+{
+../Sort/sort/Selection.o: 26,
+../Sort/sort/Bubblesort.o: 24,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 28,
+../Sort/sort/Heapsort.o: 43,
+,executions: 167 
+}
+][
+{
+../Sort/sort/Selection.o: 26,
+../Sort/sort/Bubblesort.o: 24,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 28,
+../Sort/sort/Heapsort.o: 44,
+,executions: 168 
+}
+][
+{
+../Sort/sort/Selection.o: 26,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 23,
+../Sort/sort/Insertion.o: 28,
+../Sort/sort/Heapsort.o: 44,
+,executions: 169 
+}
+][
+{
+../Sort/sort/Selection.o: 26,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 23,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 28,
+../Sort/sort/Heapsort.o: 44,
+,executions: 170 
+}
+][
+{
+../Sort/sort/Selection.o: 26,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 28,
+../Sort/sort/Heapsort.o: 44,
+,executions: 171 
+}
+][
+{
+../Sort/sort/Selection.o: 27,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 28,
+../Sort/sort/Heapsort.o: 44,
+,executions: 172 
+}
+][
+{
+../Sort/sort/Selection.o: 27,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 28,
+../Sort/sort/Heapsort.o: 45,
+,executions: 173 
+}
+][
+{
+../Sort/sort/Selection.o: 27,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 29,
+../Sort/sort/Heapsort.o: 45,
+,executions: 174 
+}
+][
+{
+../Sort/sort/Selection.o: 27,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 29,
+../Sort/sort/Heapsort.o: 46,
+,executions: 175 
+}
+][
+{
+../Sort/sort/Selection.o: 27,
+../Sort/sort/Bubblesort.o: 25,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 30,
+../Sort/sort/Heapsort.o: 46,
+,executions: 176 
+}
+][
+{
+../Sort/sort/Selection.o: 27,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 30,
+../Sort/sort/Heapsort.o: 46,
+,executions: 177 
+}
+][
+{
+../Sort/sort/Selection.o: 28,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 24,
+../Sort/sort/Insertion.o: 30,
+../Sort/sort/Heapsort.o: 46,
+,executions: 178 
+}
+][
+{
+../Sort/sort/Selection.o: 28,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 24,
+../Sort/sort/Quicksort.o: 25,
+../Sort/sort/Insertion.o: 30,
+../Sort/sort/Heapsort.o: 46,
+,executions: 179 
+}
+][
+{
+../Sort/sort/Selection.o: 28,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 25,
+../Sort/sort/Quicksort.o: 25,
+../Sort/sort/Insertion.o: 30,
+../Sort/sort/Heapsort.o: 46,
+,executions: 180 
+}
+][
+{
+../Sort/sort/Selection.o: 28,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 25,
+../Sort/sort/Quicksort.o: 25,
+../Sort/sort/Insertion.o: 30,
+../Sort/sort/Heapsort.o: 47,
+,executions: 181 
+}
+][
+{
+../Sort/sort/Selection.o: 28,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 25,
+../Sort/sort/Quicksort.o: 25,
+../Sort/sort/Insertion.o: 31,
+../Sort/sort/Heapsort.o: 47,
+,executions: 182 
+}
+][
+{
+../Sort/sort/Selection.o: 28,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 25,
+../Sort/sort/Quicksort.o: 25,
+../Sort/sort/Insertion.o: 31,
+../Sort/sort/Heapsort.o: 48,
+,executions: 183 
+}
+][
+{
+../Sort/sort/Selection.o: 29,
+../Sort/sort/Bubblesort.o: 26,
+../Sort/sort/remoteSort.o: 25,
+../Sort/sort/Quicksort.o: 25,
+../Sort/sort/Insertion.o: 31,
+../Sort/sort/Heapsort.o: 48,
+,executions: 184 
+}
+][
+{
+../Sort/sort/Selection.o: 29,
+../Sort/sort/Bubblesort.o: 27,
+../Sort/sort/remoteSort.o: 25,
+../Sort/sort/Quicksort.o: 25,
+../Sort/sort/Insertion.o: 31,
+../Sort/sort/Heapsort.o: 48,
+,executions: 185 
+}
+][
+{
+../Sort/sort/Selection.o: 29,
+../Sort/sort/Bubblesort.o: 27,
+../Sort/sort/remoteSort.o: 25,
+../Sort/sort/Quicksort.o: 26,
+../Sort/sort/Insertion.o: 31,
+../Sort/sort/Heapsort.o: 48,
+,executions: 186 
+}
+][
+{
+../Sort/sort/Selection.o: 29,
+../Sort/sort/Bubblesort.o: 27,
+../Sort/sort/remoteSort.o: 26,
+../Sort/sort/Quicksort.o: 26,
+../Sort/sort/Insertion.o: 31,
+../Sort/sort/Heapsort.o: 48,
+,executions: 187 
+}
+][
+{
+../Sort/sort/Selection.o: 29,
+../Sort/sort/Bubblesort.o: 27,
+../Sort/sort/remoteSort.o: 26,
+../Sort/sort/Quicksort.o: 26,
+../Sort/sort/Insertion.o: 31,
+../Sort/sort/Heapsort.o: 49,
+,executions: 188 
+}
+][
+{
+../Sort/sort/Selection.o: 29,
+../Sort/sort/Bubblesort.o: 27,
+../Sort/sort/remoteSort.o: 26,
+../Sort/sort/Quicksort.o: 26,
+../Sort/sort/Insertion.o: 32,
+../Sort/sort/Heapsort.o: 49,
+,executions: 189 
+}
+][
+{
+../Sort/sort/Selection.o: 30,
+../Sort/sort/Bubblesort.o: 27,
+../Sort/sort/remoteSort.o: 26,
+../Sort/sort/Quicksort.o: 26,
+../Sort/sort/Insertion.o: 32,
+../Sort/sort/Heapsort.o: 49,
+,executions: 190 
+}
+][
+{
+../Sort/sort/Selection.o: 30,
+../Sort/sort/Bubblesort.o: 27,
+../Sort/sort/remoteSort.o: 26,
+../Sort/sort/Quicksort.o: 26,
+../Sort/sort/Insertion.o: 32,
+../Sort/sort/Heapsort.o: 50,
+,executions: 191 
+}
+][
+{
+../Sort/sort/Selection.o: 30,
+../Sort/sort/Bubblesort.o: 28,
+../Sort/sort/remoteSort.o: 26,
+../Sort/sort/Quicksort.o: 26,
+../Sort/sort/Insertion.o: 32,
+../Sort/sort/Heapsort.o: 50,
+,executions: 192 
+}
+][
+{
+../Sort/sort/Selection.o: 30,
+../Sort/sort/Bubblesort.o: 28,
+../Sort/sort/remoteSort.o: 26,
+../Sort/sort/Quicksort.o: 27,
+../Sort/sort/Insertion.o: 32,
+../Sort/sort/Heapsort.o: 50,
+,executions: 193 
+}
+][
+{
+../Sort/sort/Selection.o: 30,
+../Sort/sort/Bubblesort.o: 28,
+../Sort/sort/remoteSort.o: 27,
+../Sort/sort/Quicksort.o: 27,
+../Sort/sort/Insertion.o: 32,
+../Sort/sort/Heapsort.o: 50,
+,executions: 194 
+}
+][
+{
+../Sort/sort/Selection.o: 30,
+../Sort/sort/Bubblesort.o: 28,
+../Sort/sort/remoteSort.o: 27,
+../Sort/sort/Quicksort.o: 27,
+../Sort/sort/Insertion.o: 32,
+../Sort/sort/Heapsort.o: 51,
+,executions: 195 
+}
+][
+{
+../Sort/sort/Selection.o: 30,
+../Sort/sort/Bubblesort.o: 28,
+../Sort/sort/remoteSort.o: 27,
+../Sort/sort/Quicksort.o: 27,
+../Sort/sort/Insertion.o: 33,
+../Sort/sort/Heapsort.o: 51,
+,executions: 196 
+}
+][
+{
+../Sort/sort/Selection.o: 31,
+../Sort/sort/Bubblesort.o: 28,
+../Sort/sort/remoteSort.o: 27,
+../Sort/sort/Quicksort.o: 27,
+../Sort/sort/Insertion.o: 33,
+../Sort/sort/Heapsort.o: 51,
+,executions: 197 
+}
+][
+{
+../Sort/sort/Selection.o: 31,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 27,
+../Sort/sort/Quicksort.o: 27,
+../Sort/sort/Insertion.o: 33,
+../Sort/sort/Heapsort.o: 51,
+,executions: 198 
+}
+][
+{
+../Sort/sort/Selection.o: 31,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 27,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 33,
+../Sort/sort/Heapsort.o: 51,
+,executions: 199 
+}
+][
+{
+../Sort/sort/Selection.o: 31,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 33,
+../Sort/sort/Heapsort.o: 51,
+,executions: 200 
+}
+][
+{
+../Sort/sort/Selection.o: 31,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 33,
+../Sort/sort/Heapsort.o: 52,
+,executions: 201 
+}
+][
+{
+../Sort/sort/Selection.o: 31,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 52,
+,executions: 202 
+}
+][
+{
+../Sort/sort/Selection.o: 31,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 53,
+,executions: 203 
+}
+][
+{
+../Sort/sort/Selection.o: 32,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 53,
+,executions: 204 
+}
+][
+{
+../Sort/sort/Selection.o: 32,
+../Sort/sort/Bubblesort.o: 29,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 54,
+,executions: 205 
+}
+][
+{
+../Sort/sort/Selection.o: 32,
+../Sort/sort/Bubblesort.o: 30,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 28,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 54,
+,executions: 206 
+}
+][
+{
+../Sort/sort/Selection.o: 32,
+../Sort/sort/Bubblesort.o: 30,
+../Sort/sort/remoteSort.o: 28,
+../Sort/sort/Quicksort.o: 29,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 54,
+,executions: 207 
+}
+][
+{
+../Sort/sort/Selection.o: 32,
+../Sort/sort/Bubblesort.o: 30,
+../Sort/sort/remoteSort.o: 29,
+../Sort/sort/Quicksort.o: 29,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 54,
+,executions: 208 
+}
+][
+{
+../Sort/sort/Selection.o: 32,
+../Sort/sort/Bubblesort.o: 30,
+../Sort/sort/remoteSort.o: 29,
+../Sort/sort/Quicksort.o: 29,
+../Sort/sort/Insertion.o: 34,
+../Sort/sort/Heapsort.o: 55,
+,executions: 209 
+}
+][
+{
+../Sort/sort/Selection.o: 32,
+../Sort/sort/Bubblesort.o: 30,
+../Sort/sort/remoteSort.o: 29,
+../Sort/sort/Quicksort.o: 29,
+../Sort/sort/Insertion.o: 35,
+../Sort/sort/Heapsort.o: 55,
+,executions: 210 
+}
+][
+{
+../Sort/sort/Selection.o: 33,
+../Sort/sort/Bubblesort.o: 30,
+../Sort/sort/remoteSort.o: 29,
+../Sort/sort/Quicksort.o: 29,
+../Sort/sort/Insertion.o: 35,
+../Sort/sort/Heapsort.o: 55,
+,executions: 211 
+}
+][
+{
+../Sort/sort/Selection.o: 33,
+../Sort/sort/Bubblesort.o: 30,
+../Sort/sort/remoteSort.o: 29,
+../Sort/sort/Quicksort.o: 29,
+../Sort/sort/Insertion.o: 35,
+../Sort/sort/Heapsort.o: 56,
+,executions: 212 
+}
+][
+{
+../Sort/sort/Selection.o: 33,
+../Sort/sort/Bubblesort.o: 31,
+../Sort/sort/remoteSort.o: 29,
+../Sort/sort/Quicksort.o: 29,
+../Sort/sort/Insertion.o: 35,
+../Sort/sort/Heapsort.o: 56,
+,executions: 213 
+}
+][
+{
+../Sort/sort/Selection.o: 33,
+../Sort/sort/Bubblesort.o: 31,
+../Sort/sort/remoteSort.o: 29,
+../Sort/sort/Quicksort.o: 30,
+../Sort/sort/Insertion.o: 35,
+../Sort/sort/Heapsort.o: 56,
+,executions: 214 
+}
+][
+{
+../Sort/sort/Selection.o: 33,
+../Sort/sort/Bubblesort.o: 31,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 30,
+../Sort/sort/Insertion.o: 35,
+../Sort/sort/Heapsort.o: 56,
+,executions: 215 
+}
+][
+{
+../Sort/sort/Selection.o: 33,
+../Sort/sort/Bubblesort.o: 31,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 30,
+../Sort/sort/Insertion.o: 36,
+../Sort/sort/Heapsort.o: 56,
+,executions: 216 
+}
+][
+{
+../Sort/sort/Selection.o: 33,
+../Sort/sort/Bubblesort.o: 31,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 30,
+../Sort/sort/Insertion.o: 36,
+../Sort/sort/Heapsort.o: 57,
+,executions: 217 
+}
+][
+{
+../Sort/sort/Selection.o: 34,
+../Sort/sort/Bubblesort.o: 31,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 30,
+../Sort/sort/Insertion.o: 36,
+../Sort/sort/Heapsort.o: 57,
+,executions: 218 
+}
+][
+{
+../Sort/sort/Selection.o: 34,
+../Sort/sort/Bubblesort.o: 32,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 30,
+../Sort/sort/Insertion.o: 36,
+../Sort/sort/Heapsort.o: 57,
+,executions: 219 
+}
+][
+{
+../Sort/sort/Selection.o: 34,
+../Sort/sort/Bubblesort.o: 32,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 30,
+../Sort/sort/Insertion.o: 36,
+../Sort/sort/Heapsort.o: 58,
+,executions: 220 
+}
+][
+{
+../Sort/sort/Selection.o: 34,
+../Sort/sort/Bubblesort.o: 32,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 31,
+../Sort/sort/Insertion.o: 36,
+../Sort/sort/Heapsort.o: 58,
+,executions: 221 
+}
+][
+{
+../Sort/sort/Selection.o: 34,
+../Sort/sort/Bubblesort.o: 32,
+../Sort/sort/remoteSort.o: 30,
+../Sort/sort/Quicksort.o: 31,
+../Sort/sort/Insertion.o: 37,
+../Sort/sort/Heapsort.o: 58,
+,executions: 222 
+}
+][
+{
+../Sort/sort/Selection.o: 34,
+../Sort/sort/Bubblesort.o: 32,
+../Sort/sort/remoteSort.o: 31,
+../Sort/sort/Quicksort.o: 31,
+../Sort/sort/Insertion.o: 37,
+../Sort/sort/Heapsort.o: 58,
+,executions: 223 
+}
+][
+{
+../Sort/sort/Selection.o: 35,
+../Sort/sort/Bubblesort.o: 32,
+../Sort/sort/remoteSort.o: 31,
+../Sort/sort/Quicksort.o: 31,
+../Sort/sort/Insertion.o: 37,
+../Sort/sort/Heapsort.o: 58,
+,executions: 224 
+}
+][
+{
+../Sort/sort/Selection.o: 35,
+../Sort/sort/Bubblesort.o: 32,
+../Sort/sort/remoteSort.o: 31,
+../Sort/sort/Quicksort.o: 31,
+../Sort/sort/Insertion.o: 37,
+../Sort/sort/Heapsort.o: 59,
+,executions: 225 
+}
+][
+{
+../Sort/sort/Selection.o: 35,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 31,
+../Sort/sort/Quicksort.o: 31,
+../Sort/sort/Insertion.o: 37,
+../Sort/sort/Heapsort.o: 59,
+,executions: 226 
+}
+][
+{
+../Sort/sort/Selection.o: 35,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 31,
+../Sort/sort/Quicksort.o: 31,
+../Sort/sort/Insertion.o: 38,
+../Sort/sort/Heapsort.o: 59,
+,executions: 227 
+}
+][
+{
+../Sort/sort/Selection.o: 35,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 31,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 38,
+../Sort/sort/Heapsort.o: 59,
+,executions: 228 
+}
+][
+{
+../Sort/sort/Selection.o: 35,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 31,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 38,
+../Sort/sort/Heapsort.o: 60,
+,executions: 229 
+}
+][
+{
+../Sort/sort/Selection.o: 35,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 38,
+../Sort/sort/Heapsort.o: 60,
+,executions: 230 
+}
+][
+{
+../Sort/sort/Selection.o: 36,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 38,
+../Sort/sort/Heapsort.o: 60,
+,executions: 231 
+}
+][
+{
+../Sort/sort/Selection.o: 36,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 60,
+,executions: 232 
+}
+][
+{
+../Sort/sort/Selection.o: 36,
+../Sort/sort/Bubblesort.o: 33,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 61,
+,executions: 233 
+}
+][
+{
+../Sort/sort/Selection.o: 36,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 61,
+,executions: 234 
+}
+][
+{
+../Sort/sort/Selection.o: 36,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 32,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 62,
+,executions: 235 
+}
+][
+{
+../Sort/sort/Selection.o: 36,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 62,
+,executions: 236 
+}
+][
+{
+../Sort/sort/Selection.o: 37,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 32,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 62,
+,executions: 237 
+}
+][
+{
+../Sort/sort/Selection.o: 37,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 62,
+,executions: 238 
+}
+][
+{
+../Sort/sort/Selection.o: 37,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 39,
+../Sort/sort/Heapsort.o: 63,
+,executions: 239 
+}
+][
+{
+../Sort/sort/Selection.o: 37,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 63,
+,executions: 240 
+}
+][
+{
+../Sort/sort/Selection.o: 37,
+../Sort/sort/Bubblesort.o: 34,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 64,
+,executions: 241 
+}
+][
+{
+../Sort/sort/Selection.o: 37,
+../Sort/sort/Bubblesort.o: 35,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 64,
+,executions: 242 
+}
+][
+{
+../Sort/sort/Selection.o: 37,
+../Sort/sort/Bubblesort.o: 35,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 65,
+,executions: 243 
+}
+][
+{
+../Sort/sort/Selection.o: 38,
+../Sort/sort/Bubblesort.o: 35,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 33,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 65,
+,executions: 244 
+}
+][
+{
+../Sort/sort/Selection.o: 38,
+../Sort/sort/Bubblesort.o: 35,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 34,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 65,
+,executions: 245 
+}
+][
+{
+../Sort/sort/Selection.o: 38,
+../Sort/sort/Bubblesort.o: 35,
+../Sort/sort/remoteSort.o: 33,
+../Sort/sort/Quicksort.o: 34,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 66,
+,executions: 246 
+}
+][
+{
+../Sort/sort/Selection.o: 38,
+../Sort/sort/Bubblesort.o: 35,
+../Sort/sort/remoteSort.o: 34,
+../Sort/sort/Quicksort.o: 34,
+../Sort/sort/Insertion.o: 40,
+../Sort/sort/Heapsort.o: 66,
+,executions: 247 
+}
+][
+{
+../Sort/sort/Selection.o: 38,
+../Sort/sort/Bubblesort.o: 35,
+../Sort/sort/remoteSort.o: 34,
+../Sort/sort/Quicksort.o: 34,
+../Sort/sort/Insertion.o: 41,
+../Sort/sort/Heapsort.o: 66,
+,executions: 248 
+}
+][
+{
+../Sort/sort/Selection.o: 38,
+../Sort/sort/Bubblesort.o: 36,
+../Sort/sort/remoteSort.o: 34,
+../Sort/sort/Quicksort.o: 34,
+../Sort/sort/Insertion.o: 41,
+../Sort/sort/Heapsort.o: 66,
+,executions: 249 
+}
+][
+{
+../Sort/sort/Selection.o: 38,
+../Sort/sort/Bubblesort.o: 36,
+../Sort/sort/remoteSort.o: 34,
+../Sort/sort/Quicksort.o: 34,
+../Sort/sort/Insertion.o: 41,
+../Sort/sort/Heapsort.o: 67,
+,executions: 250 
+}
+][
+{
+../Sort/sort/Selection.o: 39,
+../Sort/sort/Bubblesort.o: 36,
+../Sort/sort/remoteSort.o: 34,
+../Sort/sort/Quicksort.o: 34,
+../Sort/sort/Insertion.o: 41,
+../Sort/sort/Heapsort.o: 67,
+,executions: 251 
+}
+][
+{
+../Sort/sort/Selection.o: 39,
+../Sort/sort/Bubblesort.o: 36,
+../Sort/sort/remoteSort.o: 34,
+../Sort/sort/Quicksort.o: 35,
+../Sort/sort/Insertion.o: 41,
+../Sort/sort/Heapsort.o: 67,
+,executions: 252 
+}
+][
+{
+../Sort/sort/Selection.o: 39,
+../Sort/sort/Bubblesort.o: 36,
+../Sort/sort/remoteSort.o: 35,
+../Sort/sort/Quicksort.o: 35,
+../Sort/sort/Insertion.o: 41,
+../Sort/sort/Heapsort.o: 67,
+,executions: 253 
+}
+][
+{
+../Sort/sort/Selection.o: 39,
+../Sort/sort/Bubblesort.o: 36,
+../Sort/sort/remoteSort.o: 35,
+../Sort/sort/Quicksort.o: 35,
+../Sort/sort/Insertion.o: 41,
+../Sort/sort/Heapsort.o: 68,
+,executions: 254 
+}
+][
+{
+../Sort/sort/Selection.o: 39,
+../Sort/sort/Bubblesort.o: 36,
+../Sort/sort/remoteSort.o: 35,
+../Sort/sort/Quicksort.o: 35,
+../Sort/sort/Insertion.o: 42,
+../Sort/sort/Heapsort.o: 68,
+,executions: 255 
+}
+][
+{
+../Sort/sort/Selection.o: 39,
+../Sort/sort/Bubblesort.o: 37,
+../Sort/sort/remoteSort.o: 35,
+../Sort/sort/Quicksort.o: 35,
+../Sort/sort/Insertion.o: 42,
+../Sort/sort/Heapsort.o: 68,
+,executions: 256 
+}
+][
+{
+../Sort/sort/Selection.o: 40,
+../Sort/sort/Bubblesort.o: 37,
+../Sort/sort/remoteSort.o: 35,
+../Sort/sort/Quicksort.o: 35,
+../Sort/sort/Insertion.o: 42,
+../Sort/sort/Heapsort.o: 68,
+,executions: 257 
+}
+][
+{
+../Sort/sort/Selection.o: 40,
+../Sort/sort/Bubblesort.o: 37,
+../Sort/sort/remoteSort.o: 35,
+../Sort/sort/Quicksort.o: 35,
+../Sort/sort/Insertion.o: 42,
+../Sort/sort/Heapsort.o: 69,
+,executions: 258 
+}
+][
+{
+../Sort/sort/Selection.o: 40,
+../Sort/sort/Bubblesort.o: 37,
+../Sort/sort/remoteSort.o: 35,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 42,
+../Sort/sort/Heapsort.o: 69,
+,executions: 259 
+}
+][
+{
+../Sort/sort/Selection.o: 40,
+../Sort/sort/Bubblesort.o: 37,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 42,
+../Sort/sort/Heapsort.o: 69,
+,executions: 260 
+}
+][
+{
+../Sort/sort/Selection.o: 40,
+../Sort/sort/Bubblesort.o: 37,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 43,
+../Sort/sort/Heapsort.o: 69,
+,executions: 261 
+}
+][
+{
+../Sort/sort/Selection.o: 40,
+../Sort/sort/Bubblesort.o: 37,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 43,
+../Sort/sort/Heapsort.o: 70,
+,executions: 262 
+}
+][
+{
+../Sort/sort/Selection.o: 40,
+../Sort/sort/Bubblesort.o: 38,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 43,
+../Sort/sort/Heapsort.o: 70,
+,executions: 263 
+}
+][
+{
+../Sort/sort/Selection.o: 41,
+../Sort/sort/Bubblesort.o: 38,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 43,
+../Sort/sort/Heapsort.o: 70,
+,executions: 264 
+}
+][
+{
+../Sort/sort/Selection.o: 41,
+../Sort/sort/Bubblesort.o: 38,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 70,
+,executions: 265 
+}
+][
+{
+../Sort/sort/Selection.o: 41,
+../Sort/sort/Bubblesort.o: 38,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 36,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 71,
+,executions: 266 
+}
+][
+{
+../Sort/sort/Selection.o: 41,
+../Sort/sort/Bubblesort.o: 38,
+../Sort/sort/remoteSort.o: 36,
+../Sort/sort/Quicksort.o: 37,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 71,
+,executions: 267 
+}
+][
+{
+../Sort/sort/Selection.o: 41,
+../Sort/sort/Bubblesort.o: 38,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 37,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 71,
+,executions: 268 
+}
+][
+{
+../Sort/sort/Selection.o: 41,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 37,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 71,
+,executions: 269 
+}
+][
+{
+../Sort/sort/Selection.o: 41,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 37,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 72,
+,executions: 270 
+}
+][
+{
+../Sort/sort/Selection.o: 42,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 37,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 72,
+,executions: 271 
+}
+][
+{
+../Sort/sort/Selection.o: 42,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 37,
+../Sort/sort/Insertion.o: 44,
+../Sort/sort/Heapsort.o: 73,
+,executions: 272 
+}
+][
+{
+../Sort/sort/Selection.o: 42,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 37,
+../Sort/sort/Insertion.o: 45,
+../Sort/sort/Heapsort.o: 73,
+,executions: 273 
+}
+][
+{
+../Sort/sort/Selection.o: 42,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 45,
+../Sort/sort/Heapsort.o: 73,
+,executions: 274 
+}
+][
+{
+../Sort/sort/Selection.o: 42,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 37,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 45,
+../Sort/sort/Heapsort.o: 74,
+,executions: 275 
+}
+][
+{
+../Sort/sort/Selection.o: 42,
+../Sort/sort/Bubblesort.o: 39,
+../Sort/sort/remoteSort.o: 38,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 45,
+../Sort/sort/Heapsort.o: 74,
+,executions: 276 
+}
+][
+{
+../Sort/sort/Selection.o: 42,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 38,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 45,
+../Sort/sort/Heapsort.o: 74,
+,executions: 277 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 38,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 45,
+../Sort/sort/Heapsort.o: 74,
+,executions: 278 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 38,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 45,
+../Sort/sort/Heapsort.o: 75,
+,executions: 279 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 38,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 75,
+,executions: 280 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 38,
+../Sort/sort/Quicksort.o: 38,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 76,
+,executions: 281 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 38,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 76,
+,executions: 282 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 76,
+,executions: 283 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 40,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 77,
+,executions: 284 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 77,
+,executions: 285 
+}
+][
+{
+../Sort/sort/Selection.o: 43,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 78,
+,executions: 286 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 46,
+../Sort/sort/Heapsort.o: 78,
+,executions: 287 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 47,
+../Sort/sort/Heapsort.o: 78,
+,executions: 288 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 39,
+../Sort/sort/Insertion.o: 47,
+../Sort/sort/Heapsort.o: 79,
+,executions: 289 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 39,
+../Sort/sort/Quicksort.o: 40,
+../Sort/sort/Insertion.o: 47,
+../Sort/sort/Heapsort.o: 79,
+,executions: 290 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 40,
+../Sort/sort/Quicksort.o: 40,
+../Sort/sort/Insertion.o: 47,
+../Sort/sort/Heapsort.o: 79,
+,executions: 291 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 41,
+../Sort/sort/remoteSort.o: 40,
+../Sort/sort/Quicksort.o: 40,
+../Sort/sort/Insertion.o: 48,
+../Sort/sort/Heapsort.o: 79,
+,executions: 292 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 42,
+../Sort/sort/remoteSort.o: 40,
+../Sort/sort/Quicksort.o: 40,
+../Sort/sort/Insertion.o: 48,
+../Sort/sort/Heapsort.o: 79,
+,executions: 293 
+}
+][
+{
+../Sort/sort/Selection.o: 44,
+../Sort/sort/Bubblesort.o: 42,
+../Sort/sort/remoteSort.o: 40,
+../Sort/sort/Quicksort.o: 40,
+../Sort/sort/Insertion.o: 48,
+../Sort/sort/Heapsort.o: 80,
+,executions: 294 
+}
+][
+{
+../Sort/sort/Selection.o: 45,
+../Sort/sort/Bubblesort.o: 42,
+../Sort/sort/remoteSort.o: 40,
+../Sort/sort/Quicksort.o: 40,
+../Sort/sort/Insertion.o: 48,
+../Sort/sort/Heapsort.o: 80,
+,executions: 295 
+}
+][
+{
+../Sort/sort/Selection.o: 45,
+../Sort/sort/Bubblesort.o: 42,
+../Sort/sort/remoteSort.o: 40,
+../Sort/sort/Quicksort.o: 40,
+../Sort/sort/Insertion.o: 48,
+../Sort/sort/Heapsort.o: 81,
+,executions: 296 
+}
+][
+{
+../Sort/sort/Selection.o: 45,
+../Sort/sort/Bubblesort.o: 42,
+../Sort/sort/remoteSort.o: 40,
+../Sort/sort/Quicksort.o: 41,
+../Sort/sort/Insertion.o: 48,
+../Sort/sort/Heapsort.o: 81,
+,executions: 297 
+}
+][
+{
+../Sort/sort/Selection.o: 45,
+../Sort/sort/Bubblesort.o: 42,
+../Sort/sort/remoteSort.o: 41,
+../Sort/sort/Quicksort.o: 41,
+../Sort/sort/Insertion.o: 48,
+../Sort/sort/Heapsort.o: 81,
+,executions: 298 
+}
+][
+{
+../Sort/sort/Selection.o: 45,
+../Sort/sort/Bubblesort.o: 42,
+../Sort/sort/remoteSort.o: 41,
+../Sort/sort/Quicksort.o: 41,
+../Sort/sort/Insertion.o: 49,
+../Sort/sort/Heapsort.o: 81,
+,executions: 299 
+}
+][
+{
+../Sort/sort/Selection.o: 45,
+../Sort/sort/Bubblesort.o: 43,
+../Sort/sort/remoteSort.o: 41,
+../Sort/sort/Quicksort.o: 41,
+../Sort/sort/Insertion.o: 49,
+../Sort/sort/Heapsort.o: 81,
+,executions: 300 
+}
+][
+{
+../Sort/sort/Selection.o: 46,
+../Sort/sort/Bubblesort.o: 43,
+../Sort/sort/remoteSort.o: 41,
+../Sort/sort/Quicksort.o: 41,
+../Sort/sort/Insertion.o: 49,
+../Sort/sort/Heapsort.o: 81,
+,executions: 301 
+}
+][
+{
+../Sort/sort/Selection.o: 46,
+../Sort/sort/Bubblesort.o: 43,
+../Sort/sort/remoteSort.o: 41,
+../Sort/sort/Quicksort.o: 41,
+../Sort/sort/Insertion.o: 49,
+../Sort/sort/Heapsort.o: 82,
+,executions: 302 
+}
+][
+{
+../Sort/sort/Selection.o: 46,
+../Sort/sort/Bubblesort.o: 43,
+../Sort/sort/remoteSort.o: 41,
+../Sort/sort/Quicksort.o: 41,
+../Sort/sort/Insertion.o: 50,
+../Sort/sort/Heapsort.o: 82,
+,executions: 303 
+}
+][
+{
+../Sort/sort/Selection.o: 46,
+../Sort/sort/Bubblesort.o: 43,
+../Sort/sort/remoteSort.o: 41,
+../Sort/sort/Quicksort.o: 42,
+../Sort/sort/Insertion.o: 50,
+../Sort/sort/Heapsort.o: 82,
+,executions: 304 
+}
+][
+{
+../Sort/sort/Selection.o: 46,
+../Sort/sort/Bubblesort.o: 43,
+../Sort/sort/remoteSort.o: 42,
+../Sort/sort/Quicksort.o: 42,
+../Sort/sort/Insertion.o: 50,
+../Sort/sort/Heapsort.o: 82,
+,executions: 305 
+}
+][
+{
+../Sort/sort/Selection.o: 46,
+../Sort/sort/Bubblesort.o: 43,
+../Sort/sort/remoteSort.o: 42,
+../Sort/sort/Quicksort.o: 42,
+../Sort/sort/Insertion.o: 50,
+../Sort/sort/Heapsort.o: 83,
+,executions: 306 
+}
+][
+{
+../Sort/sort/Selection.o: 46,
+../Sort/sort/Bubblesort.o: 44,
+../Sort/sort/remoteSort.o: 42,
+../Sort/sort/Quicksort.o: 42,
+../Sort/sort/Insertion.o: 50,
+../Sort/sort/Heapsort.o: 83,
+,executions: 307 
+}
+][
+{
+../Sort/sort/Selection.o: 47,
+../Sort/sort/Bubblesort.o: 44,
+../Sort/sort/remoteSort.o: 42,
+../Sort/sort/Quicksort.o: 42,
+../Sort/sort/Insertion.o: 50,
+../Sort/sort/Heapsort.o: 83,
+,executions: 308 
+}
+][
+{
+../Sort/sort/Selection.o: 47,
+../Sort/sort/Bubblesort.o: 44,
+../Sort/sort/remoteSort.o: 42,
+../Sort/sort/Quicksort.o: 42,
+../Sort/sort/Insertion.o: 50,
+../Sort/sort/Heapsort.o: 84,
+,executions: 309 
+}
+][
+{
+../Sort/sort/Selection.o: 47,
+../Sort/sort/Bubblesort.o: 44,
+../Sort/sort/remoteSort.o: 42,
+../Sort/sort/Quicksort.o: 42,
+../Sort/sort/Insertion.o: 51,
+../Sort/sort/Heapsort.o: 84,
+,executions: 310 
+}
+][
+{
+../Sort/sort/Selection.o: 47,
+../Sort/sort/Bubblesort.o: 44,
+../Sort/sort/remoteSort.o: 42,
+../Sort/sort/Quicksort.o: 43,
+../Sort/sort/Insertion.o: 51,
+../Sort/sort/Heapsort.o: 84,
+,executions: 311 
+}
+][
+{
+../Sort/sort/Selection.o: 47,
+../Sort/sort/Bubblesort.o: 44,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 43,
+../Sort/sort/Insertion.o: 51,
+../Sort/sort/Heapsort.o: 84,
+,executions: 312 
+}
+][
+{
+../Sort/sort/Selection.o: 48,
+../Sort/sort/Bubblesort.o: 44,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 43,
+../Sort/sort/Insertion.o: 51,
+../Sort/sort/Heapsort.o: 84,
+,executions: 313 
+}
+][
+{
+../Sort/sort/Selection.o: 48,
+../Sort/sort/Bubblesort.o: 45,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 43,
+../Sort/sort/Insertion.o: 51,
+../Sort/sort/Heapsort.o: 84,
+,executions: 314 
+}
+][
+{
+../Sort/sort/Selection.o: 48,
+../Sort/sort/Bubblesort.o: 45,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 43,
+../Sort/sort/Insertion.o: 51,
+../Sort/sort/Heapsort.o: 85,
+,executions: 315 
+}
+][
+{
+../Sort/sort/Selection.o: 48,
+../Sort/sort/Bubblesort.o: 45,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 43,
+../Sort/sort/Insertion.o: 52,
+../Sort/sort/Heapsort.o: 85,
+,executions: 316 
+}
+][
+{
+../Sort/sort/Selection.o: 48,
+../Sort/sort/Bubblesort.o: 45,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 43,
+../Sort/sort/Insertion.o: 52,
+../Sort/sort/Heapsort.o: 86,
+,executions: 317 
+}
+][
+{
+../Sort/sort/Selection.o: 48,
+../Sort/sort/Bubblesort.o: 45,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 44,
+../Sort/sort/Insertion.o: 52,
+../Sort/sort/Heapsort.o: 86,
+,executions: 318 
+}
+][
+{
+../Sort/sort/Selection.o: 49,
+../Sort/sort/Bubblesort.o: 45,
+../Sort/sort/remoteSort.o: 43,
+../Sort/sort/Quicksort.o: 44,
+../Sort/sort/Insertion.o: 52,
+../Sort/sort/Heapsort.o: 86,
+,executions: 319 
+}
+][
+{
+../Sort/sort/Selection.o: 49,
+../Sort/sort/Bubblesort.o: 45,
+../Sort/sort/remoteSort.o: 44,
+../Sort/sort/Quicksort.o: 44,
+../Sort/sort/Insertion.o: 52,
+../Sort/sort/Heapsort.o: 86,
+,executions: 320 
+}
+][
+{
+../Sort/sort/Selection.o: 49,
+../Sort/sort/Bubblesort.o: 46,
+../Sort/sort/remoteSort.o: 44,
+../Sort/sort/Quicksort.o: 44,
+../Sort/sort/Insertion.o: 52,
+../Sort/sort/Heapsort.o: 86,
+,executions: 321 
+}
+][
+{
+../Sort/sort/Selection.o: 49,
+../Sort/sort/Bubblesort.o: 46,
+../Sort/sort/remoteSort.o: 44,
+../Sort/sort/Quicksort.o: 44,
+../Sort/sort/Insertion.o: 52,
+../Sort/sort/Heapsort.o: 87,
+,executions: 322 
+}
+][
+{
+../Sort/sort/Selection.o: 49,
+../Sort/sort/Bubblesort.o: 46,
+../Sort/sort/remoteSort.o: 44,
+../Sort/sort/Quicksort.o: 44,
+../Sort/sort/Insertion.o: 53,
+../Sort/sort/Heapsort.o: 87,
+,executions: 323 
+}
+][
+{
+../Sort/sort/Selection.o: 50,
+../Sort/sort/Bubblesort.o: 46,
+../Sort/sort/remoteSort.o: 44,
+../Sort/sort/Quicksort.o: 44,
+../Sort/sort/Insertion.o: 53,
+../Sort/sort/Heapsort.o: 87,
+,executions: 324 
+}
+][
+{
+../Sort/sort/Selection.o: 50,
+../Sort/sort/Bubblesort.o: 46,
+../Sort/sort/remoteSort.o: 44,
+../Sort/sort/Quicksort.o: 45,
+../Sort/sort/Insertion.o: 53,
+../Sort/sort/Heapsort.o: 87,
+,executions: 325 
+}
+][
+{
+../Sort/sort/Selection.o: 50,
+../Sort/sort/Bubblesort.o: 46,
+../Sort/sort/remoteSort.o: 45,
+../Sort/sort/Quicksort.o: 45,
+../Sort/sort/Insertion.o: 53,
+../Sort/sort/Heapsort.o: 87,
+,executions: 326 
+}
+][
+{
+../Sort/sort/Selection.o: 50,
+../Sort/sort/Bubblesort.o: 46,
+../Sort/sort/remoteSort.o: 45,
+../Sort/sort/Quicksort.o: 45,
+../Sort/sort/Insertion.o: 53,
+../Sort/sort/Heapsort.o: 88,
+,executions: 327 
+}
+][
+{
+../Sort/sort/Selection.o: 50,
+../Sort/sort/Bubblesort.o: 47,
+../Sort/sort/remoteSort.o: 45,
+../Sort/sort/Quicksort.o: 45,
+../Sort/sort/Insertion.o: 53,
+../Sort/sort/Heapsort.o: 88,
+,executions: 328 
+}
+][
+{
+../Sort/sort/Selection.o: 50,
+../Sort/sort/Bubblesort.o: 47,
+../Sort/sort/remoteSort.o: 45,
+../Sort/sort/Quicksort.o: 45,
+../Sort/sort/Insertion.o: 54,
+../Sort/sort/Heapsort.o: 88,
+,executions: 329 
+}
+][
+{
+../Sort/sort/Selection.o: 50,
+../Sort/sort/Bubblesort.o: 47,
+../Sort/sort/remoteSort.o: 45,
+../Sort/sort/Quicksort.o: 45,
+../Sort/sort/Insertion.o: 54,
+../Sort/sort/Heapsort.o: 89,
+,executions: 330 
+}
+][
+{
+../Sort/sort/Selection.o: 51,
+../Sort/sort/Bubblesort.o: 47,
+../Sort/sort/remoteSort.o: 45,
+../Sort/sort/Quicksort.o: 45,
+../Sort/sort/Insertion.o: 54,
+../Sort/sort/Heapsort.o: 89,
+,executions: 331 
+}
+][
+{
+../Sort/sort/Selection.o: 51,
+../Sort/sort/Bubblesort.o: 47,
+../Sort/sort/remoteSort.o: 45,
+../Sort/sort/Quicksort.o: 46,
+../Sort/sort/Insertion.o: 54,
+../Sort/sort/Heapsort.o: 89,
+,executions: 332 
+}
+][
+{
+../Sort/sort/Selection.o: 51,
+../Sort/sort/Bubblesort.o: 47,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 46,
+../Sort/sort/Insertion.o: 54,
+../Sort/sort/Heapsort.o: 89,
+,executions: 333 
+}
+][
+{
+../Sort/sort/Selection.o: 51,
+../Sort/sort/Bubblesort.o: 48,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 46,
+../Sort/sort/Insertion.o: 54,
+../Sort/sort/Heapsort.o: 89,
+,executions: 334 
+}
+][
+{
+../Sort/sort/Selection.o: 51,
+../Sort/sort/Bubblesort.o: 48,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 46,
+../Sort/sort/Insertion.o: 54,
+../Sort/sort/Heapsort.o: 90,
+,executions: 335 
+}
+][
+{
+../Sort/sort/Selection.o: 51,
+../Sort/sort/Bubblesort.o: 48,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 46,
+../Sort/sort/Insertion.o: 55,
+../Sort/sort/Heapsort.o: 90,
+,executions: 336 
+}
+][
+{
+../Sort/sort/Selection.o: 52,
+../Sort/sort/Bubblesort.o: 48,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 46,
+../Sort/sort/Insertion.o: 55,
+../Sort/sort/Heapsort.o: 90,
+,executions: 337 
+}
+][
+{
+../Sort/sort/Selection.o: 52,
+../Sort/sort/Bubblesort.o: 48,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 46,
+../Sort/sort/Insertion.o: 55,
+../Sort/sort/Heapsort.o: 91,
+,executions: 338 
+}
+][
+{
+../Sort/sort/Selection.o: 52,
+../Sort/sort/Bubblesort.o: 48,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 47,
+../Sort/sort/Insertion.o: 55,
+../Sort/sort/Heapsort.o: 91,
+,executions: 339 
+}
+][
+{
+../Sort/sort/Selection.o: 52,
+../Sort/sort/Bubblesort.o: 49,
+../Sort/sort/remoteSort.o: 46,
+../Sort/sort/Quicksort.o: 47,
+../Sort/sort/Insertion.o: 55,
+../Sort/sort/Heapsort.o: 91,
+,executions: 340 
+}
+][
+{
+../Sort/sort/Selection.o: 52,
+../Sort/sort/Bubblesort.o: 49,
+../Sort/sort/remoteSort.o: 47,
+../Sort/sort/Quicksort.o: 47,
+../Sort/sort/Insertion.o: 55,
+../Sort/sort/Heapsort.o: 91,
+,executions: 341 
+}
+][
+{
+../Sort/sort/Selection.o: 52,
+../Sort/sort/Bubblesort.o: 49,
+../Sort/sort/remoteSort.o: 47,
+../Sort/sort/Quicksort.o: 47,
+../Sort/sort/Insertion.o: 56,
+../Sort/sort/Heapsort.o: 91,
+,executions: 342 
+}
+][
+{
+../Sort/sort/Selection.o: 52,
+../Sort/sort/Bubblesort.o: 49,
+../Sort/sort/remoteSort.o: 47,
+../Sort/sort/Quicksort.o: 47,
+../Sort/sort/Insertion.o: 56,
+../Sort/sort/Heapsort.o: 92,
+,executions: 343 
+}
+][
+{
+../Sort/sort/Selection.o: 53,
+../Sort/sort/Bubblesort.o: 49,
+../Sort/sort/remoteSort.o: 47,
+../Sort/sort/Quicksort.o: 47,
+../Sort/sort/Insertion.o: 56,
+../Sort/sort/Heapsort.o: 92,
+,executions: 344 
+}
+][
+{
+../Sort/sort/Selection.o: 53,
+../Sort/sort/Bubblesort.o: 49,
+../Sort/sort/remoteSort.o: 47,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 56,
+../Sort/sort/Heapsort.o: 92,
+,executions: 345 
+}
+][
+{
+../Sort/sort/Selection.o: 53,
+../Sort/sort/Bubblesort.o: 50,
+../Sort/sort/remoteSort.o: 47,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 56,
+../Sort/sort/Heapsort.o: 92,
+,executions: 346 
+}
+][
+{
+../Sort/sort/Selection.o: 53,
+../Sort/sort/Bubblesort.o: 50,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 56,
+../Sort/sort/Heapsort.o: 92,
+,executions: 347 
+}
+][
+{
+../Sort/sort/Selection.o: 53,
+../Sort/sort/Bubblesort.o: 50,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 57,
+../Sort/sort/Heapsort.o: 92,
+,executions: 348 
+}
+][
+{
+../Sort/sort/Selection.o: 53,
+../Sort/sort/Bubblesort.o: 50,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 57,
+../Sort/sort/Heapsort.o: 93,
+,executions: 349 
+}
+][
+{
+../Sort/sort/Selection.o: 54,
+../Sort/sort/Bubblesort.o: 50,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 57,
+../Sort/sort/Heapsort.o: 93,
+,executions: 350 
+}
+][
+{
+../Sort/sort/Selection.o: 54,
+../Sort/sort/Bubblesort.o: 50,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 57,
+../Sort/sort/Heapsort.o: 94,
+,executions: 351 
+}
+][
+{
+../Sort/sort/Selection.o: 54,
+../Sort/sort/Bubblesort.o: 51,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 48,
+../Sort/sort/Insertion.o: 57,
+../Sort/sort/Heapsort.o: 94,
+,executions: 352 
+}
+][
+{
+../Sort/sort/Selection.o: 54,
+../Sort/sort/Bubblesort.o: 51,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 57,
+../Sort/sort/Heapsort.o: 94,
+,executions: 353 
+}
+][
+{
+../Sort/sort/Selection.o: 54,
+../Sort/sort/Bubblesort.o: 51,
+../Sort/sort/remoteSort.o: 48,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 58,
+../Sort/sort/Heapsort.o: 94,
+,executions: 354 
+}
+][
+{
+../Sort/sort/Selection.o: 54,
+../Sort/sort/Bubblesort.o: 51,
+../Sort/sort/remoteSort.o: 49,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 58,
+../Sort/sort/Heapsort.o: 94,
+,executions: 355 
+}
+][
+{
+../Sort/sort/Selection.o: 54,
+../Sort/sort/Bubblesort.o: 51,
+../Sort/sort/remoteSort.o: 49,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 58,
+../Sort/sort/Heapsort.o: 95,
+,executions: 356 
+}
+][
+{
+../Sort/sort/Selection.o: 55,
+../Sort/sort/Bubblesort.o: 51,
+../Sort/sort/remoteSort.o: 49,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 58,
+../Sort/sort/Heapsort.o: 95,
+,executions: 357 
+}
+][
+{
+../Sort/sort/Selection.o: 55,
+../Sort/sort/Bubblesort.o: 51,
+../Sort/sort/remoteSort.o: 49,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 59,
+../Sort/sort/Heapsort.o: 95,
+,executions: 358 
+}
+][
+{
+../Sort/sort/Selection.o: 55,
+../Sort/sort/Bubblesort.o: 52,
+../Sort/sort/remoteSort.o: 49,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 59,
+../Sort/sort/Heapsort.o: 95,
+,executions: 359 
+}
+][
+{
+../Sort/sort/Selection.o: 55,
+../Sort/sort/Bubblesort.o: 52,
+../Sort/sort/remoteSort.o: 49,
+../Sort/sort/Quicksort.o: 49,
+../Sort/sort/Insertion.o: 59,
+../Sort/sort/Heapsort.o: 96,
+,executions: 360 
+}
+][
+{
+../Sort/sort/Selection.o: 55,
+../Sort/sort/Bubblesort.o: 52,
+../Sort/sort/remoteSort.o: 49,
+../Sort/sort/Quicksort.o: 50,
+../Sort/sort/Insertion.o: 59,
+../Sort/sort/Heapsort.o: 96,
+,executions: 361 
+}
+][
+{
+../Sort/sort/Selection.o: 55,
+../Sort/sort/Bubblesort.o: 52,
+../Sort/sort/remoteSort.o: 50,
+../Sort/sort/Quicksort.o: 50,
+../Sort/sort/Insertion.o: 59,
+../Sort/sort/Heapsort.o: 96,
+,executions: 362 
+}
+][
+{
+../Sort/sort/Selection.o: 56,
+../Sort/sort/Bubblesort.o: 52,
+../Sort/sort/remoteSort.o: 50,
+../Sort/sort/Quicksort.o: 50,
+../Sort/sort/Insertion.o: 59,
+../Sort/sort/Heapsort.o: 96,
+,executions: 363 
+}
+][
+{
+../Sort/sort/Selection.o: 56,
+../Sort/sort/Bubblesort.o: 52,
+../Sort/sort/remoteSort.o: 50,
+../Sort/sort/Quicksort.o: 50,
+../Sort/sort/Insertion.o: 59,
+../Sort/sort/Heapsort.o: 97,
+,executions: 364 
+}
+][
+{
+../Sort/sort/Selection.o: 56,
+../Sort/sort/Bubblesort.o: 52,
+../Sort/sort/remoteSort.o: 50,
+../Sort/sort/Quicksort.o: 50,
+../Sort/sort/Insertion.o: 60,
+../Sort/sort/Heapsort.o: 97,
+,executions: 365 
+}
+][
+{
+../Sort/sort/Selection.o: 56,
+../Sort/sort/Bubblesort.o: 53,
+../Sort/sort/remoteSort.o: 50,
+../Sort/sort/Quicksort.o: 50,
+../Sort/sort/Insertion.o: 60,
+../Sort/sort/Heapsort.o: 97,
+,executions: 366 
+}
+][
+{
+../Sort/sort/Selection.o: 56,
+../Sort/sort/Bubblesort.o: 53,
+../Sort/sort/remoteSort.o: 50,
+../Sort/sort/Quicksort.o: 51,
+../Sort/sort/Insertion.o: 60,
+../Sort/sort/Heapsort.o: 97,
+,executions: 367 
+}
+][
+{
+../Sort/sort/Selection.o: 56,
+../Sort/sort/Bubblesort.o: 53,
+../Sort/sort/remoteSort.o: 51,
+../Sort/sort/Quicksort.o: 51,
+../Sort/sort/Insertion.o: 60,
+../Sort/sort/Heapsort.o: 97,
+,executions: 368 
+}
+][
+{
+../Sort/sort/Selection.o: 56,
+../Sort/sort/Bubblesort.o: 53,
+../Sort/sort/remoteSort.o: 51,
+../Sort/sort/Quicksort.o: 51,
+../Sort/sort/Insertion.o: 60,
+../Sort/sort/Heapsort.o: 98,
+,executions: 369 
+}
+][
+{
+../Sort/sort/Selection.o: 57,
+../Sort/sort/Bubblesort.o: 53,
+../Sort/sort/remoteSort.o: 51,
+../Sort/sort/Quicksort.o: 51,
+../Sort/sort/Insertion.o: 60,
+../Sort/sort/Heapsort.o: 98,
+,executions: 370 
+}
+][
+{
+../Sort/sort/Selection.o: 57,
+../Sort/sort/Bubblesort.o: 53,
+../Sort/sort/remoteSort.o: 51,
+../Sort/sort/Quicksort.o: 51,
+../Sort/sort/Insertion.o: 61,
+../Sort/sort/Heapsort.o: 98,
+,executions: 371 
+}
+][
+{
+../Sort/sort/Selection.o: 57,
+../Sort/sort/Bubblesort.o: 53,
+../Sort/sort/remoteSort.o: 51,
+../Sort/sort/Quicksort.o: 51,
+../Sort/sort/Insertion.o: 61,
+../Sort/sort/Heapsort.o: 99,
+,executions: 372 
+}
+][
+{
+../Sort/sort/Selection.o: 57,
+../Sort/sort/Bubblesort.o: 54,
+../Sort/sort/remoteSort.o: 51,
+../Sort/sort/Quicksort.o: 51,
+../Sort/sort/Insertion.o: 61,
+../Sort/sort/Heapsort.o: 99,
+,executions: 373 
+}
+][
+{
+../Sort/sort/Selection.o: 57,
+../Sort/sort/Bubblesort.o: 54,
+../Sort/sort/remoteSort.o: 51,
+../Sort/sort/Quicksort.o: 52,
+../Sort/sort/Insertion.o: 61,
+../Sort/sort/Heapsort.o: 99,
+,executions: 374 
+}
+][
+{
+../Sort/sort/Selection.o: 57,
+../Sort/sort/Bubblesort.o: 54,
+../Sort/sort/remoteSort.o: 52,
+../Sort/sort/Quicksort.o: 52,
+../Sort/sort/Insertion.o: 61,
+../Sort/sort/Heapsort.o: 99,
+,executions: 375 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 54,
+../Sort/sort/remoteSort.o: 52,
+../Sort/sort/Quicksort.o: 52,
+../Sort/sort/Insertion.o: 61,
+../Sort/sort/Heapsort.o: 99,
+,executions: 376 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 54,
+../Sort/sort/remoteSort.o: 52,
+../Sort/sort/Quicksort.o: 52,
+../Sort/sort/Insertion.o: 61,
+../Sort/sort/Heapsort.o: 100,
+,executions: 377 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 54,
+../Sort/sort/remoteSort.o: 52,
+../Sort/sort/Quicksort.o: 52,
+../Sort/sort/Insertion.o: 62,
+../Sort/sort/Heapsort.o: 100,
+,executions: 378 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 52,
+../Sort/sort/Quicksort.o: 52,
+../Sort/sort/Insertion.o: 62,
+../Sort/sort/Heapsort.o: 100,
+,executions: 379 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 52,
+../Sort/sort/Quicksort.o: 52,
+../Sort/sort/Insertion.o: 62,
+../Sort/sort/Heapsort.o: 101,
+,executions: 380 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 52,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 62,
+../Sort/sort/Heapsort.o: 101,
+,executions: 381 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 62,
+../Sort/sort/Heapsort.o: 101,
+,executions: 382 
+}
+][
+{
+../Sort/sort/Selection.o: 58,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 62,
+../Sort/sort/Heapsort.o: 102,
+,executions: 383 
+}
+][
+{
+../Sort/sort/Selection.o: 59,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 62,
+../Sort/sort/Heapsort.o: 102,
+,executions: 384 
+}
+][
+{
+../Sort/sort/Selection.o: 59,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 102,
+,executions: 385 
+}
+][
+{
+../Sort/sort/Selection.o: 59,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 103,
+,executions: 386 
+}
+][
+{
+../Sort/sort/Selection.o: 59,
+../Sort/sort/Bubblesort.o: 55,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 104,
+,executions: 387 
+}
+][
+{
+../Sort/sort/Selection.o: 59,
+../Sort/sort/Bubblesort.o: 56,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 53,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 104,
+,executions: 388 
+}
+][
+{
+../Sort/sort/Selection.o: 59,
+../Sort/sort/Bubblesort.o: 56,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 104,
+,executions: 389 
+}
+][
+{
+../Sort/sort/Selection.o: 60,
+../Sort/sort/Bubblesort.o: 56,
+../Sort/sort/remoteSort.o: 53,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 104,
+,executions: 390 
+}
+][
+{
+../Sort/sort/Selection.o: 60,
+../Sort/sort/Bubblesort.o: 56,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 104,
+,executions: 391 
+}
+][
+{
+../Sort/sort/Selection.o: 60,
+../Sort/sort/Bubblesort.o: 56,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 63,
+../Sort/sort/Heapsort.o: 105,
+,executions: 392 
+}
+][
+{
+../Sort/sort/Selection.o: 60,
+../Sort/sort/Bubblesort.o: 56,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 64,
+../Sort/sort/Heapsort.o: 105,
+,executions: 393 
+}
+][
+{
+../Sort/sort/Selection.o: 60,
+../Sort/sort/Bubblesort.o: 56,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 64,
+../Sort/sort/Heapsort.o: 106,
+,executions: 394 
+}
+][
+{
+../Sort/sort/Selection.o: 60,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 64,
+../Sort/sort/Heapsort.o: 106,
+,executions: 395 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 64,
+../Sort/sort/Heapsort.o: 106,
+,executions: 396 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 54,
+../Sort/sort/Insertion.o: 64,
+../Sort/sort/Heapsort.o: 107,
+,executions: 397 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 64,
+../Sort/sort/Heapsort.o: 107,
+,executions: 398 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 54,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 65,
+../Sort/sort/Heapsort.o: 107,
+,executions: 399 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 55,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 65,
+../Sort/sort/Heapsort.o: 107,
+,executions: 400 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 55,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 65,
+../Sort/sort/Heapsort.o: 108,
+,executions: 401 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 57,
+../Sort/sort/remoteSort.o: 55,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 65,
+../Sort/sort/Heapsort.o: 109,
+,executions: 402 
+}
+][
+{
+../Sort/sort/Selection.o: 61,
+../Sort/sort/Bubblesort.o: 58,
+../Sort/sort/remoteSort.o: 55,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 65,
+../Sort/sort/Heapsort.o: 109,
+,executions: 403 
+}
+][
+{
+../Sort/sort/Selection.o: 62,
+../Sort/sort/Bubblesort.o: 58,
+../Sort/sort/remoteSort.o: 55,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 65,
+../Sort/sort/Heapsort.o: 109,
+,executions: 404 
+}
+][
+{
+../Sort/sort/Selection.o: 62,
+../Sort/sort/Bubblesort.o: 58,
+../Sort/sort/remoteSort.o: 55,
+../Sort/sort/Quicksort.o: 55,
+../Sort/sort/Insertion.o: 66,
+../Sort/sort/Heapsort.o: 109,
+,executions: 405 
+}
+][
+{
+../Sort/sort/Selection.o: 62,
+../Sort/sort/Bubblesort.o: 58,
+../Sort/sort/remoteSort.o: 55,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 66,
+../Sort/sort/Heapsort.o: 109,
+,executions: 406 
+}
+][
+{
+../Sort/sort/Selection.o: 62,
+../Sort/sort/Bubblesort.o: 58,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 66,
+../Sort/sort/Heapsort.o: 109,
+,executions: 407 
+}
+][
+{
+../Sort/sort/Selection.o: 62,
+../Sort/sort/Bubblesort.o: 58,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 66,
+../Sort/sort/Heapsort.o: 110,
+,executions: 408 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 58,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 66,
+../Sort/sort/Heapsort.o: 110,
+,executions: 409 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 66,
+../Sort/sort/Heapsort.o: 110,
+,executions: 410 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 66,
+../Sort/sort/Heapsort.o: 111,
+,executions: 411 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 67,
+../Sort/sort/Heapsort.o: 111,
+,executions: 412 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 56,
+../Sort/sort/Insertion.o: 67,
+../Sort/sort/Heapsort.o: 112,
+,executions: 413 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 56,
+../Sort/sort/Quicksort.o: 57,
+../Sort/sort/Insertion.o: 67,
+../Sort/sort/Heapsort.o: 112,
+,executions: 414 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 57,
+../Sort/sort/Quicksort.o: 57,
+../Sort/sort/Insertion.o: 67,
+../Sort/sort/Heapsort.o: 112,
+,executions: 415 
+}
+][
+{
+../Sort/sort/Selection.o: 63,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 57,
+../Sort/sort/Quicksort.o: 57,
+../Sort/sort/Insertion.o: 67,
+../Sort/sort/Heapsort.o: 113,
+,executions: 416 
+}
+][
+{
+../Sort/sort/Selection.o: 64,
+../Sort/sort/Bubblesort.o: 59,
+../Sort/sort/remoteSort.o: 57,
+../Sort/sort/Quicksort.o: 57,
+../Sort/sort/Insertion.o: 67,
+../Sort/sort/Heapsort.o: 113,
+,executions: 417 
+}
+][
+{
+../Sort/sort/Selection.o: 64,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 57,
+../Sort/sort/Quicksort.o: 57,
+../Sort/sort/Insertion.o: 67,
+../Sort/sort/Heapsort.o: 113,
+,executions: 418 
+}
+][
+{
+../Sort/sort/Selection.o: 64,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 57,
+../Sort/sort/Quicksort.o: 57,
+../Sort/sort/Insertion.o: 68,
+../Sort/sort/Heapsort.o: 113,
+,executions: 419 
+}
+][
+{
+../Sort/sort/Selection.o: 64,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 57,
+../Sort/sort/Quicksort.o: 57,
+../Sort/sort/Insertion.o: 68,
+../Sort/sort/Heapsort.o: 114,
+,executions: 420 
+}
+][
+{
+../Sort/sort/Selection.o: 64,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 57,
+../Sort/sort/Quicksort.o: 58,
+../Sort/sort/Insertion.o: 68,
+../Sort/sort/Heapsort.o: 114,
+,executions: 421 
+}
+][
+{
+../Sort/sort/Selection.o: 64,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 58,
+../Sort/sort/Quicksort.o: 58,
+../Sort/sort/Insertion.o: 68,
+../Sort/sort/Heapsort.o: 114,
+,executions: 422 
+}
+][
+{
+../Sort/sort/Selection.o: 65,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 58,
+../Sort/sort/Quicksort.o: 58,
+../Sort/sort/Insertion.o: 68,
+../Sort/sort/Heapsort.o: 114,
+,executions: 423 
+}
+][
+{
+../Sort/sort/Selection.o: 65,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 58,
+../Sort/sort/Quicksort.o: 58,
+../Sort/sort/Insertion.o: 68,
+../Sort/sort/Heapsort.o: 115,
+,executions: 424 
+}
+][
+{
+../Sort/sort/Selection.o: 65,
+../Sort/sort/Bubblesort.o: 60,
+../Sort/sort/remoteSort.o: 58,
+../Sort/sort/Quicksort.o: 58,
+../Sort/sort/Insertion.o: 69,
+../Sort/sort/Heapsort.o: 115,
+,executions: 425 
+}
+][
+{
+../Sort/sort/Selection.o: 65,
+../Sort/sort/Bubblesort.o: 61,
+../Sort/sort/remoteSort.o: 58,
+../Sort/sort/Quicksort.o: 58,
+../Sort/sort/Insertion.o: 69,
+../Sort/sort/Heapsort.o: 115,
+,executions: 426 
+}
+][
+{
+../Sort/sort/Selection.o: 65,
+../Sort/sort/Bubblesort.o: 61,
+../Sort/sort/remoteSort.o: 58,
+../Sort/sort/Quicksort.o: 58,
+../Sort/sort/Insertion.o: 69,
+../Sort/sort/Heapsort.o: 116,
+,executions: 427 
+}
+][
+{
+../Sort/sort/Selection.o: 65,
+../Sort/sort/Bubblesort.o: 61,
+../Sort/sort/remoteSort.o: 58,
+../Sort/sort/Quicksort.o: 59,
+../Sort/sort/Insertion.o: 69,
+../Sort/sort/Heapsort.o: 116,
+,executions: 428 
+}
+][
+{
+../Sort/sort/Selection.o: 65,
+../Sort/sort/Bubblesort.o: 61,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 59,
+../Sort/sort/Insertion.o: 69,
+../Sort/sort/Heapsort.o: 116,
+,executions: 429 
+}
+][
+{
+../Sort/sort/Selection.o: 66,
+../Sort/sort/Bubblesort.o: 61,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 59,
+../Sort/sort/Insertion.o: 69,
+../Sort/sort/Heapsort.o: 116,
+,executions: 430 
+}
+][
+{
+../Sort/sort/Selection.o: 66,
+../Sort/sort/Bubblesort.o: 61,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 59,
+../Sort/sort/Insertion.o: 70,
+../Sort/sort/Heapsort.o: 116,
+,executions: 431 
+}
+][
+{
+../Sort/sort/Selection.o: 66,
+../Sort/sort/Bubblesort.o: 61,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 59,
+../Sort/sort/Insertion.o: 70,
+../Sort/sort/Heapsort.o: 117,
+,executions: 432 
+}
+][
+{
+../Sort/sort/Selection.o: 66,
+../Sort/sort/Bubblesort.o: 62,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 59,
+../Sort/sort/Insertion.o: 70,
+../Sort/sort/Heapsort.o: 117,
+,executions: 433 
+}
+][
+{
+../Sort/sort/Selection.o: 66,
+../Sort/sort/Bubblesort.o: 62,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 60,
+../Sort/sort/Insertion.o: 70,
+../Sort/sort/Heapsort.o: 117,
+,executions: 434 
+}
+][
+{
+../Sort/sort/Selection.o: 66,
+../Sort/sort/Bubblesort.o: 62,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 60,
+../Sort/sort/Insertion.o: 70,
+../Sort/sort/Heapsort.o: 118,
+,executions: 435 
+}
+][
+{
+../Sort/sort/Selection.o: 67,
+../Sort/sort/Bubblesort.o: 62,
+../Sort/sort/remoteSort.o: 59,
+../Sort/sort/Quicksort.o: 60,
+../Sort/sort/Insertion.o: 70,
+../Sort/sort/Heapsort.o: 118,
+,executions: 436 
+}
+][
+{
+../Sort/sort/Selection.o: 67,
+../Sort/sort/Bubblesort.o: 62,
+../Sort/sort/remoteSort.o: 60,
+../Sort/sort/Quicksort.o: 60,
+../Sort/sort/Insertion.o: 70,
+../Sort/sort/Heapsort.o: 118,
+,executions: 437 
+}
+][
+{
+../Sort/sort/Selection.o: 67,
+../Sort/sort/Bubblesort.o: 62,
+../Sort/sort/remoteSort.o: 60,
+../Sort/sort/Quicksort.o: 60,
+../Sort/sort/Insertion.o: 71,
+../Sort/sort/Heapsort.o: 118,
+,executions: 438 
+}
+][
+{
+../Sort/sort/Selection.o: 67,
+../Sort/sort/Bubblesort.o: 63,
+../Sort/sort/remoteSort.o: 60,
+../Sort/sort/Quicksort.o: 60,
+../Sort/sort/Insertion.o: 71,
+../Sort/sort/Heapsort.o: 118,
+,executions: 439 
+}
+][
+{
+../Sort/sort/Selection.o: 67,
+../Sort/sort/Bubblesort.o: 63,
+../Sort/sort/remoteSort.o: 60,
+../Sort/sort/Quicksort.o: 60,
+../Sort/sort/Insertion.o: 71,
+../Sort/sort/Heapsort.o: 119,
+,executions: 440 
+}
+][
+{
+../Sort/sort/Selection.o: 67,
+../Sort/sort/Bubblesort.o: 63,
+../Sort/sort/remoteSort.o: 60,
+../Sort/sort/Quicksort.o: 61,
+../Sort/sort/Insertion.o: 71,
+../Sort/sort/Heapsort.o: 119,
+,executions: 441 
+}
+][
+{
+../Sort/sort/Selection.o: 68,
+../Sort/sort/Bubblesort.o: 63,
+../Sort/sort/remoteSort.o: 60,
+../Sort/sort/Quicksort.o: 61,
+../Sort/sort/Insertion.o: 71,
+../Sort/sort/Heapsort.o: 119,
+,executions: 442 
+}
 ]
