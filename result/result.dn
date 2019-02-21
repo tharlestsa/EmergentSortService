@@ -68,53 +68,47 @@ component provides App requires    io.Output out, io.File, io.FileSystem fileSys
   	char file_name[] = "../pal/log.json"
 
 		sinkevent AppEvents(window)
-		out.println("1")
 
-		//while(open)
-		//{
-			out.println("3")
+		while(open)
+		{
+
 			if(fileSystem.exists(file_name)){
 
 					TextFile fd = new TextFile(file_name, File.FILE_ACCESS_READ)
-					out.println("2")
-
-				//	out.println("$(fd.read(fd.getSize()))")
 
 					while (!fd.eof()) {
 						char	line[]=new char[](fd.readLine())
 
-  					out.println("linha: $(line)")
-
 						if(!strUtil.irfind(line, "Quick")){
-								Quicksort.setText(new char[]("Quick sort: " ,line))
+								Quicksort.setText(new char[]("Quick sort: " , strUtil.explode(line,":")[1].string))
 						}
 
 						 if(!strUtil.ifind(line, "Heap")){
-							 	Heapsort.setText(new char[](line))
+							 	Heapsort.setText(new char[]("Heap sort: " ,strUtil.explode(line,":")[1].string))
 						}
 
 
 						if(!strUtil.ifind(line, "insertion")){
-							Insertionsort.setText(new char[](line,strUtil.explode(line,":")[1].string))
+							Insertionsort.setText(new char[]("Insertion sort: ", strUtil.explode(line,":")[1].string))
 						}
 
 						 if(!strUtil.find(line, "Bubblesort.o")){
-							Bubblesort.setText(new char[](line))
+							Bubblesort.setText(new char[]("Bubble sort: " ,strUtil.explode(line,":")[1].string))
 						}
 						 if(!strUtil.ifind(line, "remote")){
-							Remotesort.setText(new char[](line))
+							Remotesort.setText(new char[]("Remote sort: " ,strUtil.explode(line,":")[1].string))
 						}
 						 if(!strUtil.ifind(line, "selection"))
 						{
-							Selectionsort.setText(new char[](line))
+							Selectionsort.setText(new char[]("Selection sort: " ,strUtil.explode(line,":")[1].string))
 						}
 
 					}
 				//	Data rows[] = parser.jsonToArray(fd.read(fd.getSize()), typeof(Data[]), null)
 
 				}
-			//timer.sleep(3000)
-		//}
+			timer.sleep(3000)
+		}
 
 
 		main = this.thread
