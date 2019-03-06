@@ -1,5 +1,0 @@
-Quicksort
-Bubblesort
-Selection
-Heapsort
-Insertion
